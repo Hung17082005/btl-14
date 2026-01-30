@@ -4,6 +4,7 @@
 import operator as py_operator
 from ast import literal_eval
 from collections import defaultdict
+
 from dateutil.relativedelta import relativedelta
 
 from odoo import _, api, fields, models

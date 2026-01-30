@@ -5,8 +5,8 @@ import json
 import logging
 import threading
 
+from odoo import _, api, fields, models, tools
 from odoo.addons.iap.tools import iap_tools
-from odoo import api, fields, models, tools, _
 
 _logger = logging.getLogger(__name__)
 

@@ -4,7 +4,6 @@
 import base64
 
 from odoo import api, fields, models
-
 from odoo.modules.module import get_module_resource
 
 

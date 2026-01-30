@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from datetime import datetime, time, timedelta
+
 import babel.dates
 
-from datetime import datetime, timedelta, time
-
-from odoo import fields, http, _
+from odoo import _, fields, http
 from odoo.addons.website.controllers.backend import WebsiteBackend
 from odoo.http import request
 from odoo.tools.misc import get_lang

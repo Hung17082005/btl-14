@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from collections import defaultdict
 from itertools import groupby
 from operator import itemgetter
-from collections import defaultdict
 
 from odoo import _, api, fields, models
 from odoo.tools.float_utils import float_is_zero

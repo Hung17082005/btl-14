@@ -3,9 +3,9 @@
 
 from werkzeug import urls
 
-from odoo import api, fields, models, _
-from odoo.tools.translate import html_translate
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
+from odoo.tools.translate import html_translate
 
 
 class RecruitmentSource(models.Model):

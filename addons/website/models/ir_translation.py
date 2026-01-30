@@ -3,6 +3,7 @@
 
 from odoo import models
 
+
 class IrTranslation(models.Model):
     _inherit = "ir.translation"
 

@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import timedelta
+from datetime import datetime, timedelta
+
+from dateutil.relativedelta import relativedelta
 
 from odoo.addons.stock.tests.common import TestStockCommon
 from odoo.exceptions import UserError
-
 from odoo.tests import Form
-from odoo.tools import float_is_zero, float_compare
+from odoo.tools import float_compare, float_is_zero
 
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
 
 class TestPickShip(TestStockCommon):
     def create_pick_ship(self):

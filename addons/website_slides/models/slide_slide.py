@@ -4,20 +4,19 @@
 import base64
 import datetime
 import io
-import re
-import requests
-import PyPDF2
 import json
+import re
 
+import PyPDF2
+import requests
 from dateutil.relativedelta import relativedelta
 from PIL import Image
 from werkzeug import urls
 
-from odoo import api, fields, models, _
-from odoo.addons.http_routing.models.ir_http import slug
-from odoo.exceptions import UserError, AccessError
+from odoo import _, api, fields, models
+from odoo.addons.http_routing.models.ir_http import slug, url_for
+from odoo.exceptions import AccessError, UserError
 from odoo.http import request
-from odoo.addons.http_routing.models.ir_http import url_for
 from odoo.tools import html2plaintext, sql
 
 

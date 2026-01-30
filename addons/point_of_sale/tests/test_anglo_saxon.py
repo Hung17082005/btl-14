@@ -2,8 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import time
-from odoo.tests import tagged
+
 from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from odoo.tests import tagged
 
 
 class TestAngloSaxonCommon(AccountTestInvoicingCommon):

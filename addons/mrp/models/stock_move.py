@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, Command, fields, models, _
+from odoo import Command, _, api, fields, models
 from odoo.osv import expression
-from odoo.tools import float_compare, float_round, float_is_zero, OrderedSet
+from odoo.tools import OrderedSet, float_compare, float_is_zero, float_round
 
 
 class StockMoveLine(models.Model):

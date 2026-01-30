@@ -4,7 +4,7 @@
 import logging
 
 from odoo.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
-from odoo.tests import Form, tagged, loaded_demo_data
+from odoo.tests import Form, loaded_demo_data, tagged
 
 _logger = logging.getLogger(__name__)
 

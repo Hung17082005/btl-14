@@ -2,16 +2,17 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import base64
-from collections import OrderedDict
-from datetime import datetime, timedelta
 import io
 import unittest.mock
+from collections import OrderedDict
+from datetime import datetime, timedelta
 
 from PIL import Image
 
-from . import common
 from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase, Form
+from odoo.tests.common import Form, TransactionCase
+
+from . import common
 
 
 class TestVariantsSearch(TransactionCase):

@@ -2,12 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import collections
+import operator as py_operator
 from datetime import timedelta
 from itertools import groupby
-import operator as py_operator
-from odoo import fields, models, _
-from odoo.tools.float_utils import float_round, float_is_zero
 
+from odoo import _, fields, models
+from odoo.tools.float_utils import float_is_zero, float_round
 
 OPERATORS = {
     '<': py_operator.lt,

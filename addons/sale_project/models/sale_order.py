@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, Command, fields, models, _
-
+from odoo import Command, _, api, fields, models
 from odoo.tools.safe_eval import safe_eval
 from odoo.tools.sql import column_exists, create_column
 

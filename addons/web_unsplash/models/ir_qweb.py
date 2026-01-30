@@ -1,6 +1,6 @@
 from werkzeug import urls
 
-from odoo import models, api
+from odoo import api, models
 
 
 class Image(models.AbstractModel):

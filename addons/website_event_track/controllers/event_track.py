@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import base64
+import json
 from ast import literal_eval
 from collections import defaultdict
 from datetime import timedelta
-from pytz import timezone, utc
-from werkzeug.exceptions import Forbidden, NotFound
 
 import babel
 import babel.dates
-import base64
-import json
 import pytz
+from pytz import timezone, utc
+from werkzeug.exceptions import Forbidden, NotFound
 
-from odoo import exceptions, http, fields, tools, _
+from odoo import _, exceptions, fields, http, tools
 from odoo.http import request
 from odoo.osv import expression
 from odoo.tools import is_html_empty, plaintext2html

@@ -5,16 +5,15 @@
 from collections import defaultdict
 from datetime import timedelta
 from itertools import groupby
-
-from odoo.osv.expression import OR
-from odoo.tools import groupby as groupbyelem
 from operator import itemgetter
 
-from odoo import _, api, Command, fields, models
+from odoo import Command, _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.osv import expression
+from odoo.osv.expression import OR
+from odoo.tools import groupby as groupbyelem
 from odoo.tools.float_utils import float_compare, float_is_zero, float_round
-from odoo.tools.misc import clean_context, OrderedSet
+from odoo.tools.misc import OrderedSet, clean_context
 
 PROCUREMENT_PRIORITIES = [('0', 'Normal'), ('1', 'Urgent')]
 

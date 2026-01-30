@@ -2,13 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
-
 from collections import OrderedDict
-from lxml import etree
 from unittest import skip
-from odoo import tools
+
+from lxml import etree
 
 import odoo.tests
+from odoo import tools
 
 _logger = logging.getLogger(__name__)
 

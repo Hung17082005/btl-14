@@ -4,18 +4,24 @@
 import logging
 from contextlib import contextmanager
 from functools import wraps
+
 import pytz
 from dateutil.parser import parse
 
 from odoo import api, fields, models, registry
-from odoo.tools import ormcache_context
+from odoo.addons.microsoft_account.models.microsoft_service import TIMEOUT
+from odoo.addons.microsoft_calendar.utils.event_id_storage import (
+    IDS_SEPARATOR,
+    combine_ids,
+    split_ids,
+)
+from odoo.addons.microsoft_calendar.utils.microsoft_calendar import (
+    MicrosoftCalendarService,
+)
+from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
 from odoo.exceptions import UserError
 from odoo.osv import expression
-
-from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.utils.event_id_storage import IDS_SEPARATOR, combine_ids, split_ids
-from odoo.addons.microsoft_account.models.microsoft_service import TIMEOUT
+from odoo.tools import ormcache_context
 
 _logger = logging.getLogger(__name__)
 

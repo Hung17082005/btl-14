@@ -1,6 +1,8 @@
-from odoo import models, fields, api
 from datetime import date
+
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+
 
 class HopDong(models.Model):
     _name = 'hop_dong'

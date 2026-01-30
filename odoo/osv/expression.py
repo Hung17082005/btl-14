@@ -114,21 +114,20 @@ start the server specifying the ``--unaccent`` flag.
 
 """
 import collections.abc
-import warnings
-
 import logging
 import reprlib
 import traceback
+import warnings
+from datetime import date, datetime, time
 from functools import partial
 
-from datetime import date, datetime, time
 import odoo.modules
+import odoo.tools as tools
 from odoo.osv.query import Query, _generate_table_alias
 from odoo.tools import pycompat
 from odoo.tools.misc import get_lang
-from ..models import MAGIC_COLUMNS, BaseModel
-import odoo.tools as tools
 
+from ..models import MAGIC_COLUMNS, BaseModel
 
 # Domain operators.
 NOT_OPERATOR = '!'

@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 import ipaddress
 
-from odoo import _, SUPERUSER_ID
-from odoo.http import request
+from odoo import SUPERUSER_ID, _
 from odoo.addons.web.controllers import main as web
+from odoo.http import request
+
 
 def _admin_password_warn(uid):
     """ Admin still has `admin` password, flash a message via chatter.

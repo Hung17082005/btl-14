@@ -6,10 +6,10 @@
 #    - Order if the virtual stock of today is below the min of the defined order point
 #
 
-from odoo import models, tools
-
 import logging
 import threading
+
+from odoo import models, tools
 
 _logger = logging.getLogger(__name__)
 

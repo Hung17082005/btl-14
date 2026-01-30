@@ -6,6 +6,7 @@ from collections import defaultdict
 from odoo import _, models
 from odoo.exceptions import UserError
 
+
 def _prepare_data(env, data):
     # change product ids by actual product object to get access to fields in xml template
     # we needed to pass ids because reports only accepts native python types (int, float, strings, ...)

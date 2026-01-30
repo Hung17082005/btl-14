@@ -1,18 +1,18 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
+import os
 import threading
 import time
-import os
+from datetime import datetime, timedelta
+
 import psycopg2
 import pytz
-from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
+from psycopg2 import sql
 
 import odoo
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
-
-from psycopg2 import sql
 
 _logger = logging.getLogger(__name__)
 

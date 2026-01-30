@@ -7,7 +7,10 @@ from odoo import http
 from odoo.addons.base.tests.common import HttpCaseWithUserDemo
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.addons.website.tests.test_base_url import TestUrlCommon
-from odoo.addons.website_event.tests.common import TestEventOnlineCommon, TestWebsiteEventCommon
+from odoo.addons.website_event.tests.common import (
+    TestEventOnlineCommon,
+    TestWebsiteEventCommon,
+)
 from odoo.tests import HttpCase, tagged
 from odoo.tools import mute_logger
 

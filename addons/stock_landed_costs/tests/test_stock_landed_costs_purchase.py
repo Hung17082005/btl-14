@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import unittest
-from odoo.addons.stock_landed_costs.tests.common import TestStockLandedCostsCommon
-from odoo.addons.stock_landed_costs.tests.test_stockvaluationlayer import TestStockValuationLCCommon
-from odoo.addons.stock_account.tests.test_stockvaluation import _create_accounting_data
 
+from odoo.addons.stock_account.tests.test_stockvaluation import _create_accounting_data
+from odoo.addons.stock_landed_costs.tests.common import TestStockLandedCostsCommon
+from odoo.addons.stock_landed_costs.tests.test_stockvaluationlayer import (
+    TestStockValuationLCCommon,
+)
 from odoo.fields import Date
-from odoo.tests import tagged, Form
+from odoo.tests import Form, tagged
 
 
 @tagged('post_install', '-at_install')

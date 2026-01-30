@@ -3,6 +3,7 @@
 
 import logging
 import os
+
 import odoo
 
 from . import lint_case

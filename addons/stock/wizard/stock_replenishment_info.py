@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from json import dumps
 from datetime import datetime, time
+from json import dumps
 
-from odoo import api, fields, models, SUPERUSER_ID
+from odoo import SUPERUSER_ID, api, fields, models
 from odoo.osv.expression import AND
-from odoo.tools import get_month, subtract, format_date
+from odoo.tools import format_date, get_month, subtract
 
 
 class StockReplenishmentInfo(models.TransientModel):

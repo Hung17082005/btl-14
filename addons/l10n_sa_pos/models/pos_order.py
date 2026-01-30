@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import base64
 
-from odoo import fields, api, models
+from odoo import api, fields, models
 
 
 class POSOrder(models.Model):

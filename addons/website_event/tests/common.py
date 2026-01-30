@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime, timedelta, time
+from datetime import datetime, time, timedelta
 from unittest.mock import patch
 
 from odoo.addons.event.tests.common import TestEventCommon
 from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.fields import Datetime as FieldsDatetime, Date as FieldsDate
+from odoo.fields import Date as FieldsDate
+from odoo.fields import Datetime as FieldsDatetime
 from odoo.tests.common import TransactionCase
 
 

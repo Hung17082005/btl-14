@@ -2,8 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import base64
-
 from unittest.mock import patch
+
+from markupsafe import escape
 
 from odoo import tools
 from odoo.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE_PLAINTEXT
@@ -12,10 +13,8 @@ from odoo.addons.test_mail.tests.common import TestMailCommon, TestRecipients
 from odoo.api import call_kw
 from odoo.exceptions import AccessError
 from odoo.tests import tagged
-from odoo.tools import mute_logger, formataddr
 from odoo.tests.common import users
-
-from markupsafe import escape
+from odoo.tools import formataddr, mute_logger
 
 
 @tagged('mail_post')

@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from . import models
-from . import report
-from . import wizard
-
 from odoo import SUPERUSER_ID, api
+
+from . import models, report, wizard
 
 
 def uninstall_hook(cr, registry):

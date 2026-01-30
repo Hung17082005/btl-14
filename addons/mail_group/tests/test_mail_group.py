@@ -3,9 +3,9 @@
 
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.addons.mail_group.tests.common import TestMailListCommon
-from odoo.exceptions import ValidationError, AccessError
+from odoo.exceptions import AccessError, ValidationError
 from odoo.tests.common import tagged, users
-from odoo.tools import mute_logger, append_content_to_html
+from odoo.tools import append_content_to_html, mute_logger
 
 
 @tagged("mail_group")

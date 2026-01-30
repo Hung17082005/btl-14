@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
-from dateutil.relativedelta import relativedelta
-from datetime import datetime, time, timedelta,date
-from pytz import timezone, UTC
 from calendar import monthrange
+from datetime import date, datetime, time, timedelta
+
+from dateutil.relativedelta import relativedelta
+from pytz import UTC, timezone
+
+from odoo import api, fields, models
 
 # Trong module tinh_luong/models/bang_luong.py
 

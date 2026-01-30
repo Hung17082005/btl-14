@@ -14,28 +14,32 @@ import pprint
 import re
 import subprocess
 import warnings
-
 from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
 
 import pytz
-from lxml import etree, builder
+from dateutil.relativedelta import relativedelta
+from lxml import builder, etree
+
 try:
     import jingtrang
 except ImportError:
     jingtrang = None
 
 import odoo
-from . import pycompat
-from .config import config
-from .misc import file_open, unquote, ustr, SKIPPED_ELEMENT_TYPES
-from .translate import _
 from odoo import SUPERUSER_ID, api
 from odoo.exceptions import ValidationError
 
+from . import pycompat
+from .config import config
+from .misc import SKIPPED_ELEMENT_TYPES, file_open, unquote, ustr
+from .translate import _
+
 _logger = logging.getLogger(__name__)
 
-from .safe_eval import safe_eval as s_eval, pytz, time
+from .safe_eval import pytz
+from .safe_eval import safe_eval as s_eval
+from .safe_eval import time
+
 safe_eval = lambda expr, ctx={}: s_eval(expr, ctx, nocopy=True)
 
 class ParseError(Exception):

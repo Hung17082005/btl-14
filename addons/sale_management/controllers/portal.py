@@ -4,10 +4,10 @@
 from functools import partial
 
 from odoo import http
-from odoo.tools import formatLang
+from odoo.addons.sale.controllers import portal
 from odoo.exceptions import AccessError, MissingError
 from odoo.http import request
-from odoo.addons.sale.controllers import portal
+from odoo.tools import formatLang
 
 
 class CustomerPortal(portal.CustomerPortal):

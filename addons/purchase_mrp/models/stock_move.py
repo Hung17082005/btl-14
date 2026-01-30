@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import _, models
-from odoo.tools.float_utils import float_is_zero
 from odoo.exceptions import UserError
+from odoo.tools.float_utils import float_is_zero
 
 
 class StockMove(models.Model):

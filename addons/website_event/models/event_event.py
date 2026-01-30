@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import json
 from ast import literal_eval
 from collections import defaultdict
-from dateutil.relativedelta import relativedelta
-import json
-import werkzeug.urls
 
+import werkzeug.urls
+from dateutil.relativedelta import relativedelta
 from pytz import utc
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.osv import expression
-from odoo.tools.misc import get_lang, format_date
+from odoo.tools.misc import format_date, get_lang
 
 GOOGLE_CALENDAR_URL = 'https://www.google.com/calendar/render?'
 

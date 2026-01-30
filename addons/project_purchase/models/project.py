@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _, _lt
+from odoo import _, _lt, api, fields, models
 
 
 class Project(models.Model):

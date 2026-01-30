@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, _
+from odoo import _, fields, models
+
 
 class m(models.TransientModel):
     """ A model to provide source strings. """

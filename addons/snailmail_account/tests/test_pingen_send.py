@@ -1,11 +1,12 @@
 
-import requests
-import json
 import base64
+import json
 import logging
 
-from odoo.tests.common import HttpCase
+import requests
+
 from odoo.tests import tagged
+from odoo.tests.common import HttpCase
 
 _logger = logging.getLogger(__name__)
 

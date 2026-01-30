@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import odoo.tests
+from odoo.exceptions import UserError
 from odoo.tests import Form
 from odoo.tests.common import TransactionCase
 from odoo.tools import float_round
-from odoo.exceptions import UserError
 
 
 class TestPackingCommon(TransactionCase):

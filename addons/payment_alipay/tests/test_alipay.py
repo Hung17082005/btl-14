@@ -4,8 +4,8 @@ from odoo.exceptions import ValidationError
 from odoo.tests import tagged
 from odoo.tools import mute_logger
 
-from .common import AlipayCommon
 from ..controllers.main import AlipayController
+from .common import AlipayCommon
 
 
 @tagged('post_install', '-at_install')

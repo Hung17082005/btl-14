@@ -2,8 +2,8 @@
 
 from odoo import Command
 from odoo.addons.stock.tests.common2 import TestStockCommon
-from odoo.tests import Form
 from odoo.exceptions import UserError
+from odoo.tests import Form
 from odoo.tools import mute_logger
 
 

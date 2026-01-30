@@ -4,12 +4,12 @@
 Store database-specific configuration parameters
 """
 
-import uuid
 import logging
+import uuid
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
-from odoo.tools import config, ormcache, mute_logger
+from odoo.tools import config, mute_logger, ormcache
 
 _logger = logging.getLogger(__name__)
 

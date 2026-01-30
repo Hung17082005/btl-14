@@ -3,7 +3,7 @@
 
 from random import randint
 
-from odoo import fields, models, api, SUPERUSER_ID
+from odoo import SUPERUSER_ID, api, fields, models
 
 
 class UtmStage(models.Model):

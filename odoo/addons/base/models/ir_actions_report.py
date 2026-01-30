@@ -1,34 +1,34 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from markupsafe import Markup
+import base64
+import io
+import json
+import logging
+import os
+import re
+import subprocess
+import tempfile
+from collections import OrderedDict
+from collections.abc import Iterable
+from contextlib import closing
 from datetime import datetime, timedelta
 from urllib.parse import urlparse
 
-from odoo import api, fields, models, tools, SUPERUSER_ID, _
-from odoo.exceptions import UserError, AccessError
-from odoo.tools.safe_eval import safe_eval, time
-from odoo.tools.misc import find_in_path, format_datetime, ustr
-from odoo.tools import config, is_html_empty, parse_version
-from odoo.http import request
-from odoo.osv.expression import NEGATIVE_TERM_OPERATORS, FALSE_DOMAIN
-
-import base64
-import io
-import logging
-import os
 import lxml.html
-import tempfile
-import subprocess
-import re
-import json
-
 from lxml import etree
-from contextlib import closing
-from reportlab.graphics.barcode import createBarcodeDrawing
-from PyPDF2 import PdfFileWriter, PdfFileReader
-from collections import OrderedDict
-from collections.abc import Iterable
+from markupsafe import Markup
 from PIL import Image, ImageFile
+from PyPDF2 import PdfFileReader, PdfFileWriter
+from reportlab.graphics.barcode import createBarcodeDrawing
+
+from odoo import SUPERUSER_ID, _, api, fields, models, tools
+from odoo.exceptions import AccessError, UserError
+from odoo.http import request
+from odoo.osv.expression import FALSE_DOMAIN, NEGATIVE_TERM_OPERATORS
+from odoo.tools import config, is_html_empty, parse_version
+from odoo.tools.misc import find_in_path, format_datetime, ustr
+from odoo.tools.safe_eval import safe_eval, time
+
 # Allow truncated images
 ImageFile.LOAD_TRUNCATED_IMAGES = True
 

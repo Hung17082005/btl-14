@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from ast import literal_eval
-from collections import defaultdict
+import datetime
 import functools
 import itertools
 import logging
-import psycopg2
-import datetime
+from ast import literal_eval
+from collections import defaultdict
 
-from odoo import api, fields, models, Command
-from odoo import SUPERUSER_ID, _
-from odoo.exceptions import ValidationError, UserError
+import psycopg2
+
+from odoo import SUPERUSER_ID, Command, _, api, fields, models
+from odoo.exceptions import UserError, ValidationError
 from odoo.tools import mute_logger
 
 _logger = logging.getLogger('odoo.addons.base.partner.merge')

@@ -6,12 +6,13 @@ import io
 import logging
 import os
 import re
-
-from odoo import api, fields, models, tools, _, Command
-from odoo.exceptions import ValidationError, UserError
-from odoo.modules.module import get_resource_path
 from random import randrange
+
 from PIL import Image
+
+from odoo import Command, _, api, fields, models, tools
+from odoo.exceptions import UserError, ValidationError
+from odoo.modules.module import get_resource_path
 
 _logger = logging.getLogger(__name__)
 

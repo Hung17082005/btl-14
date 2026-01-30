@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.tests.common import HttpCase, tagged, ChromeBrowser
-from odoo.tools import logging, config
 from unittest.mock import patch
+
+from odoo.tests.common import ChromeBrowser, HttpCase, tagged
+from odoo.tools import config, logging
+
 
 @tagged('-at_install', 'post_install')
 class TestHttpCase(HttpCase):

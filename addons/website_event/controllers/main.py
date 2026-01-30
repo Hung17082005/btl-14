@@ -1,26 +1,26 @@
 # -*- coding: utf-8 -*-
 
-import babel.dates
-import pytz
 import re
-import werkzeug
-
 from ast import literal_eval
 from collections import defaultdict
 from datetime import datetime, timedelta
+
+import babel.dates
+import pytz
+import werkzeug
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
 from werkzeug.datastructures import OrderedMultiDict
 from werkzeug.exceptions import NotFound
 
-from odoo import fields, http, _
+from odoo import _, fields, http
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.addons.website.controllers.main import QueryURL
+from odoo.exceptions import UserError
 from odoo.http import request
 from odoo.osv import expression
-
 from odoo.tools.misc import get_lang
-from odoo.exceptions import UserError
+
 
 class WebsiteEventController(http.Controller):
 

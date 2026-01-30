@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from collections import deque
 import io
 import json
+from collections import deque
 
-from odoo import http, _
+from odoo import _, http
 from odoo.http import content_disposition, request
-from odoo.tools import ustr, osutil
+from odoo.tools import osutil, ustr
 from odoo.tools.misc import xlsxwriter
 
 

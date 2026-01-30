@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import timedelta
+
 from freezegun import freeze_time
 
 from odoo import fields
-from odoo.exceptions import UserError, AccessError
-from odoo.tests import tagged, Form
+from odoo.exceptions import AccessError, UserError
+from odoo.tests import Form, tagged
 from odoo.tools import float_compare
 
 from .common import TestSaleCommon

@@ -1,7 +1,7 @@
 from typing import Optional
 
 import astroid
-from pylint import interfaces, checkers
+from pylint import checkers, interfaces
 
 try:
     from pylint.checkers.utils import only_required_for_messages

@@ -1,11 +1,13 @@
 # -*- encoding: utf-8 -*-
 
-from . import account_move
-from . import account_journal
-from . import account_edi_format
-from . import account_edi_document
-from . import account_payment
-from . import ir_actions_report
-from . import mail_template
-from . import ir_attachment
-from . import uom
+from . import (
+    account_edi_document,
+    account_edi_format,
+    account_journal,
+    account_move,
+    account_payment,
+    ir_actions_report,
+    ir_attachment,
+    mail_template,
+    uom,
+)

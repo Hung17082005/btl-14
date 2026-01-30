@@ -1,12 +1,13 @@
-import pytz
 from datetime import datetime, timedelta
-from markupsafe import Markup
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
 
-from odoo.tests.common import HttpCase
+import pytz
+from markupsafe import Markup
 
 from odoo.addons.microsoft_calendar.models.microsoft_sync import MicrosoftSync
 from odoo.addons.microsoft_calendar.utils.event_id_storage import combine_ids
+from odoo.tests.common import HttpCase
+
 
 def mock_get_token(user):
     return f"TOKEN_FOR_USER_{user.id}"

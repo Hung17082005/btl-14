@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
-from dateutil.relativedelta import relativedelta
 from itertools import groupby
+
+from dateutil.relativedelta import relativedelta
 
 from odoo import models
 from odoo.tools import populate

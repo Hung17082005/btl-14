@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import Command
-from odoo.osv import expression
 from odoo.exceptions import AccessError
-from odoo.tools import mute_logger
+from odoo.osv import expression
 from odoo.tests import tagged
 from odoo.tests.common import Form
+from odoo.tools import mute_logger
 
 from .test_project_base import TestProjectCommon
 

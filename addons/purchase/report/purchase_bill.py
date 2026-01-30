@@ -5,6 +5,7 @@ from odoo import api, fields, models, tools
 from odoo.osv import expression
 from odoo.tools import formatLang
 
+
 class PurchaseBillUnion(models.Model):
     _name = 'purchase.bill.union'
     _auto = False

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo.exceptions import UserError, AccessError
+from odoo import Command
+from odoo.exceptions import AccessError, UserError
 from odoo.tests import common
 from odoo.tools import frozendict
-from odoo import Command
 
 
 class TestCompanyCheck(common.TransactionCase):

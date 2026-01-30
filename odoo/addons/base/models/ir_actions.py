@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo
-from odoo import api, fields, models, tools, SUPERUSER_ID, _, Command
-from odoo.exceptions import MissingError, UserError, ValidationError, AccessError
-from odoo.osv import expression
-from odoo.tools.safe_eval import safe_eval, test_python_expr
-from odoo.tools.float_utils import float_compare
-from odoo.http import request
-
 import base64
-from collections import defaultdict
 import functools
 import logging
+from collections import defaultdict
 
 from pytz import timezone
+
+import odoo
+from odoo import SUPERUSER_ID, Command, _, api, fields, models, tools
+from odoo.exceptions import AccessError, MissingError, UserError, ValidationError
+from odoo.http import request
+from odoo.osv import expression
+from odoo.tools.float_utils import float_compare
+from odoo.tools.safe_eval import safe_eval, test_python_expr
 
 _logger = logging.getLogger(__name__)
 

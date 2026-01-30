@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.mass_mailing.tests.common import MassMailCommon
+from unittest.mock import patch
+
 from odoo.addons.base.tests.test_ir_cron import CronMixinCase
+from odoo.addons.mass_mailing.tests.common import MassMailCommon
 from odoo.tests.common import users
 
-from unittest.mock import patch
 
 class TestMailingRetry(MassMailCommon, CronMixinCase):
 

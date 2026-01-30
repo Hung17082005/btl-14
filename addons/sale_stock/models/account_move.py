@@ -4,7 +4,7 @@
 from collections import defaultdict
 
 from odoo import fields, models
-from odoo.tools import float_is_zero, float_compare
+from odoo.tools import float_compare, float_is_zero
 from odoo.tools.misc import formatLang
 
 

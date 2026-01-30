@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
+from collections import defaultdict
+
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.osv.expression import AND, NEGATIVE_TERM_OPERATORS, OR
 from odoo.tools import float_round
-
-from collections import defaultdict
 
 
 class MrpBom(models.Model):

@@ -2,6 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
+
 from dateutil.relativedelta import relativedelta
 from werkzeug.urls import url_encode
 

@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import analytic
-from . import account_move
-from . import account_move_line
-from . import crm_team
-from . import payment_acquirer
-from . import payment_transaction
-from . import product_product
-from . import product_template
-from . import res_company
-from . import res_config_settings
-from . import res_partner
-from . import sale_order
-from . import sale_order_line
-from . import utm_campaign
+from . import (
+    account_move,
+    account_move_line,
+    analytic,
+    crm_team,
+    payment_acquirer,
+    payment_transaction,
+    product_product,
+    product_template,
+    res_company,
+    res_config_settings,
+    res_partner,
+    sale_order,
+    sale_order_line,
+    utm_campaign,
+)

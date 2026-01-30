@@ -2,24 +2,26 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import json
 import logging
+
 from werkzeug.exceptions import Forbidden, NotFound
 from werkzeug.urls import url_decode, url_encode, url_parse
 
-from odoo import fields, http, SUPERUSER_ID, tools, _
-from odoo.fields import Command
-from odoo.http import request
+from odoo import SUPERUSER_ID, _, fields, http, tools
 from odoo.addons.base.models.ir_qweb_fields import nl2br
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.addons.payment.controllers import portal as payment_portal
 from odoo.addons.payment.controllers.post_processing import PaymentPostProcessing
-from odoo.addons.website.controllers.main import QueryURL
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.exceptions import AccessError, MissingError, ValidationError
 from odoo.addons.portal.controllers.portal import _build_url_w_params
 from odoo.addons.website.controllers import main
 from odoo.addons.website.controllers.form import WebsiteForm
+from odoo.addons.website.controllers.main import QueryURL
+from odoo.addons.website.models.ir_http import sitemap_qs2dom
+from odoo.exceptions import AccessError, MissingError, ValidationError
+from odoo.fields import Command
+from odoo.http import request
 from odoo.osv import expression
 from odoo.tools.json import scriptsafe as json_scriptsafe
+
 _logger = logging.getLogger(__name__)
 
 

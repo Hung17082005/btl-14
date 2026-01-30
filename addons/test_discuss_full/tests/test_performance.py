@@ -2,10 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import date
+
 from dateutil.relativedelta import relativedelta
 
 from odoo import Command
-from odoo.tests.common import users, tagged, TransactionCase, warmup
+from odoo.tests.common import TransactionCase, tagged, users, warmup
 from odoo.tools.misc import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT
 
 

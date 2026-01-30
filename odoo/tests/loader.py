@@ -8,9 +8,8 @@ import unittest
 from pathlib import Path
 
 from .. import tools
-from .common import TagsSelector, OdooSuite
+from .common import OdooSuite, TagsSelector
 from .runner import OdooTestResult
-
 
 _logger = logging.getLogger(__name__)
 def get_test_modules(module):

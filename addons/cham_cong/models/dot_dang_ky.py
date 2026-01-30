@@ -1,54 +1,59 @@
-from odoo import models, fields, api
-from datetime import datetime, date, timedelta
 import calendar
+from datetime import date, datetime, timedelta
+
+from odoo import api, fields, models
+
 
 class DotDangKy(models.Model):
-    _name = 'dot_dang_ky'
+    _name = "dot_dang_ky"
     _description = "Bảng chứa thông tin đợt đăng ký"
-    _rec_name = 'ten_dot'
+    _rec_name = "ten_dot"
 
     ma_dot = fields.Char("Mã đợt", required=True)
-    ten_dot = fields.Char("Tên đợt", compute='_compute_ten_dot', store=True)
+    ten_dot = fields.Char("Tên đợt", compute="_compute_ten_dot", store=True)
     nam_dang_ky = fields.Char("Năm đăng ký", required=True)
     thang_dang_ky = fields.Selection(
-        [(str(i), f'Tháng {i}') for i in range(1, 13)],
+        [(str(i), f"Tháng {i}") for i in range(1, 13)],
         string="Tháng đăng ký",
-        required=True
+        required=True,
     )
-    ngay_bat_dau = fields.Date("Thời gian bắt đầu", compute='_compute_thoi_gian', store=True)
-    ngay_ket_thuc = fields.Date("Thời gian kết thúc", compute='_compute_thoi_gian', store=True)
-    nhan_vien_ids = fields.Many2many('nhan_vien', string="Nhân viên đăng ký")
+    ngay_bat_dau = fields.Date(
+        "Thời gian bắt đầu", compute="_compute_thoi_gian", store=True
+    )
+    ngay_ket_thuc = fields.Date(
+        "Thời gian kết thúc", compute="_compute_thoi_gian", store=True
+    )
+    nhan_vien_ids = fields.Many2many("nhan_vien", string="Nhân viên đăng ký")
     han_dang_ky = fields.Date("Hạn đăng ký", required=True)
     trang_thai_dang_ky = fields.Selection(
-        [
-            ("Đang mở", "Đang mở"),
-            ("Đã hết hạn", "Đã hết hạn"),
-            ("Đã đóng", "Đã đóng")
-        ],
+        [("Đang mở", "Đang mở"), ("Đã hết hạn", "Đã hết hạn"), ("Đã đóng", "Đã đóng")],
         string="Trạng thái đăng ký",
         compute="_compute_trang_thai_dang_ky",
-        store=True
+        store=True,
     )
     trang_thai_ap_dung = fields.Selection(
         [
             ("Đang áp dụng", "Đang áp dụng"),
             ("Ngừng áp dụng", "Ngừng áp dụng"),
-            ("Chưa áp dụng", "Chưa áp dụng")
+            ("Chưa áp dụng", "Chưa áp dụng"),
         ],
         string="Trạng thái áp dụng",
         compute="_compute_trang_thai_ap_dung",
-        store=True
+        store=True,
     )
-    dang_ky_ca_lam_theo_ngay_ids = fields.One2many('dang_ky_ca_lam_theo_ngay', inverse_name='dot_dang_ky_id', string="Đăng ký ca làm")
+    dang_ky_ca_lam_theo_ngay_ids = fields.One2many(
+        "dang_ky_ca_lam_theo_ngay",
+        inverse_name="dot_dang_ky_id",
+        string="Đăng ký ca làm",
+    )
 
     def _compute_nhan_vien(self):
         for record in self:
-            record.nhan_vien_ids = self.env['nhan_vien'].search([
-                ('phong_ban_id', '!=', False),
-                ('chuc_vu_id', '!=', False)
-            ])
-            
-    @api.depends('han_dang_ky')
+            record.nhan_vien_ids = self.env["nhan_vien"].search(
+                [("phong_ban_id", "!=", False), ("chuc_vu_id", "!=", False)]
+            )
+
+    @api.depends("han_dang_ky")
     def _compute_trang_thai_dang_ky(self):
         today = date.today()
         for record in self:
@@ -56,8 +61,8 @@ class DotDangKy(models.Model):
                 record.trang_thai_dang_ky = "Đã hết hạn"
             else:
                 record.trang_thai_dang_ky = "Đang mở"
-    
-    @api.depends('ngay_bat_dau', 'ngay_ket_thuc')
+
+    @api.depends("ngay_bat_dau", "ngay_ket_thuc")
     def _compute_trang_thai_ap_dung(self):
         today = date.today()
         for record in self:
@@ -67,8 +72,8 @@ class DotDangKy(models.Model):
                 record.trang_thai_ap_dung = "Đang áp dụng"
             else:
                 record.trang_thai_ap_dung = "Chưa áp dụng"
-    
-    @api.depends('thang_dang_ky', 'nam_dang_ky')
+
+    @api.depends("thang_dang_ky", "nam_dang_ky")
     def _compute_thoi_gian(self):
         for record in self:
             if record.thang_dang_ky and record.nam_dang_ky:
@@ -81,8 +86,8 @@ class DotDangKy(models.Model):
             else:
                 record.ngay_bat_dau = False
                 record.ngay_ket_thuc = False
-    
-    @api.depends('thang_dang_ky', 'nam_dang_ky')
+
+    @api.depends("thang_dang_ky", "nam_dang_ky")
     def _compute_ten_dot(self):
         for record in self:
             if record.thang_dang_ky and record.nam_dang_ky:

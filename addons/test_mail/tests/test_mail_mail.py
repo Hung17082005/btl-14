@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from datetime import datetime, timedelta
+from unittest.mock import call
+
 import psycopg2
 import pytz
-
-from datetime import datetime, timedelta
 from freezegun import freeze_time
-from unittest.mock import call
 
 from odoo import api, tools
 from odoo.addons.base.tests.common import MockSmtplibCase
 from odoo.addons.test_mail.tests.common import TestMailCommon
 from odoo.tests import common, tagged
-from odoo.tools import mute_logger, DEFAULT_SERVER_DATETIME_FORMAT
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, mute_logger
 
 
 @tagged('mail_mail')

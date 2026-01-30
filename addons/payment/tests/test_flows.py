@@ -4,11 +4,10 @@ from unittest.mock import patch
 
 from freezegun import freeze_time
 
-from odoo.tests import tagged
-from odoo.tools import mute_logger
-
 from odoo.addons.payment.tests.common import PaymentCommon
 from odoo.addons.payment.tests.http_common import PaymentHttpCommon
+from odoo.tests import tagged
+from odoo.tools import mute_logger
 
 
 @tagged('post_install', '-at_install')

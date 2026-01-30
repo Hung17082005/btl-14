@@ -5,14 +5,14 @@ import collections
 import json
 import os.path
 import re
-import markupsafe
 
+import markupsafe
 from lxml import etree, html
 from lxml.builder import E
 
+from odoo.addons.base.models.qweb import QWebException
 from odoo.modules import get_module_resource
 from odoo.tests.common import TransactionCase
-from odoo.addons.base.models.qweb import QWebException
 from odoo.tools import misc, mute_logger
 from odoo.tools.json import scriptsafe as json_scriptsafe
 
@@ -1182,6 +1182,8 @@ class TestQWebBasic(TransactionCase):
             self.assertIn('<div t-esc="abc + def + ("/>', e.message)
 
 from copy import deepcopy
+
+
 class FileSystemLoader(object):
     def __init__(self, path):
         # TODO: support multiple files #add_file() + add cache

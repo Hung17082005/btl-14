@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from werkzeug.urls import url_parse, url_decode
-
 import json
 
+from werkzeug.urls import url_decode, url_parse
+
 from odoo import http
-from odoo.addons.test_mail_full.tests.common import TestMailFullCommon, TestMailFullRecipients
+from odoo.addons.test_mail_full.tests.common import (
+    TestMailFullCommon,
+    TestMailFullRecipients,
+)
 from odoo.tests import tagged, users
 from odoo.tests.common import HttpCase
 

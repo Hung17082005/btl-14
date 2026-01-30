@@ -4,7 +4,7 @@
 from datetime import datetime
 
 from odoo import fields
-from odoo.tests.common import TransactionCase, Form
+from odoo.tests.common import Form, TransactionCase
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 

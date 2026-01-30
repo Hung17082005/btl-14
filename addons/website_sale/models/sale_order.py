@@ -3,12 +3,13 @@
 import logging
 import random
 from datetime import datetime
+
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, models, fields, _
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError, ValidationError
 from odoo.http import request
 from odoo.osv import expression
-from odoo.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 

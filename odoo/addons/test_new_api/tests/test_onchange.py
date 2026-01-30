@@ -3,9 +3,10 @@
 
 from unittest.mock import patch
 
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
-from odoo.tests import common, Form
 from odoo import Command
+from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
+from odoo.tests import Form, common
+
 
 def strip_prefix(prefix, names):
     size = len(prefix)

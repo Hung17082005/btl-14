@@ -2,11 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
 
-from odoo import api, fields, models, _
-from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.tools.translate import html_translate
-from odoo.osv import expression
 from psycopg2.extras import execute_values
+
+from odoo import _, api, fields, models
+from odoo.addons.http_routing.models.ir_http import slug, unslug
+from odoo.osv import expression
+from odoo.tools.translate import html_translate
 
 _logger = logging.getLogger(__name__)
 

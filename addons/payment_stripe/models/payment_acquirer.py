@@ -7,13 +7,11 @@ import requests
 from werkzeug.urls import url_encode, url_join
 
 from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-
-from odoo.addons.payment_stripe import utils as stripe_utils
 from odoo.addons.payment_stripe import const
+from odoo.addons.payment_stripe import utils as stripe_utils
 from odoo.addons.payment_stripe.controllers.main import StripeController
 from odoo.addons.payment_stripe.controllers.onboarding import OnboardingController
-
+from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

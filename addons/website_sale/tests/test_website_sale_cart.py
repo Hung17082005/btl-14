@@ -1,10 +1,10 @@
 # coding: utf-8
 
-from odoo.addons.website_sale.controllers.main import WebsiteSale, PaymentPortal
 from odoo.addons.website.tools import MockRequest
+from odoo.addons.website_sale.controllers.main import PaymentPortal, WebsiteSale
 from odoo.exceptions import UserError
-from odoo.tests.common import TransactionCase, tagged
 from odoo.fields import Command
+from odoo.tests.common import TransactionCase, tagged
 
 
 @tagged('post_install', '-at_install')

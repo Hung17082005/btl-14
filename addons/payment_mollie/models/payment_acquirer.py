@@ -7,9 +7,8 @@ import requests
 from werkzeug import urls
 
 from odoo import _, api, fields, models, service
-from odoo.exceptions import ValidationError
-
 from odoo.addons.payment_mollie.const import SUPPORTED_CURRENCIES
+from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

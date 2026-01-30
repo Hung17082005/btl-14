@@ -1,44 +1,46 @@
 # -*- coding: utf-8 -*-
 
-from . import test_account_move_reconcile
-from . import test_account_move_payments_widget
-from . import test_account_move_out_invoice
-from . import test_account_move_out_refund
-from . import test_account_move_in_invoice
-from . import test_account_move_in_refund
-from . import test_account_move_entry
-from . import test_account_move_date_algorithm
-from . import test_invoice_tax_totals
-from . import test_account_inalterable_hash
-from . import test_account_journal
-from . import test_account_account
-from . import test_account_tax
-from . import test_account_analytic
-from . import test_account_payment
-from . import test_account_bank_statement
-from . import test_account_move_partner_count
-from . import test_account_move_rounding
-from . import test_account_invoice_report
-from . import test_account_move_line_tax_details
-from . import test_account_journal_dashboard
-from . import test_chart_template
-from . import test_fiscal_position
-from . import test_reconciliation
-from . import test_sequence_mixin
-from . import test_settings
-from . import test_tax
-from . import test_invoice_taxes
-from . import test_templates_consistency
-from . import test_account_all_l10n
-from . import test_reconciliation_matching_rules
-from . import test_account_onboarding
-from . import test_portal_attachment
-from . import test_product
-from . import test_tax_report
-from . import test_transfer_wizard
-from . import test_account_incoming_supplier_invoice
-from . import test_payment_term
-from . import test_account_payment_register
-from . import test_tour
-from . import test_ir_actions_report
-from . import test_mail_tracking_value
+from . import (
+    test_account_account,
+    test_account_all_l10n,
+    test_account_analytic,
+    test_account_bank_statement,
+    test_account_inalterable_hash,
+    test_account_incoming_supplier_invoice,
+    test_account_invoice_report,
+    test_account_journal,
+    test_account_journal_dashboard,
+    test_account_move_date_algorithm,
+    test_account_move_entry,
+    test_account_move_in_invoice,
+    test_account_move_in_refund,
+    test_account_move_line_tax_details,
+    test_account_move_out_invoice,
+    test_account_move_out_refund,
+    test_account_move_partner_count,
+    test_account_move_payments_widget,
+    test_account_move_reconcile,
+    test_account_move_rounding,
+    test_account_onboarding,
+    test_account_payment,
+    test_account_payment_register,
+    test_account_tax,
+    test_chart_template,
+    test_fiscal_position,
+    test_invoice_tax_totals,
+    test_invoice_taxes,
+    test_ir_actions_report,
+    test_mail_tracking_value,
+    test_payment_term,
+    test_portal_attachment,
+    test_product,
+    test_reconciliation,
+    test_reconciliation_matching_rules,
+    test_sequence_mixin,
+    test_settings,
+    test_tax,
+    test_tax_report,
+    test_templates_consistency,
+    test_tour,
+    test_transfer_wizard,
+)

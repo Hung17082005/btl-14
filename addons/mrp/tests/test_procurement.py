@@ -3,9 +3,9 @@
 from datetime import datetime, timedelta
 
 from odoo import fields
-from odoo.tests import Form
 from odoo.addons.mrp.tests.common import TestMrpCommon
 from odoo.exceptions import UserError
+from odoo.tests import Form
 
 
 class TestProcurement(TestMrpCommon):

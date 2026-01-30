@@ -5,10 +5,10 @@ import time
 
 import odoo
 from odoo import fields, tools
-from odoo.fields import Command
-from odoo.tools import float_compare, mute_logger, test_reports
-from odoo.tests.common import Form
 from odoo.addons.point_of_sale.tests.common import TestPointOfSaleCommon
+from odoo.fields import Command
+from odoo.tests.common import Form
+from odoo.tools import float_compare, mute_logger, test_reports
 
 
 @odoo.tests.tagged('post_install', '-at_install')

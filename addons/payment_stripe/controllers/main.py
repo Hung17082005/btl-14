@@ -8,12 +8,10 @@ import pprint
 from datetime import datetime
 
 from odoo import http
+from odoo.addons.payment_stripe import utils as stripe_utils
 from odoo.exceptions import ValidationError
 from odoo.http import request
 from odoo.tools import consteq
-
-from odoo.addons.payment_stripe import utils as stripe_utils
-
 
 _logger = logging.getLogger(__name__)
 

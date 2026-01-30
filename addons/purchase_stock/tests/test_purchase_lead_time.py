@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime, timedelta, time
+from datetime import datetime, time, timedelta
 from unittest.mock import patch
 
 from odoo import fields
-from .common import PurchaseTestCommon
 from odoo.tests.common import Form
+
+from .common import PurchaseTestCommon
 
 
 class TestPurchaseLeadTime(PurchaseTestCommon):

@@ -3,10 +3,11 @@
 from collections import defaultdict
 from datetime import timedelta
 
-from odoo import api, fields, models, _
+from dateutil.relativedelta import relativedelta
+
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.tools.float_utils import float_compare
-from dateutil.relativedelta import relativedelta
 
 
 class StockPicking(models.Model):

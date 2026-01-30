@@ -1,10 +1,9 @@
-import zeep
-
-from decimal import Decimal
 from datetime import date, datetime, timedelta
-from requests import Response
-from types import SimpleNamespace, FunctionType
+from decimal import Decimal
+from types import FunctionType, SimpleNamespace
 
+import zeep
+from requests import Response
 
 TIMEOUT = 30
 SERIALIZABLE_TYPES = (

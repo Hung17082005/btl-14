@@ -7,11 +7,9 @@ import pprint
 from werkzeug import urls
 
 from odoo import _, models
-from odoo.exceptions import ValidationError
-
 from odoo.addons.payment_mollie.const import SUPPORTED_LOCALES
 from odoo.addons.payment_mollie.controllers.main import MollieController
-
+from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

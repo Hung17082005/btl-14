@@ -2,6 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from __future__ import print_function
+
 import code
 import logging
 import os
@@ -10,6 +11,7 @@ import sys
 
 import odoo
 from odoo.tools import config
+
 from . import Command
 
 _logger = logging.getLogger(__name__)

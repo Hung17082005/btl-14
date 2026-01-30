@@ -3,9 +3,9 @@
 
 from werkzeug.exceptions import Forbidden
 
+from odoo.addons.portal.controllers.mail import PortalChatter
 from odoo.http import request, route
 
-from odoo.addons.portal.controllers.mail import PortalChatter
 from .portal import ProjectCustomerPortal
 
 

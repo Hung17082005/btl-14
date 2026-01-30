@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import http
-from odoo.http import request
 from odoo.addons.http_routing.models.ir_http import unslug
 from odoo.addons.portal.controllers import portal
+from odoo.http import request
 
 
 class CustomerPortal(portal.CustomerPortal):

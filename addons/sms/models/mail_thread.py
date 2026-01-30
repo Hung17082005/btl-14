@@ -3,7 +3,7 @@
 
 import logging
 
-from odoo import api, models, fields
+from odoo import api, fields, models
 from odoo.addons.phone_validation.tools import phone_validation
 from odoo.tools import html2plaintext, plaintext2html
 

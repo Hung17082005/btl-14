@@ -11,13 +11,12 @@ import pprint
 from werkzeug import urls
 
 from odoo import _, http
-from odoo.exceptions import ValidationError
-from odoo.http import request
-from odoo.tools.pycompat import to_text
-
 from odoo.addons.payment import utils as payment_utils
 from odoo.addons.payment_adyen import utils as adyen_utils
 from odoo.addons.payment_adyen.const import CURRENCY_DECIMALS
+from odoo.exceptions import ValidationError
+from odoo.http import request
+from odoo.tools.pycompat import to_text
 
 _logger = logging.getLogger(__name__)
 

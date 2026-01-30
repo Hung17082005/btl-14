@@ -2,10 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import odoo
-
 from odoo import tools
-from odoo.tests.common import Form
 from odoo.addons.point_of_sale.tests.common import TestPoSCommon
+from odoo.tests.common import Form
+
 
 @odoo.tests.tagged('post_install', '-at_install')
 class TestPoSOtherCurrencyConfig(TestPoSCommon):

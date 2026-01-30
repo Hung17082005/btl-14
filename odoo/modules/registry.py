@@ -4,25 +4,33 @@
 """ Models registries.
 
 """
+import logging
+import os
+import threading
+import time
 from collections import defaultdict, deque
 from collections.abc import Mapping
 from contextlib import closing, contextmanager
 from functools import partial
 from operator import attrgetter
-import logging
-import os
-import threading
-import time
 
 import psycopg2
 
 import odoo
-from .. import SUPERUSER_ID
 from odoo.sql_db import TestCursor
-from odoo.tools import (config, existing_tables, ignore,
-                        lazy_classproperty, lazy_property, sql,
-                        Collector, OrderedSet)
+from odoo.tools import (
+    Collector,
+    OrderedSet,
+    config,
+    existing_tables,
+    ignore,
+    lazy_classproperty,
+    lazy_property,
+    sql,
+)
 from odoo.tools.lru import LRU
+
+from .. import SUPERUSER_ID
 
 _logger = logging.getLogger(__name__)
 _schema = logging.getLogger('odoo.schema')

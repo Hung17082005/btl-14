@@ -6,13 +6,11 @@ import pprint
 from werkzeug import urls
 
 from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-
 from odoo.addons.payment import utils as payment_utils
 from odoo.addons.payment_stripe import utils as stripe_utils
 from odoo.addons.payment_stripe.const import INTENT_STATUS_MAPPING, PAYMENT_METHOD_TYPES
 from odoo.addons.payment_stripe.controllers.main import StripeController
-
+from odoo.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 

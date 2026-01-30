@@ -1,7 +1,8 @@
-from odoo import models, fields, api
 from datetime import date
 
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+
 
 class VanBanDi(models.Model):
     _name = 'van_ban_di'

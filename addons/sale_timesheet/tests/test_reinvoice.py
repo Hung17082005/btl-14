@@ -3,7 +3,6 @@
 from datetime import timedelta
 
 from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
-
 from odoo.fields import Date
 from odoo.tests import Form, tagged
 

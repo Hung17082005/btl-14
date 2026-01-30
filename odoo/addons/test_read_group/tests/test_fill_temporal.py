@@ -3,6 +3,7 @@
 
 from odoo.tests import common
 
+
 class TestFillTemporal(common.TransactionCase):
     """Test for fill temporal.
 

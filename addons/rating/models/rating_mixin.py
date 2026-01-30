@@ -3,7 +3,11 @@
 from datetime import timedelta
 
 from odoo import api, fields, models, tools
-from odoo.addons.rating.models.rating import RATING_LIMIT_SATISFIED, RATING_LIMIT_OK, RATING_LIMIT_MIN
+from odoo.addons.rating.models.rating import (
+    RATING_LIMIT_MIN,
+    RATING_LIMIT_OK,
+    RATING_LIMIT_SATISFIED,
+)
 from odoo.osv import expression
 
 

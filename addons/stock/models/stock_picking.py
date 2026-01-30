@@ -4,10 +4,10 @@
 import json
 import time
 from ast import literal_eval
+from collections import defaultdict
 from datetime import date, timedelta
 from itertools import groupby
 from operator import attrgetter, itemgetter
-from collections import defaultdict
 
 from odoo import SUPERUSER_ID, _, api, fields, models
 from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES

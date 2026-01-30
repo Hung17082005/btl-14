@@ -2,9 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime, timedelta
+
 from pytz import timezone, utc
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.addons.resource.models.resource import float_to_time
 from odoo.modules.module import get_resource_path

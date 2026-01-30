@@ -4,6 +4,7 @@
 import odoo
 import odoo.exceptions
 
+
 def check(db, uid, passwd):
     res_users = odoo.registry(db)['res.users']
     return res_users.check(db, uid, passwd)

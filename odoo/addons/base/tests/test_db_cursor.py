@@ -4,7 +4,7 @@
 from functools import partial
 
 import odoo
-from odoo.sql_db import db_connect, TestCursor
+from odoo.sql_db import TestCursor, db_connect
 from odoo.tests import common
 from odoo.tests.common import BaseCase
 from odoo.tools.misc import config, mute_logger

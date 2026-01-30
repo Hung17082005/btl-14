@@ -11,10 +11,12 @@ class TestEventSaleCommon(TestEventCommon, TestSalesCommon):
     def setUpClass(cls):
         super(TestEventSaleCommon, cls).setUpClass()
 
-        cls.event_product = cls.env['product.product'].create({
-            'name': 'Test Registration Product',
-            'description_sale': 'Mighty Description',
-            'list_price': 10,
-            'standard_price': 30.0,
-            'detailed_type': 'event',
-        })
+        cls.event_product = cls.env["product.product"].create(
+            {
+                "name": "Test Registration Product",
+                "description_sale": "Mighty Description",
+                "list_price": 10,
+                "standard_price": 30.0,
+                "detailed_type": "event",
+            }
+        )

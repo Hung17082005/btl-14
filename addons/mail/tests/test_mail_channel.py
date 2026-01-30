@@ -7,10 +7,9 @@ from unittest.mock import patch
 
 from odoo import Command, fields
 from odoo.addons.mail.models.mail_channel import channel_avatar, group_avatar
-from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.addons.mail.tests.common import MailCommon
+from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
 from odoo.exceptions import AccessError
-from odoo.tests import tagged, Form
+from odoo.tests import Form, tagged
 from odoo.tests.common import users
 from odoo.tools import html_escape, mute_logger
 from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT

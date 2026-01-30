@@ -2,7 +2,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import base64
-
 from unittest.mock import patch
 
 from odoo.addons.mail.tests.common import mail_new_test_user
@@ -10,8 +9,9 @@ from odoo.addons.test_mail.models.test_mail_models import MailTestTicket
 from odoo.addons.test_mail.tests.common import TestMailCommon, TestRecipients
 from odoo.exceptions import AccessError
 from odoo.tests import tagged
-from odoo.tests.common import users, Form
-from odoo.tools import mute_logger, formataddr
+from odoo.tests.common import Form, users
+from odoo.tools import formataddr, mute_logger
+
 
 @tagged('mail_composer')
 class TestMailComposer(TestMailCommon, TestRecipients):

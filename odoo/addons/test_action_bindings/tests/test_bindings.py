@@ -1,5 +1,6 @@
 from odoo.tests import common
 
+
 class TestActionBindings(common.TransactionCase):
 
     def test_bindings(self):

@@ -1,3 +1,1 @@
-from . import test_assetsbundle
-from . import test_health
-from . import test_notify
+from . import test_assetsbundle, test_health, test_notify

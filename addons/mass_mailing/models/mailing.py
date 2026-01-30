@@ -4,16 +4,17 @@
 import hashlib
 import hmac
 import logging
-import lxml
 import random
 import re
 import threading
-import werkzeug.urls
 from ast import literal_eval
+
+import lxml
+import werkzeug.urls
 from dateutil.relativedelta import relativedelta
 from werkzeug.urls import url_join
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 from odoo.exceptions import UserError, ValidationError
 from odoo.osv import expression
 

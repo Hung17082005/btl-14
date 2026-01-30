@@ -29,7 +29,7 @@ if os.name == 'posix':
     try:
         import inotify
         from inotify.adapters import InotifyTrees
-        from inotify.constants import IN_MODIFY, IN_CREATE, IN_MOVED_TO
+        from inotify.constants import IN_CREATE, IN_MODIFY, IN_MOVED_TO
         INOTIFY_LISTEN_EVENTS = IN_MODIFY | IN_CREATE | IN_MOVED_TO
     except ImportError:
         inotify = None
@@ -41,8 +41,8 @@ else:
 if not inotify:
     try:
         import watchdog
-        from watchdog.observers import Observer
         from watchdog.events import FileCreatedEvent, FileModifiedEvent, FileMovedEvent
+        from watchdog.observers import Observer
     except ImportError:
         watchdog = None
 
@@ -56,8 +56,8 @@ import odoo
 from odoo.modules import get_modules
 from odoo.modules.registry import Registry
 from odoo.release import nt_service_name
-from odoo.tools import config
-from odoo.tools import stripped_sys_argv, dumpstacks, log_ormcache_stats
+from odoo.tools import config, dumpstacks, log_ormcache_stats, stripped_sys_argv
+
 from ..tests import loader, runner
 
 _logger = logging.getLogger(__name__)
@@ -636,9 +636,9 @@ class GeventServer(CommonServer):
     def start(self):
         import gevent
         try:
-            from gevent.pywsgi import WSGIServer, WSGIHandler
+            from gevent.pywsgi import WSGIHandler, WSGIServer
         except ImportError:
-            from gevent.wsgi import WSGIServer, WSGIHandler
+            from gevent.wsgi import WSGIHandler, WSGIServer
 
         class ProxyHandler(WSGIHandler):
             """ When logging requests, try to get the client address from

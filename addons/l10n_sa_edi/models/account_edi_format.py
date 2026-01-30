@@ -1,15 +1,17 @@
 import json
-from hashlib import sha256
 from base64 import b64decode, b64encode
-from lxml import etree
 from datetime import datetime
-from odoo import models, fields, _, api
-from odoo.exceptions import UserError
-from cryptography.hazmat.primitives.serialization import load_pem_private_key
-from cryptography.hazmat.primitives.asymmetric.ec import ECDSA
-from cryptography.hazmat.primitives import hashes
+from hashlib import sha256
+
 from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric.ec import ECDSA
+from cryptography.hazmat.primitives.serialization import load_pem_private_key
 from cryptography.x509 import load_der_x509_certificate
+from lxml import etree
+
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class AccountEdiFormat(models.Model):

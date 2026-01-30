@@ -3,7 +3,7 @@
 
 from werkzeug.exceptions import NotFound
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import AccessError
 from odoo.osv import expression
 

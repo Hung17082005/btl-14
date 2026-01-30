@@ -5,7 +5,7 @@ import ast
 import base64
 import re
 
-from odoo import _, api, fields, models, tools, Command
+from odoo import Command, _, api, fields, models, tools
 from odoo.exceptions import UserError
 from odoo.osv import expression
 

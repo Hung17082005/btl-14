@@ -5,6 +5,7 @@ from odoo.addons.test_mail.tests.test_mail_template import TestMailTemplate
 from odoo.tests import tagged, users
 from odoo.tests.common import Form
 
+
 @tagged('mail_template')
 class TestMailTemplateTools(TestMailTemplate):
     @classmethod

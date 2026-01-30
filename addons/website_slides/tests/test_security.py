@@ -6,7 +6,7 @@ from odoo import http
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.addons.website_slides.tests import common
 from odoo.exceptions import AccessError
-from odoo.tests import tagged, HttpCase
+from odoo.tests import HttpCase, tagged
 from odoo.tools import mute_logger
 
 

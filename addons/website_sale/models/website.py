@@ -3,11 +3,10 @@
 
 import logging
 
-from odoo import api, fields, models, tools, SUPERUSER_ID, _
-
-from odoo.http import request
-from odoo.addons.website.models import ir_http
+from odoo import SUPERUSER_ID, _, api, fields, models, tools
 from odoo.addons.http_routing.models.ir_http import url_for
+from odoo.addons.website.models import ir_http
+from odoo.http import request
 
 _logger = logging.getLogger(__name__)
 

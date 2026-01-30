@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import test_anglo_saxon_valuation
-from . import test_anglo_saxon_valuation_reconciliation
-from . import test_anglosaxon_account
-from . import test_sale_stock
-from . import test_sale_stock_lead_time
-from . import test_sale_stock_report
-from . import test_sale_order_dates
-from . import test_sale_stock_multicompany
-from . import test_sale_stock_accrued_entries
-from . import test_sale_stock_access_rights
+from . import (
+    test_anglo_saxon_valuation,
+    test_anglo_saxon_valuation_reconciliation,
+    test_anglosaxon_account,
+    test_sale_order_dates,
+    test_sale_stock,
+    test_sale_stock_access_rights,
+    test_sale_stock_accrued_entries,
+    test_sale_stock_lead_time,
+    test_sale_stock_multicompany,
+    test_sale_stock_report,
+)

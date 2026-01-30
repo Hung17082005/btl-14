@@ -3,7 +3,7 @@
 
 from datetime import timedelta
 
-from odoo import SUPERUSER_ID, api, fields, models, _
+from odoo import SUPERUSER_ID, _, api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.tools import is_html_empty
 

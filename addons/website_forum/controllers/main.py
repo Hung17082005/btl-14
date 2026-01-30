@@ -1,24 +1,22 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import json
+import logging
+from datetime import datetime
+
 import lxml
 import requests
-import logging
 import werkzeug.exceptions
 import werkzeug.urls
 import werkzeug.wrappers
 
-from datetime import datetime
-
-from odoo import http, tools, _
+from odoo import _, http, tools
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.addons.website.models.ir_http import sitemap_qs2dom
 from odoo.addons.website_profile.controllers.main import WebsiteProfile
-
 from odoo.exceptions import UserError
 from odoo.http import request
 from odoo.osv import expression
-
 
 _logger = logging.getLogger(__name__)
 

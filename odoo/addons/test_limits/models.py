@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import time
 import sys
+import time
 
-from odoo import models, api
+from odoo import api, models
+
 
 class m(models.Model):
     """ This model exposes a few methods that will consume between 'almost no

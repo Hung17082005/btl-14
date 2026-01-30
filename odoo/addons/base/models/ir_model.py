@@ -3,19 +3,19 @@
 import itertools
 import logging
 import re
-import psycopg2
 from ast import literal_eval
 from collections import defaultdict
 from collections.abc import Mapping
 from operator import itemgetter
 
+import psycopg2
 from psycopg2 import sql
 
-from odoo import api, fields, models, tools, _, Command
+from odoo import Command, _, api, fields, models, tools
 from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.osv import expression
-from odoo.tools import pycompat, unique, OrderedSet
-from odoo.tools.safe_eval import safe_eval, datetime, dateutil, time
+from odoo.tools import OrderedSet, pycompat, unique
+from odoo.tools.safe_eval import datetime, dateutil, safe_eval, time
 
 _logger = logging.getLogger(__name__)
 

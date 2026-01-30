@@ -1,2 +1,1 @@
-from . import account_chart_template
-from . import account_tax
+from . import account_chart_template, account_tax

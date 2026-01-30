@@ -7,7 +7,7 @@ import re
 from markupsafe import Markup
 
 from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError, UserError
+from odoo.exceptions import UserError, ValidationError
 from odoo.tools import is_html_empty, remove_accents
 
 # see rfc5322 section 3.2.3

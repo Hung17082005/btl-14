@@ -3,10 +3,11 @@
 
 from datetime import datetime
 from uuid import uuid4
+
 import pytz
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import AccessError, ValidationError, UserError
+from odoo import _, api, fields, models, tools
+from odoo.exceptions import AccessError, UserError, ValidationError
 
 
 class PosConfig(models.Model):

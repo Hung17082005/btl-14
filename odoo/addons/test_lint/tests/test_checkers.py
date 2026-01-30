@@ -2,7 +2,7 @@ import json
 import os
 import tempfile
 import unittest
-from subprocess import run, PIPE
+from subprocess import PIPE, run
 from textwrap import dedent
 
 from odoo import tools

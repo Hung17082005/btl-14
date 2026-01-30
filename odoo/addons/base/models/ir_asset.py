@@ -2,16 +2,15 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import os
-
 from glob import glob
 from logging import getLogger
+
 from werkzeug import urls
 
 import odoo
-from odoo.tools import misc
-from odoo import tools
-from odoo import api, fields, http, models
+from odoo import api, fields, http, models, tools
 from odoo.http import root
+from odoo.tools import misc
 
 _logger = getLogger(__name__)
 

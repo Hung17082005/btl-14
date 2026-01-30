@@ -3,9 +3,12 @@
 
 from unittest.mock import patch
 
-from odoo.addons.test_mail.tests.common import TestMailCommon, TestMailMultiCompanyCommon
-from odoo.tests.common import tagged
+from odoo.addons.test_mail.tests.common import (
+    TestMailCommon,
+    TestMailMultiCompanyCommon,
+)
 from odoo.tests import Form
+from odoo.tests.common import tagged
 
 
 @tagged('mail_track')

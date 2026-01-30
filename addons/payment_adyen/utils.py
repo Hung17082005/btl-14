@@ -1,9 +1,8 @@
 import re
 
 from odoo import _
-from odoo.exceptions import UserError, ValidationError
-
 from odoo.addons.payment import utils as payment_utils
+from odoo.exceptions import UserError, ValidationError
 
 
 def format_partner_name(partner_name):

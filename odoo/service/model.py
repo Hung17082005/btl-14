@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 
-from contextlib import closing
-from functools import wraps
 import logging
-from psycopg2 import IntegrityError, OperationalError, errorcodes
 import random
 import threading
 import time
+from contextlib import closing
+from functools import wraps
+
+from psycopg2 import IntegrityError, OperationalError, errorcodes
 
 import odoo
 from odoo.exceptions import UserError, ValidationError
 from odoo.models import check_method_name
-from odoo.tools.translate import translate, translate_sql_constraint
-from odoo.tools.translate import _
+from odoo.tools.translate import _, translate, translate_sql_constraint
 
+from ..tools import lazy, traverse_containers
 from . import security
-from ..tools import traverse_containers, lazy
 
 _logger = logging.getLogger(__name__)
 

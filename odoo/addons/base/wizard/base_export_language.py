@@ -5,7 +5,7 @@ import base64
 import contextlib
 import io
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 
 NEW_LANG_KEY = '__new__'
 

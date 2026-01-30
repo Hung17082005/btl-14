@@ -1,3 +1,1 @@
-from . import product_attribute
-from . import sale_order
-from . import product
+from . import product, product_attribute, sale_order

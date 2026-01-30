@@ -1,5 +1,6 @@
 from odoo.tests.common import HttpCase
 
+
 class TestWebsiteSaleCommon(HttpCase):
 
     def setUp(self):

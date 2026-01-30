@@ -1,15 +1,23 @@
 # -*- coding: utf-8 -*-
-from datetime import datetime, timedelta
-from dateutil.parser import parse
 import logging
-import pytz
-from unittest.mock import patch, ANY
+from datetime import datetime, timedelta
+from unittest.mock import ANY, patch
 
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
+import pytz
+from dateutil.parser import parse
+
 from odoo.addons.microsoft_calendar.models.res_users import User
+from odoo.addons.microsoft_calendar.tests.common import (
+    TestCommon,
+    _modified_date_in_the_future,
+    mock_get_token,
+    patch_api,
+)
 from odoo.addons.microsoft_calendar.utils.event_id_storage import combine_ids
-from odoo.addons.microsoft_calendar.tests.common import TestCommon, mock_get_token, _modified_date_in_the_future, patch_api
+from odoo.addons.microsoft_calendar.utils.microsoft_calendar import (
+    MicrosoftCalendarService,
+)
+from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
 from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)

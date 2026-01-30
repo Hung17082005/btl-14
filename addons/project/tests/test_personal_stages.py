@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo.tests import tagged, HttpCase
+from odoo.tests import HttpCase, tagged
 
 from .test_project_base import TestProjectCommon
+
 
 @tagged('-at_install', 'post_install', 'personal_stages')
 class TestPersonalStages(TestProjectCommon):

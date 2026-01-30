@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import logging
+
 # decorator makes wrappers that have the same API as their wrapped function
 from collections import Counter, defaultdict
-from decorator import decorator
 from inspect import signature
-import logging
+
+from decorator import decorator
 
 unsafe_eval = eval
 
@@ -198,8 +200,9 @@ class dummy_cache(object):
 
 def log_ormcache_stats(sig=None, frame=None):
     """ Log statistics of ormcache usage by database, model, and method. """
-    from odoo.modules.registry import Registry
     import threading
+
+    from odoo.modules.registry import Registry
 
     me = threading.current_thread()
     me_dbname = getattr(me, 'dbname', 'n/a')

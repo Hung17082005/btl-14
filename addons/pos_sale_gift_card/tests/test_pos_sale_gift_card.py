@@ -5,6 +5,7 @@ from odoo import Command
 from odoo.addons.point_of_sale.tests.test_frontend import TestPointOfSaleHttpCommon
 from odoo.tests.common import tagged
 
+
 @tagged('-at_install', 'post_install')
 class PosSaleGiftCardTest(TestPointOfSaleHttpCommon):
 

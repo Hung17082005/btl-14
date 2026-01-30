@@ -2,7 +2,7 @@
 
 import logging
 
-from odoo import _, api, fields, models, SUPERUSER_ID
+from odoo import SUPERUSER_ID, _, api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.osv import expression
 

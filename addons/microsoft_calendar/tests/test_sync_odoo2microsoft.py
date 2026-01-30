@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime, date
-from dateutil.relativedelta import relativedelta
+from datetime import date, datetime
 from unittest.mock import MagicMock, patch
 
-from odoo.tests.common import TransactionCase
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.models.res_users import User
-from odoo.addons.microsoft_calendar.models.microsoft_sync import MicrosoftSync
-from odoo.modules.registry import Registry
+from dateutil.relativedelta import relativedelta
+
 from odoo.addons.microsoft_account.models.microsoft_service import TIMEOUT
+from odoo.addons.microsoft_calendar.models.microsoft_sync import MicrosoftSync
+from odoo.addons.microsoft_calendar.models.res_users import User
+from odoo.addons.microsoft_calendar.utils.microsoft_calendar import (
+    MicrosoftCalendarService,
+)
+from odoo.modules.registry import Registry
+from odoo.tests.common import TransactionCase
 
 
 def patch_api(func):

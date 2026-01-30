@@ -7,8 +7,8 @@ import warnings
 _logger = logging.getLogger(__name__)
 
 try:
-    from OpenSSL import crypto as ssl_crypto
     import OpenSSL._util as ssl_util
+    from OpenSSL import crypto as ssl_crypto
 except ImportError:
     ssl_crypto = None
     _logger.warning("Cannot import library 'OpenSSL' for PKCS#7 envelope extraction.")

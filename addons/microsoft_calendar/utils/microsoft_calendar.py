@@ -1,15 +1,18 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import requests
 import json
 import logging
 
+import requests
 from werkzeug import urls
 
 from odoo import fields
+from odoo.addons.microsoft_account.models.microsoft_service import (
+    RESOURCE_NOT_FOUND_STATUSES,
+    TIMEOUT,
+)
 from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
-from odoo.addons.microsoft_account.models.microsoft_service import TIMEOUT, RESOURCE_NOT_FOUND_STATUSES
 
 _logger = logging.getLogger(__name__)
 

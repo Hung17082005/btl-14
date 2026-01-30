@@ -3,7 +3,7 @@
 from hashlib import md5
 
 from odoo import api, fields, models
-from odoo.tools.float_utils import float_split, float_repr
+from odoo.tools.float_utils import float_repr, float_split
 
 SUPPORTED_CURRENCIES = ('ARS', 'BRL', 'CLP', 'COP', 'MXN', 'PEN', 'USD')
 

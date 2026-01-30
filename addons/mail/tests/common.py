@@ -4,13 +4,13 @@
 import email
 import email.policy
 import time
-
 from collections import defaultdict
 from contextlib import contextmanager
 from functools import partial
-from lxml import html
-from unittest.mock import patch
 from smtplib import SMTPServerDisconnected
+from unittest.mock import patch
+
+from lxml import html
 
 from odoo import exceptions
 from odoo.addons.base.models.ir_mail_server import IrMailServer, MailDeliveryException

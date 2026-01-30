@@ -1,11 +1,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 # -*- coding: utf-8 -*-
 
-from odoo.http import request
 from odoo.addons.base.tests.common import HttpCaseWithUserPortal
 from odoo.addons.website.controllers.form import WebsiteForm
 from odoo.addons.website.tools import MockRequest
-from odoo.tests.common import tagged, TransactionCase
+from odoo.http import request
+from odoo.tests.common import TransactionCase, tagged
 
 
 @tagged('post_install', '-at_install')

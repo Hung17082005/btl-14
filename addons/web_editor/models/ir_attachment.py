@@ -3,7 +3,7 @@
 
 from werkzeug.urls import url_quote
 
-from odoo import api, models, fields, tools
+from odoo import api, fields, models, tools
 
 SUPPORTED_IMAGE_MIMETYPES = ['image/gif', 'image/jpe', 'image/jpeg', 'image/jpg', 'image/png', 'image/svg+xml']
 SUPPORTED_IMAGE_EXTENSIONS = ['.gif', '.jpe', '.jpeg', '.jpg', '.png', '.svg']

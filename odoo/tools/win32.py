@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import datetime
 import locale
 import time
-import datetime
 
 if not hasattr(locale, 'D_FMT'):
     locale.D_FMT = 1

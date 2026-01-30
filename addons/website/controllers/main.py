@@ -3,28 +3,28 @@
 import base64
 import datetime
 import json
-import os
 import logging
+import os
 import re
+from itertools import islice
+from textwrap import shorten
+from xml.etree import ElementTree as ET
+
 import requests
 import werkzeug.urls
 import werkzeug.utils
 import werkzeug.wrappers
-
-from itertools import islice
 from lxml import etree
-from textwrap import shorten
-from xml.etree import ElementTree as ET
 
 import odoo
-
-from odoo import http, models, fields, _
-from odoo.http import request
-from odoo.osv import expression
-from odoo.tools import OrderedSet, escape_psql, html_escape as escape
-from odoo.addons.http_routing.models.ir_http import slug, slugify, _guess_mimetype
+from odoo import _, fields, http, models
+from odoo.addons.http_routing.models.ir_http import _guess_mimetype, slug, slugify
 from odoo.addons.portal.controllers.portal import pager as portal_pager
 from odoo.addons.portal.controllers.web import Home
+from odoo.http import request
+from odoo.osv import expression
+from odoo.tools import OrderedSet, escape_psql
+from odoo.tools import html_escape as escape
 
 logger = logging.getLogger(__name__)
 

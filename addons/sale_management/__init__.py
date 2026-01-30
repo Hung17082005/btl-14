@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import models
-from . import controllers
-from odoo.api import Environment, SUPERUSER_ID
+from odoo.api import SUPERUSER_ID, Environment
+
+from . import controllers, models
 
 
 def uninstall_hook(cr, registry):

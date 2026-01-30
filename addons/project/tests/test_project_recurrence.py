@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 
 
-from odoo.tests.common import TransactionCase, Form
-from odoo.exceptions import ValidationError
-from odoo import fields
-
 from datetime import date, datetime
-from dateutil.rrule import MO, TU, WE, TH, FR, SA, SU
+
+from dateutil.rrule import FR, MO, SA, SU, TH, TU, WE
 from freezegun import freeze_time
+
+from odoo import fields
+from odoo.exceptions import ValidationError
+from odoo.tests.common import Form, TransactionCase
 
 
 class TestProjectrecurrence(TransactionCase):

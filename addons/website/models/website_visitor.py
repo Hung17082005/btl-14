@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime, timedelta
 import uuid
+from datetime import datetime, timedelta
+
 import pytz
 
-from odoo import fields, models, api, _
+from odoo import _, api, fields, models
 from odoo.addons.base.models.res_partner import _tz_get
 from odoo.exceptions import UserError
-from odoo.tools.misc import _format_time_ago
 from odoo.http import request
 from odoo.osv import expression
+from odoo.tools.misc import _format_time_ago
 
 
 class WebsiteTrack(models.Model):

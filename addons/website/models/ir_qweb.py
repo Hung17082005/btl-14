@@ -4,11 +4,11 @@ import re
 from collections import OrderedDict
 
 from odoo import models
-from odoo.http import request
 from odoo.addons.base.models.assetsbundle import AssetsBundle
 from odoo.addons.http_routing.models.ir_http import url_for
-from odoo.osv import expression
 from odoo.addons.website.models import ir_http
+from odoo.http import request
+from odoo.osv import expression
 from odoo.tools import html_escape as escape
 
 re_background_image = re.compile(r"(background-image\s*:\s*url\(\s*['\"]?\s*)([^)'\"]+)")

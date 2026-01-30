@@ -3,7 +3,7 @@
 
 from ast import literal_eval
 
-from odoo import models, fields
+from odoo import fields, models
 
 
 class StockPicking(models.Model):

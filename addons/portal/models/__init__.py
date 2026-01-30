@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import ir_http
-from . import ir_ui_view
-from . import mail_thread
-from . import mail_message
-from . import portal_mixin
-from . import res_config_settings
-from . import res_partner
-from . import res_users_apikeys_description
+from . import (
+    ir_http,
+    ir_ui_view,
+    mail_message,
+    mail_thread,
+    portal_mixin,
+    res_config_settings,
+    res_partner,
+    res_users_apikeys_description,
+)

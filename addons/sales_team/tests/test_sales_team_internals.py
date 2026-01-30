@@ -4,7 +4,7 @@
 from odoo import exceptions
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.addons.sales_team.tests.common import TestSalesMC
-from odoo.tests.common import users, TransactionCase
+from odoo.tests.common import TransactionCase, users
 from odoo.tools import mute_logger
 
 

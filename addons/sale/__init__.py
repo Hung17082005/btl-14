@@ -1,13 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import models
-from . import controllers
-from . import report
-from . import wizard
-from . import populate
+from odoo.api import SUPERUSER_ID, Environment
 
-from odoo.api import Environment, SUPERUSER_ID
+from . import controllers, models, populate, report, wizard
 
 
 def _synchronize_cron(cr, registry):

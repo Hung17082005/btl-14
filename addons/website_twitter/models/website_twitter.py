@@ -5,6 +5,7 @@ import json
 import logging
 
 import requests
+
 from odoo import api, fields, models
 
 API_ENDPOINT = 'https://api.twitter.com'

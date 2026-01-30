@@ -4,11 +4,12 @@
 import base64
 import logging
 import os
-from tempfile import TemporaryFile
-from psycopg2 import ProgrammingError
 from contextlib import closing
+from tempfile import TemporaryFile
 
-from odoo import api, fields, models, tools, sql_db, _
+from psycopg2 import ProgrammingError
+
+from odoo import _, api, fields, models, sql_db, tools
 from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)

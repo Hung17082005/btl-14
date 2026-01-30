@@ -3,6 +3,7 @@
 
 from odoo import models
 
+
 class MembershipLine(models.Model):
 
     _inherit = 'membership.membership_line'

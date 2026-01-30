@@ -2,14 +2,15 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import date
+
 from psycopg2 import IntegrityError, ProgrammingError
 
 import odoo
-from odoo.exceptions import UserError, ValidationError, AccessError
-from odoo.tools import mute_logger
-from odoo.tests import common
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
 from odoo import Command
+from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
+from odoo.exceptions import AccessError, UserError, ValidationError
+from odoo.tests import common
+from odoo.tools import mute_logger
 
 
 class TestServerActionsBase(TransactionCaseWithUserDemo):

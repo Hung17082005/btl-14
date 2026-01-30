@@ -1,5 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import van_ban_den
-from . import van_ban_di
-from . import loai_van_ban
+from . import loai_van_ban, van_ban_den, van_ban_di

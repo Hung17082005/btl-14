@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import backend
-from . import main
-from . import variant
+from . import backend, main, variant

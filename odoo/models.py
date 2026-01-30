@@ -24,46 +24,61 @@
 import collections
 import contextlib
 import datetime
-import dateutil
 import fnmatch
 import functools
-import itertools
 import io
+import itertools
 import logging
 import operator
-import pytz
 import re
 import uuid
-from collections import defaultdict, OrderedDict
+from collections import OrderedDict, defaultdict
 from collections.abc import MutableMapping
 from contextlib import closing
-from inspect import getmembers, currentframe
+from inspect import currentframe, getmembers
 from operator import attrgetter, itemgetter
 
 import babel.dates
+import dateutil
 import dateutil.relativedelta
-import psycopg2, psycopg2.extensions
+import psycopg2
+import psycopg2.extensions
+import pytz
 from lxml import etree
 from lxml.builder import E
 from psycopg2.extensions import AsIs
 
 import odoo
-from . import SUPERUSER_ID
-from . import api
-from . import tools
-from .exceptions import AccessError, MissingError, ValidationError, UserError
+
+from . import SUPERUSER_ID, api, tools
+from .exceptions import AccessError, MissingError, UserError, ValidationError
 from .osv.query import Query
-from .tools import frozendict, lazy_classproperty, ormcache, \
-                   Collector, LastOrderedSet, OrderedSet, IterableGenerator, \
-                   groupby, discardattr, partition
+from .tools import (
+    Collector,
+    IterableGenerator,
+    LastOrderedSet,
+    OrderedSet,
+    date_utils,
+    discardattr,
+    frozendict,
+    groupby,
+    lazy_classproperty,
+    ormcache,
+    partition,
+    populate,
+    unique,
+)
 from .tools.config import config
 from .tools.func import frame_codeinfo
-from .tools.misc import CountingStream, clean_context, DEFAULT_SERVER_DATETIME_FORMAT, DEFAULT_SERVER_DATE_FORMAT, get_lang
-from .tools.translate import _
-from .tools import date_utils
-from .tools import populate
-from .tools import unique
 from .tools.lru import LRU
+from .tools.misc import (
+    DEFAULT_SERVER_DATE_FORMAT,
+    DEFAULT_SERVER_DATETIME_FORMAT,
+    CountingStream,
+    clean_context,
+    get_lang,
+)
+from .tools.translate import _
 
 _logger = logging.getLogger(__name__)
 _schema = logging.getLogger(__name__ + '.schema')
@@ -6853,5 +6868,5 @@ def lazy_name_get(self):
 # keep those imports here to avoid dependency cycle errors
 # pylint: disable=wrong-import-position
 from . import fields
+from .fields import Command, Datetime, Field
 from .osv import expression
-from .fields import Field, Datetime, Command

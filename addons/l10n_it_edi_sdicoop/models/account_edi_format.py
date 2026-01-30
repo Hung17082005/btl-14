@@ -1,13 +1,16 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models, _, _lt
-from odoo.exceptions import UserError
-from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import AccountEdiProxyError
-
-from lxml import etree
 import base64
 import logging
+
+from lxml import etree
+
+from odoo import _, _lt, models
+from odoo.addons.account_edi_proxy_client.models.account_edi_proxy_user import (
+    AccountEdiProxyError,
+)
+from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
 

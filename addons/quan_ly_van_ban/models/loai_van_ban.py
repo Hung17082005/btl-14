@@ -1,7 +1,8 @@
-from odoo import models, fields, api
 from datetime import date
 
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+
 
 class LoaiVanBan(models.Model):
     _name = 'loai_van_ban'

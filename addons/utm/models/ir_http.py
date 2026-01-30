@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo.http import request
 from odoo import models
+from odoo.http import request
 
 
 class IrHttp(models.AbstractModel):

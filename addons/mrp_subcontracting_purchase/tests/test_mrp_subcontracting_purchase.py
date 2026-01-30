@@ -2,10 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import Command
+from odoo.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
 from odoo.exceptions import UserError
 from odoo.tests import Form
-
-from odoo.addons.mrp_subcontracting.tests.common import TestMrpSubcontractingCommon
 
 
 class MrpSubcontractingPurchaseTest(TestMrpSubcontractingCommon):

@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import io
 import re
-
 from datetime import datetime
 from hashlib import md5
 from logging import getLogger
 from zlib import compress, decompress
+
 from PIL import Image
 from reportlab.lib import colors
 from reportlab.lib.units import cm
@@ -16,8 +16,9 @@ from reportlab.pdfgen import canvas
 try:
     # class were renamed in PyPDF2 > 2.0
     # https://pypdf2.readthedocs.io/en/latest/user/migration-1-to-2.html#classes
-    from PyPDF2 import PdfReader
     import PyPDF2
+    from PyPDF2 import PdfReader
+
     # monkey patch to discard unused arguments as the old arguments were not discarded in the transitional class
     # https://pypdf2.readthedocs.io/en/2.0.0/_modules/PyPDF2/_reader.html#PdfReader
     class PdfFileReader(PdfReader):
@@ -28,12 +29,20 @@ try:
             super().__init__(*args, **kwargs)
 
     PyPDF2.PdfFileReader = PdfFileReader
-    from PyPDF2 import PdfFileWriter, PdfFileReader
+    from PyPDF2 import PdfFileReader, PdfFileWriter
     PdfFileWriter._addObject = PdfFileWriter._add_object
 except ImportError:
     from PyPDF2 import PdfFileWriter, PdfFileReader
 
-from PyPDF2.generic import DictionaryObject, NameObject, ArrayObject, DecodedStreamObject, NumberObject, createStringObject, ByteStringObject
+from PyPDF2.generic import (
+    ArrayObject,
+    ByteStringObject,
+    DecodedStreamObject,
+    DictionaryObject,
+    NameObject,
+    NumberObject,
+    createStringObject,
+)
 
 try:
     from fontTools.ttLib import TTFont

@@ -1,14 +1,15 @@
 from __future__ import annotations
 
+import operator
 import os
-import sys
 import re
+import sys
 import typing as t
 import warnings
+
 from werkzeug.datastructures import iter_multi_items
 from werkzeug.urls import _decode_idna
 
-import operator
 
 def _check_str_tuple(value: t.Tuple[t.AnyStr, ...]) -> None:
     """Ensure tuple items are all strings or all bytes."""
@@ -1032,6 +1033,7 @@ def url_join(
 
 
 from werkzeug import urls
+
 # see https://github.com/pallets/werkzeug/compare/2.3.0..3.0.0
 # see https://github.com/pallets/werkzeug/blob/2.3.0/src/werkzeug/urls.py for replacement
 urls.url_decode = url_decode

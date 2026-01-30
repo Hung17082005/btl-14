@@ -3,8 +3,8 @@
 
 import base64
 import re
-import requests
 
+import requests
 from werkzeug.urls import url_parse
 
 from odoo import models

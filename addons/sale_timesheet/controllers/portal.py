@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import http, _
+from odoo import _, http
+from odoo.addons.account.controllers import portal
+from odoo.addons.hr_timesheet.controllers.portal import TimesheetCustomerPortal
 from odoo.exceptions import AccessError, MissingError
 from odoo.http import request
 from odoo.osv import expression
-
-from odoo.addons.account.controllers import portal
-from odoo.addons.hr_timesheet.controllers.portal import TimesheetCustomerPortal
 
 
 class PortalAccount(portal.PortalAccount):

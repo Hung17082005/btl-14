@@ -3,10 +3,12 @@
 
 import unittest
 from itertools import zip_longest
-from lxml import etree as ET, html
+
+from lxml import etree as ET
+from lxml import html
 from lxml.html import builder as h
 
-from odoo.tests import common, HttpCase, tagged
+from odoo.tests import HttpCase, common, tagged
 
 
 def attrs(**kwargs):

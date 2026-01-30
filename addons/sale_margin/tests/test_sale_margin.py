@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import common
-from odoo.fields import Command
 from datetime import datetime
+
+from odoo.fields import Command
+from odoo.tests import common
 
 
 class TestSaleMargin(common.TransactionCase):

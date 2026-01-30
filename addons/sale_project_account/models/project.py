@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models, _, _lt
+from odoo import _, _lt, fields, models
+
 
 class Project(models.Model):
     _inherit = 'project.project'

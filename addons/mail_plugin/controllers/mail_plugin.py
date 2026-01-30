@@ -4,10 +4,11 @@
 import base64
 import json
 import logging
+
 import requests
 from werkzeug.exceptions import Forbidden
 
-from odoo import http, tools, _
+from odoo import _, http, tools
 from odoo.addons.iap.tools import iap_tools
 from odoo.exceptions import AccessError
 from odoo.http import request

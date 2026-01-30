@@ -3,13 +3,14 @@
 
 import datetime
 import logging
-from lxml import etree
+
 from freezegun import freeze_time
+from lxml import etree
 
 from odoo import tools
-from odoo.tests import tagged
 from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
 from odoo.exceptions import UserError
+from odoo.tests import tagged
 
 _logger = logging.getLogger(__name__)
 

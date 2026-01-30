@@ -9,7 +9,6 @@ import os
 import re
 import tempfile
 import zipfile
-
 from contextlib import contextmanager
 from os.path import join as opj
 
@@ -110,6 +109,7 @@ if os.name != 'nt':
     is_running_as_nt_service = lambda: False
 else:
     import ctypes
+
     import win32service as ws
     import win32serviceutil as wsu
 
@@ -148,6 +148,7 @@ else:
             CloseHandle(hProcessSnap)
 
     from contextlib import contextmanager
+
     from odoo.release import nt_service_name
 
     def is_running_as_nt_service():

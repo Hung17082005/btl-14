@@ -7,7 +7,7 @@ from collections import defaultdict
 from hashlib import sha512
 from secrets import choice
 
-from odoo import _, api, fields, models, tools, Command
+from odoo import Command, _, api, fields, models, tools
 from odoo.addons.base.models.avatar_mixin import get_hsl_from_seed
 from odoo.exceptions import UserError, ValidationError
 from odoo.osv import expression

@@ -1,11 +1,13 @@
 from __future__ import print_function
+
 import logging
-import sys
 import os
-from os.path import join as joinpath, isdir
+import sys
+from os.path import isdir
+from os.path import join as joinpath
 
 import odoo
-from odoo.modules import get_modules, get_module_path, initialize_sys_path
+from odoo.modules import get_module_path, get_modules, initialize_sys_path
 
 commands = {}
 

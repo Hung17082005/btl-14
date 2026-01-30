@@ -3,7 +3,7 @@
 
 from ast import literal_eval
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.tools import float_is_zero, float_round
 
 

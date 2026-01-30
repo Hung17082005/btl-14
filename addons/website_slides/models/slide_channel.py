@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import ast
 import logging
 import uuid
 from collections import defaultdict
 
 from dateutil.relativedelta import relativedelta
-import ast
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 from odoo.addons.http_routing.models.ir_http import slug, unslug
 from odoo.exceptions import AccessError
 from odoo.osv import expression

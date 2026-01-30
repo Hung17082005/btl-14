@@ -3,9 +3,8 @@
 import logging
 
 from odoo import _, api, models
-from odoo.exceptions import ValidationError
-
 from odoo.addons.payment_transfer.controllers.main import TransferController
+from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

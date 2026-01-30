@@ -3,11 +3,10 @@
 
 import logging
 import re
+from binascii import Error as binascii_error
 from collections import defaultdict
 
-from binascii import Error as binascii_error
-
-from odoo import _, api, Command, fields, models, modules, tools
+from odoo import Command, _, api, fields, models, modules, tools
 from odoo.exceptions import AccessError
 from odoo.osv import expression
 from odoo.tools.misc import clean_context

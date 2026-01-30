@@ -2,20 +2,22 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from . import account_automatic_entry_wizard
-from . import account_unreconcile
-from . import account_validate_account_move
-from . import pos_box
-from . import account_move_reversal
-from . import account_report_common
-from . import account_report_common_journal
-from . import account_report_print_journal
-from . import account_resequence
-from . import setup_wizards
-from . import wizard_tax_adjustments
-from . import account_invoice_send
-from . import base_document_layout
-from . import account_payment_register
-from . import account_tour_upload_bill
-from . import accrued_orders
-from . import base_partner_merge
+from . import (
+    account_automatic_entry_wizard,
+    account_invoice_send,
+    account_move_reversal,
+    account_payment_register,
+    account_report_common,
+    account_report_common_journal,
+    account_report_print_journal,
+    account_resequence,
+    account_tour_upload_bill,
+    account_unreconcile,
+    account_validate_account_move,
+    accrued_orders,
+    base_document_layout,
+    base_partner_merge,
+    pos_box,
+    setup_wizards,
+    wizard_tax_adjustments,
+)

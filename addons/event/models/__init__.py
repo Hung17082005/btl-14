@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import event_event
-from . import event_mail
-from . import event_registration
-from . import event_stage
-from . import event_tag
-from . import event_ticket
-from . import mail_template
-from . import res_config_settings
-from . import res_partner
+from . import (
+    event_event,
+    event_mail,
+    event_registration,
+    event_stage,
+    event_tag,
+    event_ticket,
+    mail_template,
+    res_config_settings,
+    res_partner,
+)

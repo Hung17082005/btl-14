@@ -2,6 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import re
+
 import odoo.tests
 
 RE_ONLY = re.compile(r'QUnit\.(only|debug)\(')

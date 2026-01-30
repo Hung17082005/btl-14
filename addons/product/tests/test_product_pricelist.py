@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime
 import time
+from datetime import datetime
 
 from odoo.tests.common import TransactionCase
 from odoo.tools import float_compare, test_reports

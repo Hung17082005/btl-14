@@ -1,9 +1,9 @@
 """ Test read_group grouping with many2many fields """
 
 
+from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
 from odoo.fields import Command
 from odoo.tests import common
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
 
 
 @common.tagged('test_m2m_read_group')

@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from odoo import _, http
 from odoo.addons.website_sale.controllers import main as website_sale_controller
-
-from odoo import http, _
-from odoo.http import request
 from odoo.exceptions import ValidationError
+from odoo.http import request
 
 
 class PaymentPortal(website_sale_controller.PaymentPortal):

@@ -3,20 +3,21 @@
 import ast
 import logging
 import time
-
 from functools import partial
 
 from lxml import etree
 from lxml.builder import E
 from psycopg2 import IntegrityError
 
+from odoo.addons.base.models.ir_ui_view import (
+    simplify_modifiers,
+    transfer_field_to_modifiers,
+    transfer_node_to_modifiers,
+)
+from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
 from odoo.exceptions import AccessError, ValidationError
 from odoo.tests import common
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
 from odoo.tools import mute_logger, view_validation
-from odoo.addons.base.models.ir_ui_view import (
-    transfer_field_to_modifiers, transfer_node_to_modifiers, simplify_modifiers,
-)
 
 _logger = logging.getLogger(__name__)
 

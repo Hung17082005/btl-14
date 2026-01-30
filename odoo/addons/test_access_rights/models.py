@@ -3,6 +3,7 @@
 
 from odoo import fields, models
 
+
 class SomeObj(models.Model):
     _name = 'test_access_right.some_obj'
     _description = 'Object For Test Access Right'

@@ -6,7 +6,7 @@ import re
 
 from lxml import etree
 
-from odoo import api, models, _, Command
+from odoo import Command, _, api, models
 from odoo.exceptions import AccessError, RedirectWarning, UserError
 from odoo.tools import ustr
 

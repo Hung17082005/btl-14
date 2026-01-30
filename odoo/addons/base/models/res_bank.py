@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import re
-
 from collections.abc import Iterable
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.osv import expression
+
 
 def sanitize_account_number(acc_number):
     if acc_number:

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import ast
-import pathlib
 import os
+import pathlib
 import re
 import shutil
 

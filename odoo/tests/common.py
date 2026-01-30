@@ -29,27 +29,26 @@ import time
 import unittest
 import warnings
 from collections import defaultdict
-from contextlib import contextmanager, ExitStack
-from datetime import datetime, date
+from contextlib import ExitStack, contextmanager
+from datetime import date, datetime
 from itertools import zip_longest as izip_longest
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 from xmlrpc import client as xmlrpclib
 
 import requests
-import werkzeug.urls
 import werkzeug.urls
 from decorator import decorator
 from lxml import etree, html
 
 import odoo
 from odoo import api
-from odoo.models import BaseModel
 from odoo.exceptions import AccessError
+from odoo.models import BaseModel
 from odoo.modules.registry import Registry
-from odoo.osv.expression import normalize_domain, TRUE_LEAF, FALSE_LEAF
+from odoo.osv.expression import FALSE_LEAF, TRUE_LEAF, normalize_domain
 from odoo.service import security
 from odoo.sql_db import BaseCursor, Cursor
-from odoo.tools import float_compare, single_email_re, profiler
+from odoo.tools import float_compare, profiler, single_email_re
 from odoo.tools.misc import find_in_path
 from odoo.tools.safe_eval import safe_eval
 

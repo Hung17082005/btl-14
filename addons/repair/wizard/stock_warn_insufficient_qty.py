@@ -3,6 +3,7 @@
 
 from odoo import fields, models
 
+
 class StockWarnInsufficientQtyRepair(models.TransientModel):
     _name = 'stock.warn.insufficient.qty.repair'
     _inherit = 'stock.warn.insufficient.qty'

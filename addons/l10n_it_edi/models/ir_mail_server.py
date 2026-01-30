@@ -1,23 +1,22 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import zipfile
-import io
-import re
-import logging
 import email
 import email.policy
-import dateutil
-import pytz
-
-from lxml import etree
+import io
+import logging
+import re
+import zipfile
 from datetime import datetime
 from xmlrpc import client as xmlrpclib
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError, UserError
-from odoo.addons.l10n_it_edi.tools.remove_signature import remove_signature
+import dateutil
+import pytz
+from lxml import etree
 
+from odoo import _, api, fields, models, tools
+from odoo.addons.l10n_it_edi.tools.remove_signature import remove_signature
+from odoo.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 

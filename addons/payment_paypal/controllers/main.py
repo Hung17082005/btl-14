@@ -12,7 +12,6 @@ from odoo.exceptions import ValidationError
 from odoo.http import request
 from odoo.tools import html_escape
 
-
 _logger = logging.getLogger(__name__)
 
 

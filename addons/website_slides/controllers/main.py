@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from ast import literal_eval
-from collections import defaultdict
-
 import base64
 import json
 import logging
 import math
+from ast import literal_eval
+from collections import defaultdict
+
 import werkzeug
 
-from odoo import http, tools, _
+from odoo import _, http, tools
 from odoo.addons.http_routing.models.ir_http import slug, unslug
 from odoo.addons.website.controllers.main import QueryURL
 from odoo.addons.website.models.ir_http import sitemap_qs2dom

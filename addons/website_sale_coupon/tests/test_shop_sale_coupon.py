@@ -2,8 +2,10 @@
 from datetime import timedelta
 
 from odoo import fields
-from odoo.tests import HttpCase, tagged, TransactionCase
-from odoo.addons.sale.tests.test_sale_product_attribute_value_config import TestSaleProductAttributeValueCommon
+from odoo.addons.sale.tests.test_sale_product_attribute_value_config import (
+    TestSaleProductAttributeValueCommon,
+)
+from odoo.tests import HttpCase, TransactionCase, tagged
 
 
 @tagged('post_install', '-at_install')

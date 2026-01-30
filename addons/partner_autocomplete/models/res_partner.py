@@ -4,12 +4,12 @@
 import base64
 import json
 import logging
-import requests
 import re
 
+import requests
 from stdnum.eu.vat import check_vies
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 
 _logger = logging.getLogger(__name__)
 

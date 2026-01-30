@@ -5,7 +5,7 @@ from random import randint
 
 from markupsafe import Markup
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.tools import float_compare, is_html_empty
 

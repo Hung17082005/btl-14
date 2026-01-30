@@ -6,18 +6,18 @@ import collections.abc
 import importlib
 import logging
 import os
-import pkg_resources
 import re
 import sys
 import warnings
 from os.path import join as opj
 
+import pkg_resources
+
 import odoo
-import odoo.tools as tools
 import odoo.release as release
+import odoo.tools as tools
 from odoo.tools import pycompat
 from odoo.tools.misc import file_path
-
 
 MANIFEST_NAMES = ('__manifest__.py', '__openerp__.py')
 README = ['README.rst', 'README.md', 'README.txt']

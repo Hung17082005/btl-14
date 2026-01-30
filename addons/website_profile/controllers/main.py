@@ -2,14 +2,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import base64
+import math
+from operator import itemgetter
+
 import werkzeug
 import werkzeug.exceptions
 import werkzeug.urls
 import werkzeug.wrappers
-import math
-
 from dateutil.relativedelta import relativedelta
-from operator import itemgetter
 
 from odoo import fields, http, modules, tools
 from odoo.http import request

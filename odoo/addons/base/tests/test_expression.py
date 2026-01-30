@@ -3,13 +3,13 @@
 
 import psycopg2
 
+from odoo import Command
 from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
 from odoo.fields import Date
 from odoo.models import BaseModel
+from odoo.osv import expression
 from odoo.tests.common import TransactionCase
 from odoo.tools import mute_logger
-from odoo.osv import expression
-from odoo import Command
 
 
 class TestExpression(SavepointCaseWithUserDemo):

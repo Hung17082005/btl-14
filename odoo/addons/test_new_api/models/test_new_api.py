@@ -3,7 +3,7 @@
 
 import datetime
 
-from odoo import models, fields, api, _, Command
+from odoo import Command, _, api, fields, models
 from odoo.exceptions import AccessError, ValidationError
 
 

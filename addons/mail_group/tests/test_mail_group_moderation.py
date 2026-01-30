@@ -4,8 +4,8 @@
 from psycopg2 import IntegrityError
 
 from odoo import Command, tools
-from odoo.addons.mail_group.tests.data import GROUP_TEMPLATE
 from odoo.addons.mail_group.tests.common import TestMailListCommon
+from odoo.addons.mail_group.tests.data import GROUP_TEMPLATE
 from odoo.exceptions import AccessError
 from odoo.tests.common import tagged, users
 from odoo.tools import mute_logger

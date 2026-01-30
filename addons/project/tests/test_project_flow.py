@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from .test_project_base import TestProjectCommon
 from odoo import Command
-from odoo.tools import mute_logger
 from odoo.addons.mail.tests.common import MockEmail
+from odoo.tools import mute_logger
 
+from .test_project_base import TestProjectCommon
 
 EMAIL_TPL = """Return-Path: <whatever-2a840@postmaster.twitter.com>
 X-Original-To: {to}

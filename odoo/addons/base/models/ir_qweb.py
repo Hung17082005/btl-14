@@ -1,24 +1,36 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
-from textwrap import dedent
+
 import copy
 import io
 import logging
 import re
-import markupsafe
 import tokenize
-from lxml import html, etree
+from textwrap import dedent
+
+import markupsafe
+from lxml import etree, html
 
 from odoo import api, models, tools
-from odoo.tools.safe_eval import check_values, assert_valid_codeobj, _BUILTINS, to_opcodes, _EXPR_OPCODES, _BLACKLIST
-from odoo.tools.misc import get_lang
+from odoo.addons.base.models.assetsbundle import AssetsBundle
+from odoo.addons.base.models.ir_asset import (
+    SCRIPT_EXTENSIONS,
+    STYLE_EXTENSIONS,
+    can_aggregate,
+)
+from odoo.addons.base.models.qweb import QWeb
 from odoo.http import request
 from odoo.modules.module import get_resource_path
+from odoo.tools.misc import get_lang
 from odoo.tools.profiler import QwebTracker
-
-from odoo.addons.base.models.qweb import QWeb
-from odoo.addons.base.models.assetsbundle import AssetsBundle
-from odoo.addons.base.models.ir_asset import can_aggregate, STYLE_EXTENSIONS, SCRIPT_EXTENSIONS
+from odoo.tools.safe_eval import (
+    _BLACKLIST,
+    _BUILTINS,
+    _EXPR_OPCODES,
+    assert_valid_codeobj,
+    check_values,
+    to_opcodes,
+)
 
 _logger = logging.getLogger(__name__)
 

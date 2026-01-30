@@ -3,12 +3,13 @@
 
 import datetime
 
-from odoo import api, fields, models, modules, _
-from pytz import timezone, UTC
+from pytz import UTC, timezone
+
+from odoo import _, api, fields, models, modules
 
 
 class Users(models.Model):
-    _inherit = 'res.users'
+    _inherit = "res.users"
 
     def _systray_get_calendar_event_domain(self):
         # Determine the domain for which the users should be notified. This method sends notification to
@@ -39,45 +40,57 @@ class Users(models.Model):
         #   |           |
         now_utc = datetime.datetime.utcnow()
         start_dt_utc = start_dt = now_utc.replace(tzinfo=UTC)
-        stop_dt_utc = datetime.datetime.combine(now_utc.date(), datetime.time.max).replace(tzinfo=UTC)
+        stop_dt_utc = datetime.datetime.combine(
+            now_utc.date(), datetime.time.max
+        ).replace(tzinfo=UTC)
 
         tz = self.env.user.tz
         if tz:
             user_tz = timezone(tz)
             start_dt = start_dt_utc.astimezone(user_tz)
-            stop_dt = datetime.datetime.combine(start_dt.date(), datetime.time.max).replace(tzinfo=user_tz)
+            stop_dt = datetime.datetime.combine(
+                start_dt.date(), datetime.time.max
+            ).replace(tzinfo=user_tz)
             stop_dt_utc = stop_dt.astimezone(UTC)
 
         start_date = start_dt.date()
 
-        return ['&', '|',
-                '&',
-                    '|',
-                        ['start', '>=', fields.Datetime.to_string(start_dt_utc)],
-                        ['stop', '>=', fields.Datetime.to_string(start_dt_utc)],
-                    ['start', '<=', fields.Datetime.to_string(stop_dt_utc)],
-                '&',
-                    ['allday', '=', True],
-                    ['start_date', '=', fields.Date.to_string(start_date)],
-                ('attendee_ids.partner_id', '=', self.env.user.partner_id.id)]
+        return [
+            "&",
+            "|",
+            "&",
+            "|",
+            ["start", ">=", fields.Datetime.to_string(start_dt_utc)],
+            ["stop", ">=", fields.Datetime.to_string(start_dt_utc)],
+            ["start", "<=", fields.Datetime.to_string(stop_dt_utc)],
+            "&",
+            ["allday", "=", True],
+            ["start_date", "=", fields.Date.to_string(start_date)],
+            ("attendee_ids.partner_id", "=", self.env.user.partner_id.id),
+        ]
 
     @api.model
     def systray_get_activities(self):
         res = super(Users, self).systray_get_activities()
 
-        meetings_lines = self.env['calendar.event'].search_read(
+        meetings_lines = self.env["calendar.event"].search_read(
             self._systray_get_calendar_event_domain(),
-            ['id', 'start', 'name', 'allday', 'attendee_status'],
-            order='start')
-        meetings_lines = [line for line in meetings_lines if line['attendee_status'] != 'declined']
+            ["id", "start", "name", "allday", "attendee_status"],
+            order="start",
+        )
+        meetings_lines = [
+            line for line in meetings_lines if line["attendee_status"] != "declined"
+        ]
         if meetings_lines:
             meeting_label = _("Today's Meetings")
             meetings_systray = {
-                'type': 'meeting',
-                'name': meeting_label,
-                'model': 'calendar.event',
-                'icon': modules.module.get_module_icon(self.env['calendar.event']._original_module),
-                'meetings': meetings_lines,
+                "type": "meeting",
+                "name": meeting_label,
+                "model": "calendar.event",
+                "icon": modules.module.get_module_icon(
+                    self.env["calendar.event"]._original_module
+                ),
+                "meetings": meetings_lines,
             }
             res.insert(0, meetings_systray)
 

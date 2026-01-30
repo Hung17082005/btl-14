@@ -1,7 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from datetime import datetime
-from freezegun import freeze_time
 import logging
+from datetime import datetime
+
+from freezegun import freeze_time
 from pytz import timezone
 
 from odoo.tests import tagged

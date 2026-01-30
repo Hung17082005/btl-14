@@ -3,16 +3,16 @@
 
 """ Modules migration handling. """
 
-from collections import defaultdict
 import glob
 import importlib.util
 import logging
 import os
+from collections import defaultdict
 from os.path import join as opj
 
-from odoo.modules.module import get_resource_path
 import odoo.release as release
 import odoo.upgrade
+from odoo.modules.module import get_resource_path
 from odoo.tools.parse_version import parse_version
 
 _logger = logging.getLogger(__name__)

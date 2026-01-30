@@ -9,8 +9,8 @@ class HRAttendanceReport(models.Model):
     _description = "Attendance Statistics"
     _auto = False
 
-    department_id = fields.Many2one('hr.department', string="Department", readonly=True)
-    employee_id = fields.Many2one('hr.employee', string="Employee", readonly=True)
+    department_id = fields.Many2one("hr.department", string="Department", readonly=True)
+    employee_id = fields.Many2one("hr.employee", string="Employee", readonly=True)
     check_in = fields.Date("Check In", readonly=True)
     worked_hours = fields.Float("Hours Worked", readonly=True)
     overtime_hours = fields.Float("Extra Hours", readonly=True)
@@ -66,5 +66,4 @@ class HRAttendanceReport(models.Model):
                 %s
                 %s
             )
-        """ % (self._table, self._select(), self._from(), self._join())
-        )
+        """ % (self._table, self._select(), self._from(), self._join()))

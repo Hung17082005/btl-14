@@ -1,7 +1,8 @@
 import datetime
 import logging
-import pytz
 from unittest.mock import patch
+
+import pytz
 
 from odoo.tests.common import TransactionCase
 from odoo.tools._monkeypatches_pytz import _tz_mapping

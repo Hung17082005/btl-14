@@ -7,10 +7,10 @@ import logging
 from werkzeug import urls
 
 from odoo import _, api, models
-from odoo.exceptions import ValidationError
-
 from odoo.addons.payment import utils as payment_utils
 from odoo.addons.payment_sips.controllers.main import SipsController
+from odoo.exceptions import ValidationError
+
 from .const import RESPONSE_CODES_MAPPING, SUPPORTED_CURRENCIES
 
 _logger = logging.getLogger(__name__)

@@ -3,11 +3,11 @@
 import base64
 
 import werkzeug
+from werkzeug.exceptions import BadRequest
 
 from odoo import _, exceptions, http, tools
-from odoo.http import request, Response
+from odoo.http import Response, request
 from odoo.tools import consteq
-from werkzeug.exceptions import BadRequest
 
 
 class MassMailController(http.Controller):

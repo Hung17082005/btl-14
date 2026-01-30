@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import common
-from . import db
-from . import model
-from . import wsgi_server
-from . import server
+from . import common, db, model, server, wsgi_server
 
 #.apidoc title: RPC Services
 

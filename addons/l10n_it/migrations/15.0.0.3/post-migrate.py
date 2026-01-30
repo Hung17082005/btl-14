@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import api, SUPERUSER_ID
+from odoo import SUPERUSER_ID, api
+
 
 def migrate(cr, version):
 

@@ -2,14 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import werkzeug
-
-from werkzeug.exceptions import NotFound, Forbidden
-from odoo.exceptions import ValidationError
+from werkzeug.exceptions import Forbidden, NotFound
 
 from odoo import _, http
+from odoo.addons.portal.controllers.mail import PortalChatter, _check_special_access
+from odoo.exceptions import ValidationError
 from odoo.http import request
-from odoo.addons.portal.controllers.mail import _check_special_access, PortalChatter
-from odoo.tools import plaintext2html, html2plaintext
+from odoo.tools import html2plaintext, plaintext2html
 
 
 class SlidesPortalChatter(PortalChatter):

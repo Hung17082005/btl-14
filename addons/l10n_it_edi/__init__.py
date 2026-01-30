@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import models
-from . import tools
+from odoo import SUPERUSER_ID, api
 
-from odoo import api, SUPERUSER_ID
+from . import models, tools
 
 
 def _l10n_it_edi_update_export_tax(env):

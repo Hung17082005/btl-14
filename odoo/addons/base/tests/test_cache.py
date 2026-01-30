@@ -3,8 +3,9 @@
 
 import os
 import platform
-import psutil
 import unittest
+
+import psutil
 
 from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
 from odoo.exceptions import CacheMiss

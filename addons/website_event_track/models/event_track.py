@@ -2,8 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import timedelta
-from pytz import utc
 from random import randint
+
+from pytz import utc
 
 from odoo import api, fields, models, tools
 from odoo.addons.http_routing.models.ir_http import slug

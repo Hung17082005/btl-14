@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-from contextlib import closing
-from datetime import datetime
-from subprocess import Popen, PIPE
 import base64
 import hashlib
 import itertools
@@ -11,8 +8,12 @@ import os
 import re
 import textwrap
 import uuid
+from contextlib import closing
+from datetime import datetime
+from subprocess import PIPE, Popen
 
 import psycopg2
+
 try:
     import sass as libsass
 except ImportError:
@@ -20,11 +21,19 @@ except ImportError:
     # `sassc` executable in the path.
     libsass = None
 
-from odoo import release, SUPERUSER_ID
+from odoo import SUPERUSER_ID, release
 from odoo.http import request
 from odoo.modules.module import get_resource_path
-from odoo.tools import func, misc, transpile_javascript, is_odoo_module, SourceMapGenerator, profiler
-from odoo.tools.misc import file_open, html_escape as escape
+from odoo.tools import (
+    SourceMapGenerator,
+    func,
+    is_odoo_module,
+    misc,
+    profiler,
+    transpile_javascript,
+)
+from odoo.tools.misc import file_open
+from odoo.tools.misc import html_escape as escape
 from odoo.tools.pycompat import to_text
 
 _logger = logging.getLogger(__name__)

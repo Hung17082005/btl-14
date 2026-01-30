@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-import re
 import base64
 import io
+import re
 
 from PyPDF2 import PdfFileReader, PdfFileWriter
-from reportlab.platypus import Frame, Paragraph, KeepInFrame
-from reportlab.lib.units import mm
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.units import mm
 from reportlab.pdfgen.canvas import Canvas
+from reportlab.platypus import Frame, KeepInFrame, Paragraph
 
-from odoo import fields, models, api, _
+from odoo import _, api, fields, models
 from odoo.addons.iap.tools import iap_tools
 from odoo.exceptions import AccessError, UserError
 from odoo.tools.safe_eval import safe_eval

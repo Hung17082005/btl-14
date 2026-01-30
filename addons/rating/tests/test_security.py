@@ -3,7 +3,7 @@
 
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.exceptions import AccessError
-from odoo.tests import tagged, common, new_test_user
+from odoo.tests import common, new_test_user, tagged
 from odoo.tools import mute_logger
 
 

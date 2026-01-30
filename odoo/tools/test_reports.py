@@ -10,10 +10,10 @@
 import logging
 import os
 import tempfile
-from subprocess import Popen, PIPE
+from subprocess import PIPE, Popen
 
 from .. import api
-from . import ustr, config
+from . import config, ustr
 from .safe_eval import safe_eval
 
 _logger = logging.getLogger(__name__)

@@ -7,9 +7,8 @@ from unittest.mock import patch
 
 from odoo import fields
 from odoo.addons.mail.tests.common import mail_new_test_user
-from odoo.exceptions import ValidationError
+from odoo.exceptions import AccessError, RedirectWarning, UserError, ValidationError
 from odoo.tests.common import Form, TransactionCase
-from odoo.exceptions import AccessError, RedirectWarning, UserError
 
 
 class StockQuant(TransactionCase):

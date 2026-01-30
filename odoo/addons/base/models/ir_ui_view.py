@@ -15,26 +15,40 @@ import time
 import uuid
 import warnings
 
+import werkzeug
+import werkzeug.urls
 from dateutil.relativedelta import relativedelta
-
-import werkzeug, werkzeug.urls
 from lxml import etree
-from lxml.etree import LxmlError
 from lxml.builder import E
+from lxml.etree import LxmlError
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError, AccessError
+from odoo import _, api, fields, models, tools
+from odoo.exceptions import AccessError, ValidationError
 from odoo.http import request
-from odoo.modules.module import get_resource_from_path, get_resource_path
-from odoo.tools import config, ConstantMapping, get_diff, pycompat, apply_inheritance_specs, locate_node
-from odoo.tools.convert import _fix_multiple_roots
-from odoo.tools.json import scriptsafe as json_scriptsafe
-from odoo.tools import safe_eval, lazy_property, frozendict
-from odoo.tools.view_validation import valid_view, get_variable_names, get_domain_identifiers, get_dict_asts
-from odoo.tools.translate import xml_translate, TRANSLATED_ATTRS
-from odoo.tools.image import image_data_uri
 from odoo.models import check_method_name
+from odoo.modules.module import get_resource_from_path, get_resource_path
 from odoo.osv.expression import expression
+from odoo.tools import (
+    ConstantMapping,
+    apply_inheritance_specs,
+    config,
+    frozendict,
+    get_diff,
+    lazy_property,
+    locate_node,
+    pycompat,
+    safe_eval,
+)
+from odoo.tools.convert import _fix_multiple_roots
+from odoo.tools.image import image_data_uri
+from odoo.tools.json import scriptsafe as json_scriptsafe
+from odoo.tools.translate import TRANSLATED_ATTRS, xml_translate
+from odoo.tools.view_validation import (
+    get_dict_asts,
+    get_domain_identifiers,
+    get_variable_names,
+    valid_view,
+)
 
 _logger = logging.getLogger(__name__)
 

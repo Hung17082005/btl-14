@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import pytz
 import uuid
 
-from odoo.tools import consteq
+import pytz
+
 from odoo import _, api, fields, models
 from odoo.addons.base.models.res_partner import _tz_get
 from odoo.exceptions import UserError
+from odoo.tools import consteq
 
 
 class MailGuest(models.Model):

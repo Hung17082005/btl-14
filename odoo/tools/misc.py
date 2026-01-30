@@ -5,11 +5,11 @@
 """
 Miscellaneous tools used by OpenERP.
 """
-import cProfile
 import collections
+import cProfile
 import datetime
-import hmac as hmac_lib
 import hashlib
+import hmac as hmac_lib
 import io
 import itertools
 import os
@@ -30,7 +30,8 @@ from collections.abc import Iterable, Mapping, MutableMapping, MutableSet
 from contextlib import contextmanager
 from difflib import HtmlDiff
 from functools import wraps
-from itertools import islice, groupby as itergroupby
+from itertools import groupby as itergroupby
+from itertools import islice
 from operator import itemgetter
 
 import babel
@@ -43,9 +44,11 @@ from lxml import etree, objectify
 
 import odoo
 import odoo.addons
+
 # get_encodings, ustr and exception_to_unicode were originally from tools.misc.
 # There are moved to loglevels until we refactor tools.
-from odoo.loglevels import get_encodings, ustr, exception_to_unicode     # noqa
+from odoo.loglevels import exception_to_unicode, get_encodings, ustr  # noqa
+
 from . import pycompat
 from .cache import *
 from .config import config
@@ -956,6 +959,7 @@ def dumpstacks(sig=None, frame=None, thread_idents=None):
     if odoo.evented:
         # code from http://stackoverflow.com/questions/12510648/in-gevent-how-can-i-dump-stack-traces-of-all-running-greenlets
         import gc
+
         from greenlet import greenlet
         for ob in gc.get_objects():
             if not isinstance(ob, greenlet) or not ob:

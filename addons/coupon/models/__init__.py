@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import mail_compose_message
-from . import coupon
-from . import coupon_reward
-from . import coupon_rules
-from . import coupon_program
-from . import product_product
+from . import (
+    coupon,
+    coupon_program,
+    coupon_reward,
+    coupon_rules,
+    mail_compose_message,
+    product_product,
+)

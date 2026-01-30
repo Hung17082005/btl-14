@@ -3,11 +3,11 @@
 import base64
 import io
 import re
+
 import xlwt
 
 from odoo import fields, models
 from odoo.tools.misc import format_date
-
 
 COLUMN_HEADER_MAP = {
     "Reporting_Month": "invoice_date",

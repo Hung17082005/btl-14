@@ -1,9 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import models
-from . import wizard
+from odoo import SUPERUSER_ID, api
 
-from odoo import api, SUPERUSER_ID
+from . import models, wizard
 
 
 def uninstall_hook(cr, registry):

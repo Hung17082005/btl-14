@@ -1,7 +1,7 @@
 from http import HTTPStatus
 
 import odoo.tools
-from odoo.tests import HttpCase, HOST
+from odoo.tests import HOST, HttpCase
 
 
 class TestCustomAuth(HttpCase):

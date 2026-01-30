@@ -2,8 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import _, api, fields, models, tools
-from odoo.addons.bus.models.bus_presence import AWAY_TIMER
-from odoo.addons.bus.models.bus_presence import DISCONNECTION_TIMER
+from odoo.addons.bus.models.bus_presence import AWAY_TIMER, DISCONNECTION_TIMER
 from odoo.osv import expression
 
 

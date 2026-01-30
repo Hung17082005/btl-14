@@ -3,7 +3,7 @@
 
 from itertools import chain
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 from odoo.exceptions import UserError, ValidationError
 from odoo.tools import format_datetime
 from odoo.tools.misc import formatLang, get_lang

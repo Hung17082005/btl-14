@@ -6,10 +6,10 @@ from datetime import datetime, timedelta
 from unittest.mock import patch
 
 from odoo.addons.base.tests.common import HttpCaseWithUserDemo
-from odoo.addons.website.tools import MockRequest
 from odoo.addons.website.models.website_visitor import WebsiteVisitor
+from odoo.addons.website.tools import MockRequest
 from odoo.exceptions import UserError
-from odoo.tests import common, tagged, HttpCase
+from odoo.tests import HttpCase, common, tagged
 
 
 class MockVisitor(common.BaseCase):

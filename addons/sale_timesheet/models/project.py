@@ -4,10 +4,11 @@
 import json
 from collections import defaultdict
 
-from odoo import api, fields, models, _, _lt
+from odoo import _, _lt, api, fields, models
+from odoo.exceptions import UserError, ValidationError
 from odoo.osv import expression
-from odoo.exceptions import ValidationError, UserError
-from odoo.tools import format_amount, float_is_zero, formatLang
+from odoo.tools import float_is_zero, format_amount, formatLang
+
 
 # YTI PLEASE SPLIT ME
 class Project(models.Model):

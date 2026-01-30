@@ -1,5 +1,5 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import models, api, fields, _
+from odoo import _, api, fields, models
 
 
 class AccountChartTemplate(models.Model):

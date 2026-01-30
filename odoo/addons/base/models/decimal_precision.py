@@ -1,11 +1,12 @@
 # -*- encoding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools, _
-import odoo.addons
-
 import logging
 import sys
+
+import odoo.addons
+from odoo import _, api, fields, models, tools
+
 _logger = logging.getLogger(__name__)
 
 

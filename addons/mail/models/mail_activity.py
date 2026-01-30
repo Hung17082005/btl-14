@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import pytz
-
 from collections import defaultdict
 from datetime import date, datetime
+
+import pytz
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, exceptions, fields, models, _, Command
+from odoo import Command, _, api, exceptions, fields, models
 from odoo.osv import expression
 from odoo.tools.misc import clean_context
 

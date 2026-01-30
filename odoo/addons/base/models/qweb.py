@@ -1,21 +1,22 @@
 # -*- coding: utf-8 -*-
+import builtins
+import io
 import logging
 import os.path
 import re
-import traceback
-import builtins
 import token
 import tokenize
-import io
+import traceback
+from collections.abc import Mapping, Sized
+from itertools import chain, count
+from textwrap import dedent
+from textwrap import indent as _indent
 
-from markupsafe import Markup, escape
-from collections.abc import Sized, Mapping
-from itertools import count, chain
-from textwrap import dedent, indent as _indent
 from lxml import etree
+from markupsafe import Markup, escape
 from psycopg2.extensions import TransactionRollbackError
 
-from odoo.tools import pycompat, freehash
+from odoo.tools import freehash, pycompat
 
 _logger = logging.getLogger(__name__)
 

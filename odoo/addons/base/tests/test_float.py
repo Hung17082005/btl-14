@@ -4,7 +4,14 @@
 from math import log10
 
 from odoo.tests.common import TransactionCase
-from odoo.tools import float_compare, float_is_zero, float_repr, float_round, float_split, float_split_str
+from odoo.tools import (
+    float_compare,
+    float_is_zero,
+    float_repr,
+    float_round,
+    float_split,
+    float_split_str,
+)
 
 
 class TestFloatPrecision(TransactionCase):

@@ -3,8 +3,7 @@
 
 from collections import defaultdict
 
-from odoo import _, fields, models
-from odoo import Command
+from odoo import Command, _, fields, models
 from odoo.tools.float_utils import float_compare
 
 

@@ -3,13 +3,12 @@
 
 import json
 import logging
-from datetime import timedelta
 from collections import defaultdict
+from datetime import timedelta
 
-from odoo import api, fields, models, _
-from odoo.tools import float_compare, float_round
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
-
+from odoo.tools import float_compare, float_round
 
 _logger = logging.getLogger(__name__)
 

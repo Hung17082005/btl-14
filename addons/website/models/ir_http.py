@@ -1,28 +1,26 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
-from lxml import etree
 import os
-import unittest
 import time
+import unittest
+from functools import partial
 
 import pytz
 import werkzeug
 import werkzeug.routing
 import werkzeug.utils
-
-from functools import partial
+from lxml import etree
 
 import odoo
-from odoo import api, models
-from odoo import registry, SUPERUSER_ID
-from odoo.exceptions import AccessError
-from odoo.http import request
-from odoo.tools.safe_eval import safe_eval
-from odoo.osv.expression import FALSE_DOMAIN
+from odoo import SUPERUSER_ID, api, models, registry
 from odoo.addons.http_routing.models import ir_http
 from odoo.addons.http_routing.models.ir_http import _guess_mimetype
 from odoo.addons.portal.controllers.portal import _build_url_w_params
+from odoo.exceptions import AccessError
+from odoo.http import request
+from odoo.osv.expression import FALSE_DOMAIN
+from odoo.tools.safe_eval import safe_eval
 
 logger = logging.getLogger(__name__)
 

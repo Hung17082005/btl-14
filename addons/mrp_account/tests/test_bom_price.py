@@ -2,9 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo.exceptions import UserError
-from odoo.tests import common, Form
-
-from odoo.tools.float_utils import float_round, float_compare
+from odoo.tests import Form, common
+from odoo.tools.float_utils import float_compare, float_round
 
 
 class TestBomPrice(common.TransactionCase):

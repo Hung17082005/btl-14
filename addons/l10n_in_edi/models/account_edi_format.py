@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import re
 import json
-import pytz
-import markupsafe
-
+import logging
+import re
 from collections import defaultdict
 
-from odoo import models, fields, api, _
-from odoo.tools import html_escape, float_is_zero, float_compare
-from odoo.exceptions import AccessError, ValidationError
+import markupsafe
+import pytz
+
+from odoo import _, api, fields, models
 from odoo.addons.iap import jsonrpc
-import logging
+from odoo.exceptions import AccessError, ValidationError
+from odoo.tools import float_compare, float_is_zero, html_escape
 
 _logger = logging.getLogger(__name__)
 

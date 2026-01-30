@@ -1,11 +1,14 @@
 from types import SimpleNamespace
+
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.serialization import pkcs12
 from OpenSSL import crypto
 
 
 def load_key_and_certificates(content, password):
-    private_key, certificate, _dummy = pkcs12.load_key_and_certificates(content, password, backend=default_backend())
+    private_key, certificate, _dummy = pkcs12.load_key_and_certificates(
+        content, password, backend=default_backend()
+    )
 
     def public_key():
         public_key = certificate.public_key()
@@ -16,6 +19,7 @@ def load_key_and_certificates(content, password):
                 n=public_numbers.n,
                 e=public_numbers.e,
             )
+
         return SimpleNamespace(
             public_numbers=public_numbers,
             public_bytes=public_key.public_bytes,
@@ -37,7 +41,7 @@ def load_key_and_certificates(content, password):
             get_attributes_for_oid=lambda oid: [
                 SimpleNamespace(value=item.value)
                 for item in certificate.issuer.get_attributes_for_oid(oid)
-            ]
+            ],
         ),
         not_valid_after=certificate.not_valid_after,
         not_valid_before=certificate.not_valid_before,

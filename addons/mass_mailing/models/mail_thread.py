@@ -3,7 +3,7 @@
 
 import datetime
 
-from odoo import api, models, fields, tools
+from odoo import api, fields, models, tools
 
 BLACKLIST_MAX_BOUNCED_LIMIT = 5
 

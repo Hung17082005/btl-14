@@ -3,8 +3,7 @@
 
 from datetime import timedelta
 
-
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 
 
 class User(models.Model):

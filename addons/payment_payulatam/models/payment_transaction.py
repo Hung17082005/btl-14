@@ -5,11 +5,10 @@ import logging
 from werkzeug import urls
 
 from odoo import _, api, models
-from odoo.exceptions import ValidationError
-from odoo.tools.float_utils import float_repr
-
 from odoo.addons.payment import utils as payment_utils
 from odoo.addons.payment_payulatam.controllers.main import PayuLatamController
+from odoo.exceptions import ValidationError
+from odoo.tools.float_utils import float_repr
 
 _logger = logging.getLogger(__name__)
 

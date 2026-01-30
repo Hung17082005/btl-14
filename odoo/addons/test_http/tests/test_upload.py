@@ -3,6 +3,7 @@
 
 from io import StringIO
 from unittest.mock import patch
+
 from odoo.tests import common, tagged
 
 

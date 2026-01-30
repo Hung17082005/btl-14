@@ -2,6 +2,7 @@
 
 from odoo import _, api, models
 
+
 class PricelistItem(models.Model):
     _inherit = "product.pricelist.item"
 

@@ -10,9 +10,17 @@ import re
 
 from werkzeug import urls
 
-from odoo import fields as odoo_fields, http, tools, _, SUPERUSER_ID
-from odoo.exceptions import ValidationError, AccessError, MissingError, UserError, AccessDenied
-from odoo.http import content_disposition, Controller, request, route
+from odoo import SUPERUSER_ID, _
+from odoo import fields as odoo_fields
+from odoo import http, tools
+from odoo.exceptions import (
+    AccessDenied,
+    AccessError,
+    MissingError,
+    UserError,
+    ValidationError,
+)
+from odoo.http import Controller, content_disposition, request, route
 from odoo.tools import consteq
 
 # --------------------------------------------------

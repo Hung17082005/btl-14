@@ -2,19 +2,22 @@
 
 import configparser as ConfigParser
 import errno
+import glob
 import logging
 import optparse
-import glob
 import os
 import sys
 import tempfile
 import warnings
-import odoo
-from os.path import expandvars, expanduser, abspath, realpath
-from .. import release, conf, loglevels
-from . import appdirs
+from os.path import abspath, expanduser, expandvars, realpath
 
 from passlib.context import CryptContext
+
+import odoo
+
+from .. import conf, loglevels, release
+from . import appdirs
+
 crypt_context = CryptContext(schemes=['pbkdf2_sha512', 'plaintext'],
                              deprecated=['plaintext'],
                              pbkdf2_sha512__rounds=600_000)

@@ -4,11 +4,10 @@ import logging
 import pprint
 
 from odoo import _, api, fields, models
-from odoo.exceptions import UserError, ValidationError
-
 from odoo.addons.payment import utils as payment_utils
 from odoo.addons.payment_adyen import utils as adyen_utils
 from odoo.addons.payment_adyen.const import CURRENCY_DECIMALS, RESULT_CODES_MAPPING
+from odoo.exceptions import UserError, ValidationError
 
 _logger = logging.getLogger(__name__)
 

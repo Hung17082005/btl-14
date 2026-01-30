@@ -4,8 +4,8 @@
 import json
 import logging
 import time
-import requests
 
+import requests
 from werkzeug.urls import url_encode, url_join
 
 from odoo import _, api, fields, models

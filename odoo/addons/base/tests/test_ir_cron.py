@@ -3,10 +3,11 @@
 
 from datetime import timedelta
 from unittest.mock import patch
+
 from freezegun import freeze_time
 
 from odoo import fields
-from odoo.tests.common import TransactionCase, RecordCapturer, get_db_name
+from odoo.tests.common import RecordCapturer, TransactionCase, get_db_name
 
 
 class CronMixinCase:

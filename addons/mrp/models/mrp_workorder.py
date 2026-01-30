@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
-from collections import defaultdict
 import json
+from collections import defaultdict
+from datetime import datetime, timedelta
 
-from odoo import api, fields, models, _, SUPERUSER_ID
+from dateutil.relativedelta import relativedelta
+
+from odoo import SUPERUSER_ID, _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.tools import float_compare, float_round, format_datetime
 

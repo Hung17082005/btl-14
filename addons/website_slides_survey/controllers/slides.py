@@ -2,16 +2,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import werkzeug
-import werkzeug.utils
 import werkzeug.exceptions
+import werkzeug.utils
 
-from odoo import _
-from odoo import http
+from odoo import _, http
+from odoo.addons.website_slides.controllers.main import WebsiteSlides
 from odoo.exceptions import AccessError
 from odoo.http import request
 from odoo.osv import expression
-
-from odoo.addons.website_slides.controllers.main import WebsiteSlides
 
 
 class WebsiteSlidesSurvey(WebsiteSlides):

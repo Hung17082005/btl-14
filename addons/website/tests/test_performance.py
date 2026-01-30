@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal, HttpCaseWithUserDemo
+from odoo.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUserPortal
 
 EXTRA_REQUEST = 5
 """ During tests, the query on 'base_registry_signaling, base_cache_signaling'

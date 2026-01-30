@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import print_function
+
 import argparse
 import os
 import re
@@ -9,6 +10,7 @@ import sys
 import jinja2
 
 from . import Command
+
 
 class Scaffold(Command):
     """ Generates an Odoo module skeleton. """

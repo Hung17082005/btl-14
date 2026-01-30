@@ -3,10 +3,9 @@
 
 import random
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import AccessDenied, AccessError, UserError
 from odoo.tools import html_escape
-
 
 
 class CrmLead(models.Model):

@@ -3,11 +3,11 @@
 
 from datetime import timedelta
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
-from odoo.tools.misc import get_lang
 from odoo.osv import expression
-from odoo.tools import float_is_zero, float_compare, float_round
+from odoo.tools import float_compare, float_is_zero, float_round
+from odoo.tools.misc import get_lang
 
 
 class SaleOrderLine(models.Model):

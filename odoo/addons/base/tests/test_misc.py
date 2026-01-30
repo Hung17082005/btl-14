@@ -2,10 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import datetime
-from dateutil.relativedelta import relativedelta
 import os.path
-import pytz
 
+import pytz
+from dateutil.relativedelta import relativedelta
+
+from odoo.tests.common import BaseCase, TransactionCase
 from odoo.tools import (
     config,
     date_utils,
@@ -16,7 +18,6 @@ from odoo.tools import (
     remove_accents,
     validate_url,
 )
-from odoo.tests.common import TransactionCase, BaseCase
 
 
 class TestCountingStream(BaseCase):

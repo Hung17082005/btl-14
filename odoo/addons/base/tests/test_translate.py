@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.exceptions import AccessError, ValidationError
-from odoo.tools import mute_logger
-from odoo.tools.translate import quote, unquote, xml_translate, html_translate
-from odoo.tests.common import TransactionCase, BaseCase, new_test_user
 from psycopg2 import IntegrityError
+
+from odoo.exceptions import AccessError, ValidationError
+from odoo.tests.common import BaseCase, TransactionCase, new_test_user
+from odoo.tools import mute_logger
+from odoo.tools.translate import html_translate, quote, unquote, xml_translate
 
 
 class TranslationToolsTestCase(BaseCase):

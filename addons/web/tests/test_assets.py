@@ -5,7 +5,6 @@ import time
 
 import odoo
 import odoo.tests
-
 from odoo.modules.module import read_manifest
 from odoo.tools import mute_logger
 

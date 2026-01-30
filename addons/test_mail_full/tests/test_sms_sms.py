@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import werkzeug
+from unittest.mock import DEFAULT, patch
 
-from unittest.mock import patch
-from unittest.mock import DEFAULT
+import werkzeug
 
 from odoo import exceptions
 from odoo.addons.link_tracker.tests.common import MockLinkTracker

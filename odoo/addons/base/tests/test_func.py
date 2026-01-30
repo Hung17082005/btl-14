@@ -3,10 +3,10 @@
 
 import functools
 
+from odoo import Command
 from odoo.tests.common import BaseCase
 from odoo.tools import frozendict
 from odoo.tools.func import compose
-from odoo import Command
 
 
 class TestCompose(BaseCase):

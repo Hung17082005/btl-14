@@ -14,12 +14,10 @@ def rename_tag(cr, old_tag, new_tag):
 def migrate(cr, version):
     # By deleting tag B from ir_model_data we ensure that the ORM won't try to remove this record.
     # This is done because the tag might be already used as a FK somewhere else.
-    cr.execute(
-        """DELETE FROM ir_model_data
+    cr.execute("""DELETE FROM ir_model_data
            WHERE module='l10n_de'
            AND name='tag_de_liabilities_bs_B'
-        """
-    )
+        """)
 
     rename_tag(cr, "tag_de_liabilities_bs_C_1", "tag_de_liabilities_bs_B_1")
     rename_tag(cr, "tag_de_liabilities_bs_C_2", "tag_de_liabilities_bs_B_2")

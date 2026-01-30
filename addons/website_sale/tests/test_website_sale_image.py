@@ -5,8 +5,8 @@ import io
 
 from PIL import Image
 
-from odoo.addons.website_sale.tests.common import TestWebsiteSaleCommon
 import odoo.tests
+from odoo.addons.website_sale.tests.common import TestWebsiteSaleCommon
 
 
 @odoo.tests.common.tagged('post_install', '-at_install')

@@ -4,8 +4,8 @@
 from datetime import timedelta
 
 from odoo import fields
-from odoo.tests import tagged
 from odoo.addons.sale_purchase.tests.common import TestCommonSalePurchaseNoChart
+from odoo.tests import tagged
 
 
 @tagged('post_install', '-at_install')

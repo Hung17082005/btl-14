@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError
-
+from odoo import _, api, fields, models, tools
 from odoo.addons.website.tools import get_video_embed_code
+from odoo.exceptions import ValidationError
 
 
 class ProductImage(models.Model):

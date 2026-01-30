@@ -5,7 +5,7 @@ import base64
 import operator
 import re
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 from odoo.exceptions import ValidationError
 from odoo.http import request
 from odoo.modules import get_module_resource

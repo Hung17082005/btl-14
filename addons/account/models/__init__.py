@@ -1,36 +1,38 @@
 # -*- coding: utf-8 -*-
 
-from . import sequence_mixin
-from . import partner
-from . import res_partner_bank
-from . import account_account_tag
-from . import account_account
-from . import account_journal
-from . import account_tax
-from . import account_tax_carryover_line
-from . import account_tax_report
-from . import account_reconcile_model
-from . import account_payment_term
-from . import account_move
-from . import account_move_line_tax_details
-from . import account_analytic_default
-from . import account_partial_reconcile
-from . import account_full_reconcile
-from . import account_payment
-from . import account_payment_method
-from . import account_bank_statement
-from . import chart_template
-from . import account_analytic_line
-from . import account_journal_dashboard
-from . import product
-from . import company
-from . import res_config_settings
-from . import account_cash_rounding
-from . import account_incoterms
-from . import digest
-from . import res_users
-from . import ir_actions_report
-from . import res_currency
-from . import res_bank
-from . import mail_thread
-from . import ir_module_module
+from . import (
+    account_account,
+    account_account_tag,
+    account_analytic_default,
+    account_analytic_line,
+    account_bank_statement,
+    account_cash_rounding,
+    account_full_reconcile,
+    account_incoterms,
+    account_journal,
+    account_journal_dashboard,
+    account_move,
+    account_move_line_tax_details,
+    account_partial_reconcile,
+    account_payment,
+    account_payment_method,
+    account_payment_term,
+    account_reconcile_model,
+    account_tax,
+    account_tax_carryover_line,
+    account_tax_report,
+    chart_template,
+    company,
+    digest,
+    ir_actions_report,
+    ir_module_module,
+    mail_thread,
+    partner,
+    product,
+    res_bank,
+    res_config_settings,
+    res_currency,
+    res_partner_bank,
+    res_users,
+    sequence_mixin,
+)

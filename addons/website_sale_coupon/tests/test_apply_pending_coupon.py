@@ -1,6 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.sale_coupon.tests.test_program_numbers import TestSaleCouponProgramNumbers
+from odoo.addons.sale_coupon.tests.test_program_numbers import (
+    TestSaleCouponProgramNumbers,
+)
 from odoo.addons.website.tools import MockRequest
 from odoo.addons.website_sale_coupon.controllers.main import WebsiteSale
 from odoo.tests import tagged

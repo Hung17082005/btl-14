@@ -5,20 +5,20 @@ import base64
 import collections
 import datetime
 import hashlib
-import pytz
-import threading
 import re
+import threading
 import warnings
-
-import requests
 from collections import defaultdict
-from lxml import etree
 from random import randint
+
+import pytz
+import requests
+from lxml import etree
 from werkzeug import urls
 
-from odoo import api, fields, models, tools, SUPERUSER_ID, _, Command
-from odoo.osv.expression import get_unaccent_wrapper
+from odoo import SUPERUSER_ID, Command, _, api, fields, models, tools
 from odoo.exceptions import RedirectWarning, UserError, ValidationError
+from odoo.osv.expression import get_unaccent_wrapper
 
 # Global variables used for the warning fields declared on the res.partner
 # in the following modules : sale, purchase, account, stock

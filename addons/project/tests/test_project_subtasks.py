@@ -5,6 +5,7 @@ from odoo.addons.project.tests.test_project_base import TestProjectCommon
 from odoo.tests import tagged
 from odoo.tests.common import Form
 
+
 @tagged('-at_install', 'post_install')
 class TestProjectSubtasks(TestProjectCommon):
     def test_task_display_project_with_default_form(self):

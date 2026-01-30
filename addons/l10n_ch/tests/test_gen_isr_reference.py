@@ -4,11 +4,11 @@
 from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 from odoo.tests import tagged
 
-QR_IBAN = 'CH21 3080 8001 2345 6782 7'
+QR_IBAN = "CH21 3080 8001 2345 6782 7"
 ISR_SUBS_NUMBER = "01-162-8"
 
 
-@tagged('post_install_l10n', 'post_install', '-at_install')
+@tagged("post_install_l10n", "post_install", "-at_install")
 class TestGenISRReference(AccountTestInvoicingCommon):
     """Check condition of generation of and content of the structured ref"""
 
@@ -38,7 +38,9 @@ class TestGenISRReference(AccountTestInvoicingCommon):
             }
         )
         cls.product_a.taxes_id = cls.product_b.taxes_id = None
-        cls.invoice = cls.init_invoice("out_invoice", products=cls.product_a+cls.product_b)
+        cls.invoice = cls.init_invoice(
+            "out_invoice", products=cls.product_a + cls.product_b
+        )
 
     def test_isr(self):
 

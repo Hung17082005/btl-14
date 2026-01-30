@@ -1,30 +1,38 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from email.message import EmailMessage
-from email.utils import make_msgid
 import base64
 import datetime
 import email
 import email.policy
-import idna
 import logging
 import re
 import smtplib
 import ssl
 import sys
 import threading
-
+from email.message import EmailMessage
+from email.utils import make_msgid
 from socket import gaierror, timeout
+
+import idna
 from OpenSSL import crypto as SSLCrypto
-from OpenSSL.crypto import Error as SSLCryptoError, FILETYPE_PEM
+from OpenSSL.crypto import FILETYPE_PEM
+from OpenSSL.crypto import Error as SSLCryptoError
 from OpenSSL.SSL import Error as SSLError
 from urllib3.contrib.pyopenssl import PyOpenSSLContext
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 from odoo.exceptions import UserError
-from odoo.tools import ustr, pycompat, formataddr, email_normalize, encapsulate_email, email_domain_extract, email_domain_normalize
-
+from odoo.tools import (
+    email_domain_extract,
+    email_domain_normalize,
+    email_normalize,
+    encapsulate_email,
+    formataddr,
+    pycompat,
+    ustr,
+)
 
 _logger = logging.getLogger(__name__)
 _test_logger = logging.getLogger('odoo.tests')

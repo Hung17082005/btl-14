@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import models
-from . import report
-from . import populate
-from . import wizard
+from odoo import SUPERUSER_ID, api
 
-from odoo import api, SUPERUSER_ID
+from . import models, populate, report, wizard
 
 
 def _create_buy_rules(cr, registry):

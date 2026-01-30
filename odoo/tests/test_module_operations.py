@@ -8,10 +8,10 @@ import time
 sys.path.append(os.path.abspath(os.path.join(__file__,'../../../')))
 
 import odoo
-from odoo.tools import config, topological_sort, unique
+import odoo.tests.loader
 from odoo.netsvc import init_logger
 from odoo.tests import standalone_tests
-import odoo.tests.loader
+from odoo.tools import config, topological_sort, unique
 
 _logger = logging.getLogger('odoo.tests.test_module_operations')
 

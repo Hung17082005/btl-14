@@ -6,8 +6,9 @@ import textwrap
 
 from passlib.hash import pbkdf2_sha512
 
-from . import Command
 from odoo.tools import config
+
+from . import Command
 
 
 class GenProxyToken(Command):

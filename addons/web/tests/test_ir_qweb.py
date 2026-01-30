@@ -1,5 +1,7 @@
 from lxml import etree
+
 from odoo.tests.common import TransactionCase
+
 
 class TestIrQweb(TransactionCase):
     def test_image_field(self):

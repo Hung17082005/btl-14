@@ -3,6 +3,7 @@
 
 from odoo import fields, models
 
+
 class AccountAnalyticTag(models.Model):
     _inherit = 'account.analytic.tag'
 

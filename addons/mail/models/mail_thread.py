@@ -4,30 +4,39 @@
 import ast
 import base64
 import datetime
-import dateutil
 import email
 import email.policy
 import hashlib
 import hmac
-import lxml
 import logging
-import pytz
 import re
-import time
 import threading
-
+import time
 from collections import namedtuple
-from email.message import EmailMessage
 from email import message_from_string, policy
-from lxml import etree
-from werkzeug import urls
+from email.message import EmailMessage
 from xmlrpc import client as xmlrpclib
-from markupsafe import Markup
 
-from odoo import _, api, exceptions, fields, models, tools, registry, SUPERUSER_ID, Command
+import dateutil
+import lxml
+import pytz
+from lxml import etree
+from markupsafe import Markup
+from werkzeug import urls
+
+from odoo import (
+    SUPERUSER_ID,
+    Command,
+    _,
+    api,
+    exceptions,
+    fields,
+    models,
+    registry,
+    tools,
+)
 from odoo.exceptions import MissingError
 from odoo.osv import expression
-
 from odoo.tools.misc import clean_context, split_every
 
 _logger = logging.getLogger(__name__)

@@ -6,7 +6,9 @@ from unittest.mock import patch
 
 from odoo import exceptions
 from odoo.addons.iap.tools import iap_tools
-from odoo.addons.partner_autocomplete.models.iap_autocomplete_api import IapAutocompleteEnrichAPI
+from odoo.addons.partner_autocomplete.models.iap_autocomplete_api import (
+    IapAutocompleteEnrichAPI,
+)
 from odoo.tests import common
 
 

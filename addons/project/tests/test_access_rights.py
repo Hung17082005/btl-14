@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from odoo import Command
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.addons.project.tests.test_project_base import TestProjectCommon
-from odoo import Command
 from odoo.exceptions import AccessError, ValidationError
 from odoo.tests.common import users
 from odoo.tools import mute_logger
+
 
 class TestAccessRights(TestProjectCommon):
     def setUp(self):

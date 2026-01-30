@@ -2,16 +2,15 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, timedelta
+from html import unescape
 
 import requests
-
-from html import unescape
 from markupsafe import Markup
 
-from odoo import models, api, service
-from odoo.tools.translate import _
+from odoo import api, models, service
 from odoo.exceptions import UserError
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, misc
+from odoo.tools.translate import _
 
 
 class MercuryTransaction(models.Model):

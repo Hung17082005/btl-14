@@ -3,9 +3,9 @@
 
 from ast import literal_eval
 
+from odoo import exceptions
 from odoo.addons.phone_validation.tools import phone_validation
 from odoo.addons.test_mail_full.tests.common import TestMailFullCommon
-from odoo import exceptions
 from odoo.tests import tagged
 from odoo.tests.common import users
 from odoo.tools import mute_logger

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import markupsafe
-from odoo.addons.account_edi_ubl_bis3.models.account_edi_format import COUNTRY_EAS
 
-from odoo import models, _
+from odoo import _, models
+from odoo.addons.account_edi_ubl_bis3.models.account_edi_format import COUNTRY_EAS
 
 
 class AccountEdiFormat(models.Model):

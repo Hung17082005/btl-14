@@ -5,10 +5,9 @@ import logging
 from werkzeug import urls
 
 from odoo import _, api, models
+from odoo.addons.payment_alipay.controllers.main import AlipayController
 from odoo.exceptions import ValidationError
 from odoo.tools.float_utils import float_compare
-
-from odoo.addons.payment_alipay.controllers.main import AlipayController
 
 _logger = logging.getLogger(__name__)
 

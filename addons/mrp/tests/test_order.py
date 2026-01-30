@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests import Form
 from datetime import datetime, timedelta
+
 from freezegun import freeze_time
 
 from odoo import fields
-from odoo.exceptions import UserError
 from odoo.addons.mrp.tests.common import TestMrpCommon
+from odoo.exceptions import UserError
+from odoo.tests import Form
 from odoo.tools.misc import format_date
 
 

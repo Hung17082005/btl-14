@@ -1,4 +1,4 @@
-from odoo import api, SUPERUSER_ID
+from odoo import SUPERUSER_ID, api
 
 
 def load_translations(cr, registry):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools, _
-from odoo.exceptions import ValidationError, UserError
+from odoo import _, api, fields, models, tools
 from odoo.addons.website.models import ir_http
+from odoo.exceptions import UserError, ValidationError
 from odoo.tools.translate import html_translate
 
 

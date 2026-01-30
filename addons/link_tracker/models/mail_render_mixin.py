@@ -2,9 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import re
+from html import unescape
 
 import markupsafe
-from html import unescape
 from werkzeug import urls
 
 from odoo import api, models, tools

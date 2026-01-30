@@ -2,16 +2,15 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import ast
-
 from textwrap import dedent
 
 from odoo import SUPERUSER_ID, Command
+from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
 from odoo.exceptions import RedirectWarning, UserError, ValidationError
 from odoo.tests import tagged
-from odoo.tests.common import TransactionCase, BaseCase
+from odoo.tests.common import BaseCase, TransactionCase
 from odoo.tools import mute_logger
-from odoo.tools.safe_eval import safe_eval, const_eval, expr_eval
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
+from odoo.tools.safe_eval import const_eval, expr_eval, safe_eval
 
 
 class TestSafeEval(BaseCase):

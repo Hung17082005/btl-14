@@ -2,13 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
+from datetime import date, timedelta
 
 from odoo import tools
-from odoo.api import Environment
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.tests import loaded_demo_data, tagged
 from odoo.addons.account.tests.common import AccountTestInvoicingHttpCommon
-from datetime import date, timedelta
+from odoo.api import Environment
+from odoo.tests import loaded_demo_data, tagged
+from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
 
 _logger = logging.getLogger(__name__)
 

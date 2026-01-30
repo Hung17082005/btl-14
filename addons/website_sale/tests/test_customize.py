@@ -6,6 +6,7 @@ from odoo.addons.base.tests.common import HttpCaseWithUserDemo, HttpCaseWithUser
 from odoo.modules.module import get_module_resource
 from odoo.tests import tagged
 
+
 @tagged('post_install', '-at_install')
 class TestUi(HttpCaseWithUserDemo, HttpCaseWithUserPortal):
 

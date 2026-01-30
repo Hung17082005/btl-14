@@ -1,28 +1,28 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from collections import Counter
-from lxml import etree
+import base64
 import os
+import pathlib
+import textwrap
 import time
+from collections import Counter
 from unittest import skip
 from unittest.mock import patch
-import textwrap
-import pathlib
+
 import lxml
-import base64
+from lxml import etree
 
 from odoo import api, http
 from odoo.addons import __path__ as ADDONS_PATH
 from odoo.addons.base.models.assetsbundle import AssetsBundle
 from odoo.addons.base.models.ir_asset import AssetPaths
 from odoo.addons.base.models.ir_attachment import IrAttachment
+from odoo.addons.base.models.qweb import QWebException
 from odoo.modules.module import get_resource_path, read_manifest
 from odoo.tests import HttpCase, tagged
 from odoo.tests.common import TransactionCase
-from odoo.addons.base.models.qweb import QWebException
-from odoo.tools import mute_logger, func
-
+from odoo.tools import func, mute_logger
 
 GETMTINE = os.path.getmtime
 

@@ -3,11 +3,11 @@
 
 import werkzeug
 
-from odoo import http, fields, tools
+from odoo import fields, http, tools
 from odoo.addons.http_routing.models.ir_http import slug
 from odoo.addons.portal.controllers.portal import pager as portal_pager
 from odoo.exceptions import AccessError
-from odoo.http import request, Response
+from odoo.http import Response, request
 from odoo.osv import expression
 from odoo.tools import consteq
 

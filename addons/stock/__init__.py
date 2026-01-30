@@ -1,14 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import controllers
-from . import models
-from . import report
-from . import wizard
-from . import populate
+from odoo import SUPERUSER_ID, api
 
-
-from odoo import api, SUPERUSER_ID
+from . import controllers, models, populate, report, wizard
 
 
 # TODO: Apply proper fix & remove in master

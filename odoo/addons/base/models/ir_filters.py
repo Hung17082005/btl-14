@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 from odoo.exceptions import UserError
-from odoo.tools.safe_eval import safe_eval, datetime
+from odoo.tools.safe_eval import datetime, safe_eval
 
 
 class IrFilters(models.Model):

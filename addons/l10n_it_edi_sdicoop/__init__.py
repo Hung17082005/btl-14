@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from . import models
+from odoo import SUPERUSER_ID, api
 
-from odoo import api, SUPERUSER_ID
+from . import models
 
 
 def _disable_pec_mail_post_init(cr, registry):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields
-from odoo.http import request
+from odoo import api, fields, models
 from odoo.addons.http_routing.models.ir_http import url_for
+from odoo.http import request
 from odoo.tools import is_html_empty
 
 

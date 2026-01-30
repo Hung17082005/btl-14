@@ -1,12 +1,12 @@
 # # -*- coding: utf-8 -*-
 # # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from unittest.mock import patch
 import sys
+from unittest.mock import patch
 
 from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.tests import common, tagged
 from odoo.exceptions import AccessError
+from odoo.tests import common, tagged
 
 
 @tagged('post_install', '-at_install')

@@ -5,10 +5,10 @@ from collections import defaultdict
 
 import psycopg2
 
+from odoo import Command
 from odoo.exceptions import AccessError, MissingError
 from odoo.tests.common import TransactionCase
 from odoo.tools import mute_logger
-from odoo import Command
 
 
 class TestORM(TransactionCase):

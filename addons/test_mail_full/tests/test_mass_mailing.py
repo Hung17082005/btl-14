@@ -4,9 +4,9 @@
 import werkzeug
 
 from odoo.addons.test_mail_full.tests.common import TestMailFullCommon
+from odoo.tests import tagged
 from odoo.tests.common import users
 from odoo.tools import mute_logger
-from odoo.tests import tagged
 
 
 @tagged('mass_mailing')

@@ -3,6 +3,7 @@
 from odoo.addons.stock.tests.common import TestStockCommon
 from odoo.tests import Form
 
+
 class TestReturnPicking(TestStockCommon):
 
     def test_stock_return_picking_line_creation(self):

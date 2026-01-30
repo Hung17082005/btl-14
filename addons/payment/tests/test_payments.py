@@ -2,9 +2,9 @@
 
 from unittest.mock import patch
 
+from odoo.addons.payment.tests.common import PaymentCommon
 from odoo.exceptions import ValidationError
 from odoo.tests import tagged
-from odoo.addons.payment.tests.common import PaymentCommon
 
 
 @tagged('-at_install', 'post_install')

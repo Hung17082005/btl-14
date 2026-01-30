@@ -2,12 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import base64
+import io
 import re
 
+from odoo.modules.module import get_module_resource
 from odoo.tests.common import TransactionCase
 from odoo.tools import pdf
-from odoo.modules.module import get_module_resource
-import io
 
 
 class TestPdf(TransactionCase):

@@ -3,8 +3,8 @@
 
 from ast import literal_eval
 
-from odoo import api, fields, models, _, _lt
-from odoo.exceptions import ValidationError, UserError
+from odoo import _, _lt, api, fields, models
+from odoo.exceptions import UserError, ValidationError
 from odoo.osv import expression
 from odoo.osv.query import Query
 

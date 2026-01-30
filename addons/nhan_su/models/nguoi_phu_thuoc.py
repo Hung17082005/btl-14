@@ -1,5 +1,6 @@
-from odoo import models, fields, api
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+
 
 class NguoiPhuThuoc(models.Model):
     _name = 'nguoi_phu_thuoc'

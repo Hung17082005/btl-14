@@ -3,9 +3,9 @@
 import time
 
 from odoo.exceptions import AccessError
-from odoo.tests.common import BaseCase, TransactionCase, tagged, new_test_user
+from odoo.tests.common import BaseCase, TransactionCase, new_test_user, tagged
 from odoo.tools import profiler
-from odoo.tools.profiler import Profiler, ExecutionContext
+from odoo.tools.profiler import ExecutionContext, Profiler
 from odoo.tools.speedscope import Speedscope
 
 

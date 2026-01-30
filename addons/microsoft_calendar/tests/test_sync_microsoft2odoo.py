@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService, MicrosoftEvent
-from odoo.exceptions import ValidationError
+from datetime import date, datetime
+
 import pytz
-from datetime import datetime, date
-from odoo.tests.common import TransactionCase
 from dateutil.relativedelta import relativedelta
+
+from odoo.addons.microsoft_calendar.utils.microsoft_calendar import (
+    MicrosoftCalendarService,
+    MicrosoftEvent,
+)
+from odoo.exceptions import ValidationError
+from odoo.tests.common import TransactionCase
 
 
 class TestSyncMicrosoft2Odoo(TransactionCase):

@@ -4,7 +4,7 @@
 from datetime import datetime, timedelta
 
 from odoo.addons.mass_mailing.tests.common import MassMailCommon
-from odoo.tests import users, tagged
+from odoo.tests import tagged, users
 from odoo.tools import mute_logger
 
 

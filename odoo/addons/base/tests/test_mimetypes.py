@@ -7,7 +7,7 @@ except ImportError:
     magic = None
 
 from odoo.tests.common import BaseCase
-from odoo.tools.mimetypes import guess_mimetype, get_extension
+from odoo.tools.mimetypes import get_extension, guess_mimetype
 
 PNG = b'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC'
 GIF = b"R0lGODdhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs="

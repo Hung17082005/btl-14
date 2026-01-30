@@ -6,8 +6,9 @@ import os
 import re
 import subprocess
 from unittest import skipIf
+
 from odoo import tools
-from odoo.modules import get_modules, get_module_path
+from odoo.modules import get_module_path, get_modules
 
 from . import lint_case
 

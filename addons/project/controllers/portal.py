@@ -3,17 +3,17 @@
 
 from collections import OrderedDict
 from operator import itemgetter
+
 from markupsafe import Markup
 
-from odoo import conf, http, _
+from odoo import _, conf, http
+from odoo.addons.portal.controllers.portal import CustomerPortal
+from odoo.addons.portal.controllers.portal import pager as portal_pager
+from odoo.addons.web.controllers.main import HomeStaticTemplateHelpers
 from odoo.exceptions import AccessError, MissingError
 from odoo.http import request
-from odoo.addons.portal.controllers.portal import CustomerPortal, pager as portal_pager
+from odoo.osv.expression import AND, OR
 from odoo.tools import groupby as groupbyelem
-
-from odoo.osv.expression import OR, AND
-
-from odoo.addons.web.controllers.main import HomeStaticTemplateHelpers
 
 
 class ProjectCustomerPortal(CustomerPortal):

@@ -3,12 +3,12 @@
 
 import json
 import random
+from datetime import date
 
 from babel.dates import format_date
-from datetime import date
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.release import version
 

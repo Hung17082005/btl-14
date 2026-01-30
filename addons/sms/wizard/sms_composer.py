@@ -3,7 +3,7 @@
 
 from ast import literal_eval
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.addons.phone_validation.tools import phone_validation
 from odoo.exceptions import UserError
 from odoo.tools import html2plaintext, plaintext2html

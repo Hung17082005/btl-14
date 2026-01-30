@@ -29,7 +29,7 @@ except ImportError:
     from decorator import decorator
 
 from .exceptions import CacheMiss
-from .tools import frozendict, classproperty, lazy_property, StackMap
+from .tools import StackMap, classproperty, frozendict, lazy_property
 from .tools.translate import _
 
 _logger = logging.getLogger(__name__)
@@ -1033,6 +1033,7 @@ class Cache(object):
 
 # keep those imports here in order to handle cyclic dependencies correctly
 from odoo import SUPERUSER_ID
-from odoo.exceptions import UserError, AccessError, MissingError
+from odoo.exceptions import AccessError, MissingError, UserError
 from odoo.modules.registry import Registry
+
 from .sql_db import BaseCursor

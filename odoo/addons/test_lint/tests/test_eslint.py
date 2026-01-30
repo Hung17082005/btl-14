@@ -5,6 +5,7 @@ import logging
 import re
 import subprocess
 from unittest import skipIf
+
 from odoo import tools
 
 from . import lint_case

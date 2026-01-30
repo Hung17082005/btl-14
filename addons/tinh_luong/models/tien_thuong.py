@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
-from odoo.exceptions import ValidationError
 from datetime import date
+
+from odoo import api, fields, models
+from odoo.exceptions import ValidationError
+
 
 class TienThuong(models.Model):
     _name = 'tien_thuong'

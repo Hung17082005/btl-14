@@ -8,9 +8,9 @@ from odoo.tests import tagged
 from odoo.tests.common import HttpCase
 from odoo.tools import mute_logger
 
-from .common import PayULatamCommon
 from ..controllers.main import PayuLatamController
 from ..models.payment_acquirer import SUPPORTED_CURRENCIES
+from .common import PayULatamCommon
 
 
 @tagged('post_install', '-at_install')

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
+import json
+
 import werkzeug
 from werkzeug.exceptions import InternalServerError
 
 from odoo import http
-from odoo.http import request
 from odoo.addons.web.controllers.main import _serialize_exception
+from odoo.http import request
 from odoo.tools.misc import html_escape
-
-import json
 
 
 class StockReportController(http.Controller):

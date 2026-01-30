@@ -3,6 +3,7 @@
 
 from odoo import api, fields, models
 
+
 class NewModel(models.Model):
     _name = 'export.integer'
     _description = 'Export: Integer'

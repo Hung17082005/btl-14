@@ -2,10 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import datetime
+
 from dateutil.relativedelta import relativedelta
 
-from odoo.tests import tagged
 from odoo.addons.base.tests.common import HttpCaseWithUserPortal
+from odoo.tests import tagged
 
 
 @tagged('post_install', '-at_install')

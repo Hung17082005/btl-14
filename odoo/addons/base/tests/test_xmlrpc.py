@@ -3,12 +3,12 @@
 import time
 from xmlrpc.client import Binary
 
+import odoo.tools
 from odoo.exceptions import AccessDenied, AccessError
 from odoo.http import _request_stack
-
-import odoo.tools
+from odoo.service import common as auth
+from odoo.service import model
 from odoo.tests import common
-from odoo.service import common as auth, model
 from odoo.tools import DotDict
 
 

@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime
+import functools
 import gc
 import json
 import logging
-import sys
-import time
-import threading
 import re
-import functools
+import sys
+import threading
+import time
+from datetime import datetime
 
 from psycopg2 import sql
 
@@ -529,7 +529,9 @@ class Profiler:
 
             if self.db:
                 # pylint: disable=import-outside-toplevel
-                from odoo.sql_db import db_connect  # only import from odoo if/when needed.
+                from odoo.sql_db import (
+                    db_connect,  # only import from odoo if/when needed.
+                )
                 with db_connect(self.db).cursor() as cr:
                     values = {
                         "name": self.description,

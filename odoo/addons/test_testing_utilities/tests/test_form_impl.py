@@ -8,8 +8,8 @@ business objects.
 """
 from operator import itemgetter
 
-from odoo.tests.common import TransactionCase, Form
 from odoo import Command
+from odoo.tests.common import Form, TransactionCase
 
 
 class TestBasic(TransactionCase):

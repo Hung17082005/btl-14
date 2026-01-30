@@ -3,18 +3,19 @@
 
 import base64
 import socket
-
-from unittest.mock import DEFAULT
-from unittest.mock import patch
+from unittest.mock import DEFAULT, patch
 
 from odoo import exceptions
 from odoo.addons.mail.models.mail_thread import MailThread
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.addons.test_mail.data import test_mail_data
-from odoo.addons.test_mail.data.test_mail_data import MAIL_TEMPLATE, THAI_EMAIL_WINDOWS_874
+from odoo.addons.test_mail.data.test_mail_data import (
+    MAIL_TEMPLATE,
+    THAI_EMAIL_WINDOWS_874,
+)
 from odoo.addons.test_mail.models.test_mail_models import MailTestGateway
 from odoo.addons.test_mail.tests.common import TestMailCommon
-from odoo.tests import tagged, RecordCapturer
+from odoo.tests import RecordCapturer, tagged
 from odoo.tests.common import users
 from odoo.tools import email_split_and_format, formataddr, mute_logger
 

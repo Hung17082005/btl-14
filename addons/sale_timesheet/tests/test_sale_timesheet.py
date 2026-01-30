@@ -2,11 +2,11 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from datetime import date, timedelta
 
-from odoo.fields import Date
-from odoo.tools import float_is_zero
-from odoo.exceptions import UserError
 from odoo.addons.sale_timesheet.tests.common import TestCommonSaleTimesheet
+from odoo.exceptions import UserError
+from odoo.fields import Date
 from odoo.tests import tagged
+from odoo.tools import float_is_zero
 
 
 @tagged('-at_install', 'post_install')

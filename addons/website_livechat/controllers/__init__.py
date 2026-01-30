@@ -1,3 +1,2 @@
 # -*- coding: utf-8 -*-
-from . import main
-from . import test
+from . import main, test

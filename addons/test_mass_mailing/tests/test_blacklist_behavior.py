@@ -2,16 +2,16 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import datetime
+from unittest.mock import patch
 
 from freezegun import freeze_time
-from unittest.mock import patch
 
 from odoo.addons.mass_mailing.models.mail_thread import BLACKLIST_MAX_BOUNCED_LIMIT
 from odoo.addons.test_mass_mailing.tests import common
+from odoo.sql_db import Cursor
 from odoo.tests import tagged
 from odoo.tests.common import users
 from odoo.tools import mute_logger
-from odoo.sql_db import Cursor
 
 
 @tagged('mail_blacklist')

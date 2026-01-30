@@ -5,18 +5,19 @@ from odoo import api, fields, models
 
 
 class PeopleRole(models.Model):
-    """ CRM Reveal People Roles for People """
-    _name = 'crm.iap.lead.role'
-    _description = 'People Role'
+    """CRM Reveal People Roles for People"""
 
-    name = fields.Char(string='Role Name', required=True, translate=True)
+    _name = "crm.iap.lead.role"
+    _description = "People Role"
+
+    name = fields.Char(string="Role Name", required=True, translate=True)
     reveal_id = fields.Char(required=True)
-    color = fields.Integer(string='Color Index')
+    color = fields.Integer(string="Color Index")
 
     _sql_constraints = [
-        ('name_uniq', 'unique (name)', 'Role name already exists!'),
+        ("name_uniq", "unique (name)", "Role name already exists!"),
     ]
 
-    @api.depends('name')
+    @api.depends("name")
     def name_get(self):
-        return [(role.id, role.name.replace('_', ' ').title()) for role in self]
+        return [(role.id, role.name.replace("_", " ").title()) for role in self]

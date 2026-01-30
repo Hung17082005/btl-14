@@ -4,7 +4,6 @@ import base64
 import uuid
 
 from odoo import api, fields, models
-
 from odoo.modules.module import get_resource_path
 
 RATING_LIMIT_SATISFIED = 5

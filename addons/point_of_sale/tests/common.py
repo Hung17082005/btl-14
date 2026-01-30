@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
-from random import randint
+import logging
 from datetime import datetime
+from random import randint
 
 from odoo import fields, tools
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
-from odoo.tests.common import Form
+from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import (
+    ValuationReconciliationTestCommon,
+)
 from odoo.tests import tagged
-
-import logging
+from odoo.tests.common import Form
 
 _logger = logging.getLogger(__name__)
 

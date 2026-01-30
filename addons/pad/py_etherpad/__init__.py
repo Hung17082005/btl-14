@@ -1,7 +1,7 @@
 """Module to talk to EtherpadLite API."""
-import requests
 import logging
 
+import requests
 from markupsafe import Markup
 
 from odoo.tools import html2plaintext

@@ -1,15 +1,15 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-import pytz
 import logging
-
-from odoo import api, fields, models
-from odoo.osv import expression
-
-from .lunch_supplier import float_to_time
 from datetime import datetime, timedelta
 from textwrap import dedent
 
+import pytz
+
+from odoo import api, fields, models
 from odoo.addons.base.models.res_partner import _tz_get
+from odoo.osv import expression
+
+from .lunch_supplier import float_to_time
 
 _logger = logging.getLogger(__name__)
 WEEKDAY_TO_NAME = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import TransactionCase, tagged, TagsSelector, BaseCase
+from odoo.tests.common import BaseCase, TagsSelector, TransactionCase, tagged
 
 
 @tagged('nodatabase')

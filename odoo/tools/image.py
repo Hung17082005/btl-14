@@ -4,11 +4,11 @@ import base64
 import binascii
 import io
 
-from PIL import Image, ImageOps
 # We can preload Ico too because it is considered safe
-from PIL import IcoImagePlugin
+from PIL import IcoImagePlugin, Image, ImageOps
+
 try:
-    from PIL.Image import Transpose, Palette, Resampling
+    from PIL.Image import Palette, Resampling, Transpose
 except ImportError:
     Transpose = Palette = Resampling = Image
 
@@ -16,7 +16,6 @@ from random import randrange
 
 from odoo.exceptions import UserError
 from odoo.tools.translate import _
-
 
 # Preload PIL with the minimal subset of image formats we need
 Image.preinit()

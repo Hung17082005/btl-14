@@ -1,13 +1,15 @@
 import json
+from unittest.mock import MagicMock, call, patch
+
 import requests
-from unittest.mock import patch, call, MagicMock
 
 from odoo import fields
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
-from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
 from odoo.addons.microsoft_account.models.microsoft_service import MicrosoftService
+from odoo.addons.microsoft_calendar.utils.microsoft_calendar import (
+    MicrosoftCalendarService,
+)
+from odoo.addons.microsoft_calendar.utils.microsoft_event import MicrosoftEvent
 from odoo.tests import TransactionCase
-
 
 DEFAULT_TIMEOUT = 20
 

@@ -3,8 +3,8 @@
 
 import inspect
 import logging
-import warnings
 import traceback
+import warnings
 
 from odoo import api, models
 from odoo.exceptions import AccessDenied

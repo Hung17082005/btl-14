@@ -9,7 +9,7 @@ import string
 import requests
 from markupsafe import Markup
 
-from odoo import api, models, _
+from odoo import _, api, models
 from odoo.exceptions import UserError
 
 from ..py_etherpad import EtherpadLiteClient

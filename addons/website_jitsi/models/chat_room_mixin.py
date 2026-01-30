@@ -6,6 +6,7 @@ import re
 from odoo import api, fields, models
 from odoo.tools import remove_accents
 
+
 class ChatRoomMixin(models.AbstractModel):
     """Add the chat room configuration (`chat.room`) on the needed models.
 

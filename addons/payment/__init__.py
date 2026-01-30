@@ -1,11 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import controllers
-from . import models
-from . import utils
-from . import wizards
+from odoo import SUPERUSER_ID, api
 
-from odoo import api, SUPERUSER_ID
+from . import controllers, models, utils, wizards
 
 
 def reset_payment_acquirer(cr, registry, provider):

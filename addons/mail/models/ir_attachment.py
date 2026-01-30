@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, models, SUPERUSER_ID
+from odoo import SUPERUSER_ID, _, models
 from odoo.exceptions import AccessError, MissingError, UserError
 from odoo.http import request
 from odoo.tools import consteq

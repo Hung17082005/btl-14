@@ -1,9 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
+import unittest
+
 import odoo
 import odoo.tests
-import unittest
 
 _logger = logging.getLogger(__name__)
 

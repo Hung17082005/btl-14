@@ -3,7 +3,7 @@
 
 import werkzeug.urls
 
-from odoo import fields, models, _
+from odoo import _, fields, models
 
 
 class SMSComposer(models.TransientModel):

@@ -6,9 +6,8 @@ from uuid import uuid4
 from lxml import etree, objectify
 
 from odoo import http
-from odoo.tests import HttpCase
-
 from odoo.addons.payment.tests.utils import PaymentTestUtils
+from odoo.tests import HttpCase
 
 
 class PaymentHttpCommon(PaymentTestUtils, HttpCase):

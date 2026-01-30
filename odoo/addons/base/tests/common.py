@@ -4,8 +4,8 @@
 from contextlib import contextmanager
 from unittest.mock import patch
 
-from odoo.tests.common import TransactionCase, HttpCase
 from odoo import Command
+from odoo.tests.common import HttpCase, TransactionCase
 
 
 class TransactionCaseWithUserDemo(TransactionCase):

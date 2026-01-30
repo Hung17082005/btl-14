@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+from datetime import date
 from itertools import groupby
 from operator import itemgetter
-from datetime import date
+
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class ProductTemplate(models.Model):

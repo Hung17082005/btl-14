@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import Command
-from odoo.tests.common import users
 from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
+from odoo.tests.common import users
 
 
 class TestSaleProject(TransactionCaseWithUserDemo):

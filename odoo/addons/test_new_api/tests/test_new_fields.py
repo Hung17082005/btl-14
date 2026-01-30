@@ -5,19 +5,20 @@
 # test cases for new-style fields
 #
 import base64
+import io
 from collections import OrderedDict
 from datetime import date, datetime, time
-import io
-from PIL import Image
 from unittest.mock import patch
-import psycopg2
 
-from odoo import models, fields, Command
+import psycopg2
+from PIL import Image
+
+from odoo import Command, fields, models
 from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
 from odoo.exceptions import AccessError, MissingError, UserError, ValidationError
 from odoo.tests import common
-from odoo.tools import mute_logger, float_repr
-from odoo.tools.date_utils import add, subtract, start_of, end_of
+from odoo.tools import float_repr, mute_logger
+from odoo.tools.date_utils import add, end_of, start_of, subtract
 from odoo.tools.image import image_data_uri
 
 
@@ -2250,6 +2251,7 @@ class TestFields(TransactionCaseWithUserDemo):
 
     def test_85_binary_guess_zip(self):
         from odoo.addons.base.tests.test_mimetypes import ZIP
+
         # Regular ZIP files can be uploaded by non-admin users
         self.env['test_new_api.binary_svg'].with_user(self.user_demo).create({
             'name': 'Test without attachment',
@@ -2267,6 +2269,7 @@ class TestFields(TransactionCaseWithUserDemo):
 
     def test_90_binary_svg(self):
         from odoo.addons.base.tests.test_mimetypes import SVG
+
         # This should work without problems
         self.env['test_new_api.binary_svg'].create({
             'name': 'Test without attachment',
@@ -2283,6 +2286,7 @@ class TestFields(TransactionCaseWithUserDemo):
 
     def test_91_binary_svg_attachment(self):
         from odoo.addons.base.tests.test_mimetypes import SVG
+
         # This doesn't neuter SVG with admin
         record = self.env['test_new_api.binary_svg'].create({
             'name': 'Test without attachment',

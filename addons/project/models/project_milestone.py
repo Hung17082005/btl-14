@@ -3,6 +3,7 @@
 
 from odoo import api, fields, models
 
+
 class ProjectMilestone(models.Model):
     _name = 'project.milestone'
     _description = "Project Milestone"

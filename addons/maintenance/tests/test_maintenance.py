@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import datetime
 import time
 
-from odoo.tests.common import TransactionCase
 from dateutil import relativedelta
-import datetime
+
+from odoo.tests.common import TransactionCase
+
 
 class TestEquipment(TransactionCase):
     """ Test used to check that when doing equipment/maintenance_request/equipment_category creation."""

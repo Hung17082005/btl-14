@@ -2,6 +2,7 @@
 
 from odoo import fields, models
 
+
 class ResCompany(models.Model):
     _name = 'res.company'
     _description = 'Companies'

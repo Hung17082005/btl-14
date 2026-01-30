@@ -2,15 +2,20 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
-import requests
-from odoo.addons.microsoft_calendar.models.microsoft_sync import microsoft_calendar_token
 from datetime import timedelta
 
-from odoo import api, fields, models, _
+import requests
+
+from odoo import _, api, fields, models
+from odoo.addons.microsoft_account.models.microsoft_service import (
+    DEFAULT_MICROSOFT_TOKEN_ENDPOINT,
+)
+from odoo.addons.microsoft_calendar.models.microsoft_sync import (
+    microsoft_calendar_token,
+)
+from odoo.addons.microsoft_calendar.utils.microsoft_calendar import InvalidSyncToken
 from odoo.exceptions import UserError
 from odoo.loglevels import exception_to_unicode
-from odoo.addons.microsoft_account.models.microsoft_service import DEFAULT_MICROSOFT_TOKEN_ENDPOINT
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import InvalidSyncToken
 
 _logger = logging.getLogger(__name__)
 

@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from lxml import etree
 import re
+
+from lxml import etree
 
 from odoo import http, tools
 from odoo.addons.base.tests.common import TransactionCaseWithUserDemo

@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields
 from datetime import datetime
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+
+from odoo import fields
 from odoo.addons.purchase_requisition.tests.common import TestPurchaseRequisitionCommon
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 
 class TestPurchaseRequisitionStock(TestPurchaseRequisitionCommon):

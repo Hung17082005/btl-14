@@ -9,12 +9,12 @@ from markupsafe import escape
 from psycopg2 import IntegrityError
 from werkzeug.exceptions import BadRequest
 
-from odoo import http, SUPERUSER_ID, _, _lt
+from odoo import SUPERUSER_ID, _, _lt, http
+from odoo.addons.base.models.ir_qweb_fields import nl2br
+from odoo.exceptions import AccessDenied, UserError, ValidationError
 from odoo.http import request
 from odoo.tools import plaintext2html
-from odoo.addons.base.models.ir_qweb_fields import nl2br
-from odoo.exceptions import AccessDenied, ValidationError, UserError
-from odoo.tools.misc import hmac, consteq
+from odoo.tools.misc import consteq, hmac
 
 
 class WebsiteForm(http.Controller):

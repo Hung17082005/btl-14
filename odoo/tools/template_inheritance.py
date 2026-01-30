@@ -1,13 +1,14 @@
 
-from lxml import etree
-from lxml.builder import E
 import copy
 import itertools
 import logging
 
-from odoo.tools.translate import _
-from odoo.tools import SKIPPED_ELEMENT_TYPES, html_escape
+from lxml import etree
+from lxml.builder import E
+
 from odoo.exceptions import ValidationError
+from odoo.tools import SKIPPED_ELEMENT_TYPES, html_escape
+from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 

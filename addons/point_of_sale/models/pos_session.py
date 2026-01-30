@@ -4,9 +4,10 @@
 from collections import defaultdict
 from datetime import timedelta
 
-from odoo import api, fields, models, _, Command
+from odoo import Command, _, api, fields, models
 from odoo.exceptions import AccessError, UserError, ValidationError
-from odoo.tools import float_is_zero, float_compare
+from odoo.tools import float_compare, float_is_zero
+
 
 class PosSession(models.Model):
     _name = 'pos.session'

@@ -2,14 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
+import re
 import time
 
 import lxml.html
 from werkzeug import urls
 
 import odoo
-import re
-
 from odoo.addons.base.tests.common import HttpCaseWithUserDemo
 
 _logger = logging.getLogger(__name__)

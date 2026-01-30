@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import base_module_uninstall
-from . import base_partner_merge_automatic_wizard
-from . import mail_blacklist_remove
-from . import mail_compose_message
-from . import mail_resend_cancel
-from . import mail_resend_message
-from . import mail_template_preview
-from . import mail_wizard_invite
+from . import (
+    base_module_uninstall,
+    base_partner_merge_automatic_wizard,
+    mail_blacklist_remove,
+    mail_compose_message,
+    mail_resend_cancel,
+    mail_resend_message,
+    mail_template_preview,
+    mail_wizard_invite,
+)

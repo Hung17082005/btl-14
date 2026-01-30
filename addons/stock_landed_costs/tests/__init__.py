@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from . import test_stock_landed_costs
-from . import test_stock_landed_costs_purchase
-from . import test_stock_landed_costs_rounding
-from . import test_stockvaluationlayer
+from . import (
+    test_stock_landed_costs,
+    test_stock_landed_costs_purchase,
+    test_stock_landed_costs_rounding,
+    test_stockvaluationlayer,
+)

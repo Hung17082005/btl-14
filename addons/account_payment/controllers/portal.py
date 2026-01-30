@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.http import request
-
 from odoo.addons.account.controllers import portal
 from odoo.addons.payment.controllers.portal import PaymentPortal
 from odoo.addons.portal.controllers.portal import _build_url_w_params
+from odoo.http import request
 
 
 class PortalAccount(portal.PortalAccount):
@@ -19,40 +18,54 @@ class PortalAccount(portal.PortalAccount):
         partner_sudo = request.env.user.partner_id if logged_in else invoice.partner_id
         invoice_company = invoice.company_id or request.env.company
 
-        acquirers_sudo = request.env['payment.acquirer'].sudo()._get_compatible_acquirers(
-            invoice_company.id, partner_sudo.id, currency_id=invoice.currency_id.id
+        acquirers_sudo = (
+            request.env["payment.acquirer"]
+            .sudo()
+            ._get_compatible_acquirers(
+                invoice_company.id, partner_sudo.id, currency_id=invoice.currency_id.id
+            )
         )  # In sudo mode to read the fields of acquirers and partner (if not logged in)
-        tokens = request.env['payment.token'].search(
-            [('acquirer_id', 'in', acquirers_sudo.ids), ('partner_id', '=', partner_sudo.id)]
+        tokens = request.env["payment.token"].search(
+            [
+                ("acquirer_id", "in", acquirers_sudo.ids),
+                ("partner_id", "=", partner_sudo.id),
+            ]
         )  # Tokens are cleared at the end if the user is not logged in
 
         # Make sure that the partner's company matches the invoice's company.
         if not PaymentPortal._can_partner_pay_in_company(partner_sudo, invoice_company):
-            acquirers_sudo = request.env['payment.acquirer'].sudo()
-            tokens = request.env['payment.token']
+            acquirers_sudo = request.env["payment.acquirer"].sudo()
+            tokens = request.env["payment.token"]
 
         fees_by_acquirer = {
             acq_sudo: acq_sudo._compute_fees(
                 invoice.amount_total, invoice.currency_id, invoice.partner_id.country_id
-            ) for acq_sudo in acquirers_sudo.filtered('fees_active')
+            )
+            for acq_sudo in acquirers_sudo.filtered("fees_active")
         }
-        values.update({
-            'acquirers': acquirers_sudo,
-            'tokens': tokens,
-            'fees_by_acquirer': fees_by_acquirer,
-            'show_tokenize_input': logged_in,  # Prevent public partner from saving payment methods
-            'amount': invoice.amount_residual,
-            'currency': invoice.currency_id,
-            'partner_id': partner_sudo.id,
-            'access_token': access_token,
-            'transaction_route': f'/invoice/transaction/{invoice.id}/',
-            'landing_route': _build_url_w_params(invoice.access_url, {'access_token': access_token})
-        })
+        values.update(
+            {
+                "acquirers": acquirers_sudo,
+                "tokens": tokens,
+                "fees_by_acquirer": fees_by_acquirer,
+                "show_tokenize_input": logged_in,  # Prevent public partner from saving payment methods
+                "amount": invoice.amount_residual,
+                "currency": invoice.currency_id,
+                "partner_id": partner_sudo.id,
+                "access_token": access_token,
+                "transaction_route": f"/invoice/transaction/{invoice.id}/",
+                "landing_route": _build_url_w_params(
+                    invoice.access_url, {"access_token": access_token}
+                ),
+            }
+        )
         if not logged_in:
             # Don't display payment tokens of the invoice partner if the user is not logged in, but
             # inform that logging in will make them available.
-            values.update({
-                'existing_token': bool(tokens),
-                'tokens': request.env['payment.token'],
-            })
+            values.update(
+                {
+                    "existing_token": bool(tokens),
+                    "tokens": request.env["payment.token"],
+                }
+            )
         return values

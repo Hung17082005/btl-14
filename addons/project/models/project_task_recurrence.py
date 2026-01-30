@@ -1,12 +1,27 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from calendar import monthrange
+
+from dateutil.relativedelta import relativedelta
+from dateutil.rrule import (
+    DAILY,
+    FR,
+    MO,
+    MONTHLY,
+    SA,
+    SU,
+    TH,
+    TU,
+    WE,
+    WEEKLY,
+    YEARLY,
+    rrule,
+    rruleset,
+)
+
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
-
-from calendar import monthrange
-from dateutil.relativedelta import relativedelta
-from dateutil.rrule import rrule, rruleset, DAILY, WEEKLY, MONTHLY, YEARLY, MO, TU, WE, TH, FR, SA, SU
 
 MONTHS = {
     'january': 31,

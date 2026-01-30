@@ -4,7 +4,7 @@
 from collections import defaultdict
 
 from odoo import api, models
-from odoo.tools import float_compare, float_is_zero, format_date, float_round
+from odoo.tools import float_compare, float_is_zero, float_round, format_date
 
 
 class ReplenishmentReport(models.AbstractModel):

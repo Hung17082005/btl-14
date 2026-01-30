@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import print_function
+
 import argparse
 import glob
 import itertools
@@ -8,10 +9,11 @@ import os
 import sys
 
 import odoo
+from odoo.modules.module import MANIFEST_NAMES, get_module_root
+from odoo.service.db import DatabaseExists, _create_empty_database
+
 from . import Command
 from .server import main
-from odoo.modules.module import get_module_root, MANIFEST_NAMES
-from odoo.service.db import _create_empty_database, DatabaseExists
 
 
 class Start(Command):

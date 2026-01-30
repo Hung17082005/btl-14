@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import odoo.tests
+from odoo import http
 from odoo.addons.web_editor.controllers.main import Web_Editor
 from odoo.addons.web_unsplash.controllers.main import Web_Unsplash
-
-import odoo.tests
-
-from odoo import http
 from odoo.tools import config
 
 BASE_URL = "http://127.0.0.1:%s" % (config["http_port"],)

@@ -3,8 +3,8 @@
 
 from odoo.addons.sms.tests import common as sms_common
 from odoo.addons.test_mail.tests.test_performance import BaseMailPerformance
-from odoo.tests.common import users, warmup
 from odoo.tests import tagged
+from odoo.tests.common import users, warmup
 from odoo.tools import mute_logger
 
 

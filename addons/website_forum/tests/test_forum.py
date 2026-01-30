@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from .common import KARMA, TestForumCommon
+from psycopg2 import IntegrityError
+
 from odoo import http
 from odoo.addons.http_routing.models.ir_http import slug
-from odoo.exceptions import UserError, AccessError
+from odoo.exceptions import AccessError, UserError
 from odoo.tests import HttpCase
 from odoo.tools import mute_logger
-from psycopg2 import IntegrityError
+
+from .common import KARMA, TestForumCommon
 
 
 class TestForum(TestForumCommon):

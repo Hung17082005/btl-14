@@ -1,6 +1,6 @@
+import odoo
 from odoo.http import content_disposition
 from odoo.tests import common
-import odoo
 
 GIF = b"R0lGODdhAQABAIAAAP///////ywAAAAAAQABAAACAkQBADs="
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import exceptions, SUPERUSER_ID
+from odoo import SUPERUSER_ID, exceptions
 from odoo.addons.sale.controllers.portal import CustomerPortal
 from odoo.http import request, route
 from odoo.tools import consteq

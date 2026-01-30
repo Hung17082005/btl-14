@@ -2,15 +2,16 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
-import pytz
 from datetime import datetime
+
+import pytz
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import is_html_empty, email_normalize
+from odoo import _, api, fields, models
 from odoo.addons.microsoft_calendar.utils.event_id_storage import combine_ids
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools import email_normalize, is_html_empty
 
 ATTENDEE_CONVERTER_O2M = {
     'needsAction': 'notresponded',

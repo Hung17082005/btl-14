@@ -8,13 +8,14 @@ import random
 import select
 import threading
 import time
+
 from psycopg2 import InterfaceError, sql
 
 import odoo
 import odoo.service.server as servermod
-from odoo import api, fields, models, SUPERUSER_ID
-from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo import SUPERUSER_ID, api, fields, models
 from odoo.tools import date_utils
+from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 
 _logger = logging.getLogger(__name__)
 
@@ -22,15 +23,18 @@ _logger = logging.getLogger(__name__)
 TIMEOUT = 50
 
 # custom function to call instead of NOTIFY postgresql command (opt-in)
-ODOO_NOTIFY_FUNCTION = os.environ.get('ODOO_NOTIFY_FUNCTION')
+ODOO_NOTIFY_FUNCTION = os.environ.get("ODOO_NOTIFY_FUNCTION")
 
 
 def get_notify_payload_max_length(default=8000):
     try:
-        length = int(os.environ.get('ODOO_NOTIFY_PAYLOAD_MAX_LENGTH', default))
+        length = int(os.environ.get("ODOO_NOTIFY_PAYLOAD_MAX_LENGTH", default))
     except ValueError:
-        _logger.warning("ODOO_NOTIFY_PAYLOAD_MAX_LENGTH has to be an integer, "
-                        "defaulting to %d bytes", default)
+        _logger.warning(
+            "ODOO_NOTIFY_PAYLOAD_MAX_LENGTH has to be an integer, "
+            "defaulting to %d bytes",
+            default,
+        )
         length = default
     return length
 
@@ -39,11 +43,12 @@ def get_notify_payload_max_length(default=8000):
 NOTIFY_PAYLOAD_MAX_LENGTH = get_notify_payload_max_length()
 
 
-#----------------------------------------------------------
+# ----------------------------------------------------------
 # Bus
-#----------------------------------------------------------
+# ----------------------------------------------------------
 def json_dump(v):
-    return json.dumps(v, separators=(',', ':'), default=date_utils.json_default)
+    return json.dumps(v, separators=(",", ":"), default=date_utils.json_default)
+
 
 def hashable(key):
     if isinstance(key, list):
@@ -75,22 +80,27 @@ def get_notify_payloads(channels):
         return [payload]
     else:
         pivot = math.ceil(len(channels) / 2)
-        return (get_notify_payloads(channels[:pivot]) +
-                get_notify_payloads(channels[pivot:]))
+        return get_notify_payloads(channels[:pivot]) + get_notify_payloads(
+            channels[pivot:]
+        )
 
 
 class ImBus(models.Model):
 
-    _name = 'bus.bus'
-    _description = 'Communication Bus'
+    _name = "bus.bus"
+    _description = "Communication Bus"
 
-    channel = fields.Char('Channel')
-    message = fields.Char('Message')
+    channel = fields.Char("Channel")
+    message = fields.Char("Message")
 
     @api.autovacuum
     def _gc_messages(self):
-        timeout_ago = datetime.datetime.utcnow()-datetime.timedelta(seconds=TIMEOUT*2)
-        domain = [('create_date', '<', timeout_ago.strftime(DEFAULT_SERVER_DATETIME_FORMAT))]
+        timeout_ago = datetime.datetime.utcnow() - datetime.timedelta(
+            seconds=TIMEOUT * 2
+        )
+        domain = [
+            ("create_date", "<", timeout_ago.strftime(DEFAULT_SERVER_DATETIME_FORMAT))
+        ]
         return self.sudo().search(domain).unlink()
 
     @api.model
@@ -100,13 +110,17 @@ class ImBus(models.Model):
         for target, notification_type, message in notifications:
             channel = channel_with_db(self.env.cr.dbname, target)
             channels.add(channel)
-            values.append({
-                'channel': json_dump(channel),
-                'message': json_dump({
-                    'type': notification_type,
-                    'payload': message,
-                })
-            })
+            values.append(
+                {
+                    "channel": json_dump(channel),
+                    "message": json_dump(
+                        {
+                            "type": notification_type,
+                            "payload": message,
+                        }
+                    ),
+                }
+            )
         self.sudo().create(values)
         if channels:
             # We have to wait until the notifications are commited in database.
@@ -116,15 +130,20 @@ class ImBus(models.Model):
             # and the longpolling will return no notification.
             @self.env.cr.postcommit.add
             def notify():
-                with odoo.sql_db.db_connect('postgres').cursor() as cr:
+                with odoo.sql_db.db_connect("postgres").cursor() as cr:
                     if ODOO_NOTIFY_FUNCTION:
-                        query = sql.SQL("SELECT {}('imbus', %s)").format(sql.Identifier(ODOO_NOTIFY_FUNCTION))
+                        query = sql.SQL("SELECT {}('imbus', %s)").format(
+                            sql.Identifier(ODOO_NOTIFY_FUNCTION)
+                        )
                     else:
                         query = "NOTIFY imbus, %s"
                     payloads = get_notify_payloads(list(channels))
                     if len(payloads) > 1:
-                        _logger.info("The imbus notification payload was too large, "
-                                     "it's been split into %d payloads.", len(payloads))
+                        _logger.info(
+                            "The imbus notification payload was too large, "
+                            "it's been split into %d payloads.",
+                            len(payloads),
+                        )
                     for payload in payloads:
                         cr.execute(query, (payload,))
 
@@ -136,26 +155,36 @@ class ImBus(models.Model):
     def _poll(self, channels, last=0, options=None):
         # first poll return the notification in the 'buffer'
         if last == 0:
-            timeout_ago = datetime.datetime.utcnow()-datetime.timedelta(seconds=TIMEOUT)
-            domain = [('create_date', '>', timeout_ago.strftime(DEFAULT_SERVER_DATETIME_FORMAT))]
+            timeout_ago = datetime.datetime.utcnow() - datetime.timedelta(
+                seconds=TIMEOUT
+            )
+            domain = [
+                (
+                    "create_date",
+                    ">",
+                    timeout_ago.strftime(DEFAULT_SERVER_DATETIME_FORMAT),
+                )
+            ]
         else:  # else returns the unread notifications
-            domain = [('id', '>', last)]
+            domain = [("id", ">", last)]
         channels = [json_dump(channel_with_db(self.env.cr.dbname, c)) for c in channels]
-        domain.append(('channel', 'in', channels))
+        domain.append(("channel", "in", channels))
         notifications = self.sudo().search_read(domain)
         # list of notification to return
         result = []
         for notif in notifications:
-            result.append({
-                'id': notif['id'],
-                'message': json.loads(notif['message']),
-            })
+            result.append(
+                {
+                    "id": notif["id"],
+                    "message": json.loads(notif["message"]),
+                }
+            )
         return result
 
 
-#----------------------------------------------------------
+# ----------------------------------------------------------
 # Dispatcher
-#----------------------------------------------------------
+# ----------------------------------------------------------
 class ImDispatch:
     def __init__(self):
         self.channels = {}
@@ -182,10 +211,10 @@ class ImDispatch:
         # immediatly returns if past notifications exist
         with registry.cursor() as cr:
             env = api.Environment(cr, SUPERUSER_ID, {})
-            notifications = env['bus.bus']._poll(channels, last, options)
+            notifications = env["bus.bus"]._poll(channels, last, options)
 
         # immediatly returns in peek mode
-        if options.get('peek'):
+        if options.get("peek"):
             return dict(notifications=notifications, channels=channels)
 
         # or wait for future ones
@@ -201,7 +230,7 @@ class ImDispatch:
                 event.wait(timeout=timeout)
                 with registry.cursor() as cr:
                     env = api.Environment(cr, SUPERUSER_ID, {})
-                    notifications = env['bus.bus']._poll(channels, last, options)
+                    notifications = env["bus.bus"]._poll(channels, last, options)
             except Exception:
                 # timeout
                 pass
@@ -214,12 +243,12 @@ class ImDispatch:
         return notifications
 
     def loop(self):
-        """ Dispatch postgres notifications to the relevant polling threads/greenlets """
+        """Dispatch postgres notifications to the relevant polling threads/greenlets"""
         _logger.info("Bus.loop listen imbus on db postgres")
-        with odoo.sql_db.db_connect('postgres').cursor() as cr:
+        with odoo.sql_db.db_connect("postgres").cursor() as cr:
             conn = cr._cnx
             cr.execute("listen imbus")
-            cr.commit();
+            cr.commit()
             while not stop_event.is_set():
                 if select.select([conn], [], [], TIMEOUT) == ([], [], []):
                     pass
@@ -258,12 +287,15 @@ class ImDispatch:
         if odoo.evented:
             # gevent mode
             import gevent.event  # pylint: disable=import-outside-toplevel
+
             self.Event = gevent.event.Event
             gevent.spawn(self.run)
         else:
             # threaded mode
             self.Event = threading.Event
-            threading.Thread(name=f"{__name__}.Bus", target=self.run, daemon=True).start()
+            threading.Thread(
+                name=f"{__name__}.Bus", target=self.run, daemon=True
+            ).start()
         self.started = True
         return self
 

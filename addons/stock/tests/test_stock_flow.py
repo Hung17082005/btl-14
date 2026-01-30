@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from odoo import fields
 from odoo.addons.stock.tests.common import TestStockCommon
 from odoo.exceptions import ValidationError
 from odoo.tests import Form
-from odoo.tools import mute_logger, float_round
-from odoo import fields
+from odoo.tools import float_round, mute_logger
 
 
 class TestStockFlow(TestStockCommon):

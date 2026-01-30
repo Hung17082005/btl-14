@@ -7,26 +7,30 @@ import inspect
 import json
 import logging
 import re
-import requests
 
+import requests
 from lxml import etree, html
 from psycopg2 import sql
 from werkzeug import urls
 from werkzeug.datastructures import OrderedMultiDict
 from werkzeug.exceptions import NotFound
 
-from odoo import api, fields, models, tools, http, release, registry
-from odoo.addons.http_routing.models.ir_http import slugify, _guess_mimetype, url_for
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.addons.website.tools import get_unaccent_sql_wrapper, similarity_score, text_from_html
-from odoo.addons.portal.controllers.portal import pager
+from odoo import api, fields, http, models, registry, release, tools
+from odoo.addons.http_routing.models.ir_http import _guess_mimetype, slugify, url_for
 from odoo.addons.iap.tools import iap_tools
-from odoo.exceptions import UserError, AccessError
+from odoo.addons.portal.controllers.portal import pager
+from odoo.addons.website.models.ir_http import sitemap_qs2dom
+from odoo.addons.website.tools import (
+    get_unaccent_sql_wrapper,
+    similarity_score,
+    text_from_html,
+)
+from odoo.exceptions import AccessError, UserError
 from odoo.http import request
 from odoo.modules.module import get_resource_path
-from odoo.osv.expression import AND, OR, FALSE_DOMAIN
-from odoo.tools.translate import _
+from odoo.osv.expression import AND, FALSE_DOMAIN, OR
 from odoo.tools import escape_psql, pycompat
+from odoo.tools.translate import _
 
 logger = logging.getLogger(__name__)
 

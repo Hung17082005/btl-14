@@ -3,10 +3,10 @@
 
 from psycopg2 import IntegrityError
 
+from odoo import Command
 from odoo.exceptions import ValidationError
 from odoo.tests.common import TransactionCase, tagged
 from odoo.tools import mute_logger
-from odoo import Command
 
 
 class TestXMLID(TransactionCase):

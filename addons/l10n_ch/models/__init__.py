@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import res_config_settings
-from . import account_invoice
-from . import account_journal
-from . import mail_template
-from . import res_bank
-from . import res_company
-from . import account_bank_statement
-from . import ir_actions_report
+from . import (
+    account_bank_statement,
+    account_invoice,
+    account_journal,
+    ir_actions_report,
+    mail_template,
+    res_bank,
+    res_company,
+    res_config_settings,
+)

@@ -3,7 +3,7 @@
 
 import threading
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 SERVICE_POLICY = [

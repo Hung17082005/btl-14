@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import goal
-from . import challenge
-from . import badge
-from . import gamification_karma_rank
-from . import gamification_karma_tracking
-from . import res_users
+from . import (
+    badge,
+    challenge,
+    gamification_karma_rank,
+    gamification_karma_tracking,
+    goal,
+    res_users,
+)

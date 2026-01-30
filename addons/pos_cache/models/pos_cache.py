@@ -4,7 +4,7 @@ import base64
 import json
 from ast import literal_eval
 
-from odoo import models, fields, api
+from odoo import api, fields, models
 from odoo.tools import date_utils
 
 

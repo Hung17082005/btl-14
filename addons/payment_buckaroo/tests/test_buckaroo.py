@@ -4,8 +4,8 @@ from odoo.exceptions import ValidationError
 from odoo.tests import tagged
 from odoo.tools import mute_logger
 
-from .common import BuckarooCommon
 from ..controllers.main import BuckarooController
+from .common import BuckarooCommon
 
 
 @tagged('post_install', '-at_install')

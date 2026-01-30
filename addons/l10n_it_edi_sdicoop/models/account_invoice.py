@@ -4,7 +4,6 @@ import logging
 
 from odoo import api, fields, models
 
-
 _logger = logging.getLogger(__name__)
 
 DEFAULT_FACTUR_ITALIAN_DATE_FORMAT = '%Y-%m-%d'

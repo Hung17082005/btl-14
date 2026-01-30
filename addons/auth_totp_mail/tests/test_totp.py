@@ -3,19 +3,21 @@
 
 import logging
 
-from odoo.tests import tagged, loaded_demo_data
 from odoo.addons.auth_totp.tests.test_totp import TestTOTP
+from odoo.tests import loaded_demo_data, tagged
 
 _logger = logging.getLogger(__name__)
 
 
-@tagged('post_install', '-at_install')
+@tagged("post_install", "-at_install")
 class TestTOTPInvite(TestTOTP):
 
     def test_totp_administration(self):
         # TODO: Make this work if no demo data + hr installed
         if not loaded_demo_data(self.env):
-            _logger.warning("This test relies on demo data. To be rewritten independently of demo data for accurate and reliable results.")
+            _logger.warning(
+                "This test relies on demo data. To be rewritten independently of demo data for accurate and reliable results."
+            )
             return
-        self.start_tour('/web', 'totp_admin_invite', login='admin')
-        self.start_tour('/web', 'totp_admin_self_invite', login='admin')
+        self.start_tour("/web", "totp_admin_invite", login="admin")
+        self.start_tour("/web", "totp_admin_self_invite", login="admin")

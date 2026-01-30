@@ -23,14 +23,14 @@ from lxml import etree
 from lxml.builder import E
 from psycopg2 import sql
 
-from odoo import api, fields, models, tools, SUPERUSER_ID, _, Command
+from odoo import SUPERUSER_ID, Command, _, api, fields, models, tools
 from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
 from odoo.exceptions import AccessDenied, AccessError, UserError, ValidationError
 from odoo.http import request
 from odoo.modules.module import get_module_resource
 from odoo.osv import expression
 from odoo.service.db import check_super
-from odoo.tools import partition, collections, frozendict, lazy_property, image_process
+from odoo.tools import collections, frozendict, image_process, lazy_property, partition
 
 _logger = logging.getLogger(__name__)
 

@@ -1,22 +1,23 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from collections import defaultdict
 import math
+from collections import defaultdict
 from datetime import datetime, time, timedelta
-from dateutil.relativedelta import relativedelta
-from dateutil.rrule import rrule, DAILY, WEEKLY
 from functools import partial
 from itertools import chain
+
+from dateutil.relativedelta import relativedelta
+from dateutil.rrule import DAILY, WEEKLY, rrule
 from pytz import timezone, utc
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.addons.base.models.res_partner import _tz_get
 from odoo.exceptions import ValidationError
 from odoo.osv import expression
+from odoo.tools import date_utils, float_utils
 from odoo.tools.float_utils import float_round
 
-from odoo.tools import date_utils, float_utils
 from .resource_mixin import timezone_datetime
 
 # Default hour per day value. The one should

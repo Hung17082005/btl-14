@@ -8,7 +8,7 @@ import operator
 from collections import defaultdict
 from difflib import get_close_matches
 
-from odoo import api, fields, models, tools, SUPERUSER_ID, _
+from odoo import SUPERUSER_ID, _, api, fields, models, tools
 from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.modules import get_module_path, get_module_resource
 

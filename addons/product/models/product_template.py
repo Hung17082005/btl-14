@@ -5,8 +5,8 @@ import itertools
 import logging
 from collections import defaultdict
 
-from odoo import api, fields, models, tools, _, SUPERUSER_ID
-from odoo.exceptions import ValidationError, RedirectWarning, UserError
+from odoo import SUPERUSER_ID, _, api, fields, models, tools
+from odoo.exceptions import RedirectWarning, UserError, ValidationError
 from odoo.osv import expression
 
 _logger = logging.getLogger(__name__)

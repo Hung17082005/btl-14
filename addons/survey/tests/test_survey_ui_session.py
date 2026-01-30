@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from dateutil.relativedelta import relativedelta
 from unittest.mock import patch
 
+from dateutil.relativedelta import relativedelta
+
 from odoo import fields
-from odoo.tests.common import tagged, HttpCase
+from odoo.tests.common import HttpCase, tagged
 
 
 @tagged('post_install', '-at_install')

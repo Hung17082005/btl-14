@@ -4,12 +4,10 @@
 from operator import itemgetter
 
 from odoo import _
-from odoo.http import request
-from odoo.tools import groupby as groupbyelem
-
-from odoo.osv.expression import OR
-
 from odoo.addons.project.controllers.portal import ProjectCustomerPortal
+from odoo.http import request
+from odoo.osv.expression import OR
+from odoo.tools import groupby as groupbyelem
 
 
 class SaleProjectCustomerPortal(ProjectCustomerPortal):

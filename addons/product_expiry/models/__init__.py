@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from . import production_lot
-from . import product_product
-from . import res_config_settings
-from . import stock_move_line
-from . import stock_move
-from . import stock_picking
-from . import stock_quant
+from . import (
+    product_product,
+    production_lot,
+    res_config_settings,
+    stock_move,
+    stock_move_line,
+    stock_picking,
+    stock_quant,
+)

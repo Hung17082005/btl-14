@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import itertools
 
-from odoo import models, fields
+from odoo import fields, models
 
 
 class ProductTemplate(models.Model):

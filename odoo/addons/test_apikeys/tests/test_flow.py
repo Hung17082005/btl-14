@@ -1,9 +1,9 @@
-import logging
 import json
+import logging
 
 from odoo import api
-from odoo.tests import tagged, get_db_name, loaded_demo_data
 from odoo.addons.base.tests.common import HttpCaseWithUserDemo
+from odoo.tests import get_db_name, loaded_demo_data, tagged
 
 _logger = logging.getLogger(__name__)
 

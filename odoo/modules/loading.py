@@ -16,6 +16,7 @@ import odoo.modules.db
 import odoo.modules.graph
 import odoo.modules.migration
 import odoo.modules.registry
+
 from .. import SUPERUSER_ID, api, tools
 from .module import adapt_version, initialize_sys_path, load_openerp_module
 

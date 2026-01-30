@@ -5,6 +5,7 @@ from base64 import b64decode
 
 from odoo.tests.common import TransactionCase
 
+
 class TestAvatarMixin(TransactionCase):
 
     """ tests the avatar mixin """

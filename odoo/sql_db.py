@@ -8,19 +8,23 @@ the database, *not* a database abstraction toolkit. Database abstraction is what
 the ORM does, in fact.
 """
 
-from contextlib import contextmanager
-from functools import wraps
 import itertools
 import logging
 import time
 import uuid
 import warnings
+from contextlib import contextmanager
+from functools import wraps
 
-from decorator import decorator
 import psycopg2
-import psycopg2.extras
 import psycopg2.extensions
-from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT, ISOLATION_LEVEL_READ_COMMITTED, ISOLATION_LEVEL_REPEATABLE_READ
+import psycopg2.extras
+from decorator import decorator
+from psycopg2.extensions import (
+    ISOLATION_LEVEL_AUTOCOMMIT,
+    ISOLATION_LEVEL_READ_COMMITTED,
+    ISOLATION_LEVEL_REPEATABLE_READ,
+)
 from psycopg2.pool import PoolError
 from werkzeug import urls
 
@@ -43,9 +47,9 @@ psycopg2.extensions.register_type(psycopg2.extensions.new_type((700, 701, 1700,)
 
 
 from . import tools
+from .tools import parse_version as pv
 from .tools.func import frame_codeinfo
 
-from .tools import parse_version as pv
 if pv(psycopg2.__version__) < pv('2.7'):
     from psycopg2._psycopg import QuotedString
     def adapt_string(adapted):
@@ -56,8 +60,8 @@ if pv(psycopg2.__version__) < pv('2.7'):
 
     psycopg2.extensions.register_adapter(str, adapt_string)
 
-from datetime import timedelta
 import threading
+from datetime import timedelta
 from inspect import currentframe
 
 
@@ -76,6 +80,7 @@ def clear_env(cr):
 
 
 import re
+
 re_from = re.compile('.* from "?([a-zA-Z_0-9]+)"? .*$')
 re_into = re.compile('.* into "?([a-zA-Z_0-9]+)"? .*$')
 

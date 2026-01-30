@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
 
-from odoo.fields import Command
-from odoo.exceptions import ValidationError
-from odoo.tests import tagged
+from datetime import date
 
 from odoo.addons.project.tests.test_project_base import TestProjectCommon
-
-from datetime import date
+from odoo.exceptions import ValidationError
+from odoo.fields import Command
+from odoo.tests import tagged
 
 
 @tagged('-at_install', 'post_install')

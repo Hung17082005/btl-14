@@ -2,14 +2,13 @@
 
 from freezegun import freeze_time
 
+from odoo.addons.payment import utils as payment_utils
 from odoo.fields import Command
 from odoo.tests import tagged
 from odoo.tools import mute_logger
 
-from odoo.addons.payment import utils as payment_utils
-
-from .common import OgoneCommon
 from ..controllers.main import OgoneController
+from .common import OgoneCommon
 
 
 @tagged('post_install', '-at_install')

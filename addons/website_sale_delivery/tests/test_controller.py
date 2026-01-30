@@ -3,11 +3,12 @@
 
 from unittest.mock import patch
 
-from odoo.exceptions import UserError, ValidationError
 from odoo.addons.payment.tests.common import PaymentCommon
-from odoo.addons.website_sale_delivery.controllers.main import WebsiteSaleDelivery
 from odoo.addons.website.tools import MockRequest
+from odoo.addons.website_sale_delivery.controllers.main import WebsiteSaleDelivery
+from odoo.exceptions import UserError, ValidationError
 from odoo.tests import tagged
+
 
 @tagged('post_install', '-at_install')
 class TestWebsiteSaleDeliveryController(PaymentCommon):

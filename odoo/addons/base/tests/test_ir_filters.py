@@ -6,7 +6,7 @@ import logging
 
 from odoo import exceptions
 from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.tests.common import TransactionCase, ADMIN_USER_ID, tagged
+from odoo.tests.common import ADMIN_USER_ID, TransactionCase, tagged
 
 _logger = logging.getLogger(__name__)
 

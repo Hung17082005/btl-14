@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import base64
-from collections import defaultdict, OrderedDict
-from decorator import decorator
-from operator import attrgetter
 import io
 import logging
 import os
@@ -11,25 +8,27 @@ import shutil
 import tempfile
 import threading
 import zipfile
+from collections import OrderedDict, defaultdict
+from operator import attrgetter
 
+import lxml.html
+import psycopg2
 import requests
 import werkzeug.urls
-
+from decorator import decorator
 from docutils import nodes
 from docutils.core import publish_string
 from docutils.transforms import Transform, writer_aux
 from docutils.writers.html4css1 import Writer
-import lxml.html
-import psycopg2
 
 import odoo
-from odoo import api, fields, models, modules, tools, _
+from odoo import _, api, fields, models, modules, tools
 from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
 from odoo.exceptions import AccessDenied, UserError, ValidationError
-from odoo.osv import expression
-from odoo.tools.parse_version import parse_version
-from odoo.tools.misc import topological_sort
 from odoo.http import request
+from odoo.osv import expression
+from odoo.tools.misc import topological_sort
+from odoo.tools.parse_version import parse_version
 
 _logger = logging.getLogger(__name__)
 

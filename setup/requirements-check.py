@@ -47,10 +47,8 @@ from typing import Dict, List, Optional, Tuple
 from urllib.request import HTTPError
 from urllib.request import urlopen as _urlopen
 
-from pip._internal.index.package_finder import (
-    LinkEvaluator,  # noqa: PLC2701
-    canonicalize_name,  # noqa: PLC2701
-)
+from pip._internal.index.package_finder import LinkEvaluator  # noqa: PLC2701
+from pip._internal.index.package_finder import canonicalize_name  # noqa: PLC2701
 from pip._internal.models.link import Link  # noqa: PLC2701
 from pip._internal.models.target_python import TargetPython  # noqa: PLC2701
 from pip._vendor.packaging.markers import Marker

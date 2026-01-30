@@ -9,8 +9,8 @@ import uuid
 from lxml import etree
 
 from odoo import models
-from odoo.tools import misc
 from odoo.addons.base.models.assetsbundle import EXTENSIONS
+from odoo.tools import misc
 
 _match_asset_file_url_regex = re.compile(r"^/(\w+)/(.+?)(\.custom\.(.+))?\.(\w+)$")
 

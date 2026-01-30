@@ -20,9 +20,9 @@
 #
 ###################################################################################
 
-from . import models
+from odoo import SUPERUSER_ID, api
 
-from odoo import api, SUPERUSER_ID
+from . import models
 
 
 def _uninstall_reset_changes(cr, registry):

@@ -4,12 +4,15 @@
 import logging
 
 import odoo.tests
-
 from odoo import api
-from odoo.addons.base.tests.common import HttpCaseWithUserDemo, TransactionCaseWithUserDemo, HttpCaseWithUserPortal
+from odoo.addons.base.tests.common import (
+    HttpCaseWithUserDemo,
+    HttpCaseWithUserPortal,
+    TransactionCaseWithUserDemo,
+)
+from odoo.addons.website.tools import MockRequest
 from odoo.addons.website_sale.controllers.main import WebsiteSale
 from odoo.addons.website_sale.tests.common import TestWebsiteSaleCommon
-from odoo.addons.website.tools import MockRequest
 
 _logger = logging.getLogger(__name__)
 

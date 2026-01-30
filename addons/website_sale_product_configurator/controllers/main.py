@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import json
-from odoo import http
-from odoo.http import request
 
-from odoo.addons.sale_product_configurator.controllers.main import ProductConfiguratorController
+from odoo import http
+from odoo.addons.sale_product_configurator.controllers.main import (
+    ProductConfiguratorController,
+)
 from odoo.addons.website_sale.controllers import main
+from odoo.http import request
 
 
 class WebsiteSaleProductConfiguratorController(ProductConfiguratorController):

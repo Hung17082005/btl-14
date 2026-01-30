@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import json
 import datetime
+import json
 import math
 import re
 import warnings
-
 from collections import defaultdict
+
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_compare, float_round, float_is_zero, format_datetime
-from odoo.tools.misc import OrderedSet, format_date, groupby as tools_groupby
-
+from odoo import _, api, fields, models
 from odoo.addons.stock.models.stock_move import PROCUREMENT_PRIORITIES
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools import float_compare, float_is_zero, float_round, format_datetime
+from odoo.tools.misc import OrderedSet, format_date
+from odoo.tools.misc import groupby as tools_groupby
 
 SIZE_BACK_ORDER_NUMERING = 3
 

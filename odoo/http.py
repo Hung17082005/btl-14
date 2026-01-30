@@ -10,6 +10,7 @@ import functools
 import hashlib
 import hmac
 import inspect
+import json
 import logging
 import mimetypes
 import os
@@ -21,14 +22,13 @@ import threading
 import time
 import traceback
 import warnings
+from datetime import datetime
 from os.path import join as opj
 from zlib import adler32
 
 import babel.core
-from datetime import datetime
 import passlib.utils
 import psycopg2
-import json
 import werkzeug.datastructures
 import werkzeug.exceptions
 import werkzeug.local
@@ -36,6 +36,7 @@ import werkzeug.routing
 import werkzeug.wrappers
 from werkzeug import urls
 from werkzeug.wsgi import wrap_file
+
 try:
     from werkzeug.middleware.shared_data import SharedDataMiddleware
 except ImportError:
@@ -47,16 +48,17 @@ except ImportError:
     psutil = None
 
 import odoo
+
+from .modules.module import read_manifest
+from .service import model as service_model
+from .service import security
 from .service.server import memory_info
-from .service import security, model as service_model
-from .tools.func import lazy_property
-from .tools import profiler
-from .tools import ustr, consteq, frozendict, pycompat, unique, date_utils
-from .tools.mimetypes import guess_mimetype
-from .tools.misc import str2bool
+from .tools import consteq, date_utils, frozendict, profiler, pycompat, unique, ustr
 from .tools._vendor import sessions
 from .tools._vendor.useragents import UserAgent
-from .modules.module import read_manifest
+from .tools.func import lazy_property
+from .tools.mimetypes import guess_mimetype
+from .tools.misc import str2bool
 
 _logger = logging.getLogger(__name__)
 rpc_request = logging.getLogger(__name__ + '.rpc.request')

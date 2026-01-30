@@ -4,10 +4,10 @@
 import werkzeug.urls
 
 from odoo import http
-from odoo.addons.http_routing.models.ir_http import unslug, slug
+from odoo.addons.http_routing.models.ir_http import slug, unslug
 from odoo.addons.website.models.ir_http import sitemap_qs2dom
-from odoo.tools.translate import _
 from odoo.http import request
+from odoo.tools.translate import _
 
 
 class WebsiteCustomer(http.Controller):

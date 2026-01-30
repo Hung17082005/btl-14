@@ -20,9 +20,9 @@
 #
 ###################################################################################
 
+import base64
 import re
 import uuid
-import base64
 
 from odoo import api, fields, models
 

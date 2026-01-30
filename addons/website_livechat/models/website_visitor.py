@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime, timedelta
 import json
+from datetime import datetime, timedelta
 
-from odoo import models, api, fields, _
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.http import request
 from odoo.tools.sql import column_exists, create_column

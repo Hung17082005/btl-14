@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from __future__ import print_function
+
 import argparse
 import os
-import requests
 import sys
 import tempfile
 import zipfile
 
+import requests
+
 from . import Command
+
 
 class Deploy(Command):
     """Deploy a module on an Odoo instance"""

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from odoo.tests.common import TransactionCase
-from odoo.exceptions import MissingError
 from odoo import Command
+from odoo.exceptions import MissingError
+from odoo.tests.common import TransactionCase
 
 
 class One2manyCase(TransactionCase):

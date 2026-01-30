@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo import api, SUPERUSER_ID, _
-from . import controllers
-from . import models
-from . import wizard
-from . import report
+from odoo import SUPERUSER_ID, _, api
+
+from . import controllers, models, report, wizard
+
 
 def _post_init_hook(cr, registry):
     env = api.Environment(cr, SUPERUSER_ID, {})

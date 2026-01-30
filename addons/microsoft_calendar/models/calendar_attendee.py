@@ -2,9 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import models
-
-from odoo.addons.microsoft_calendar.models.microsoft_sync import microsoft_calendar_token
-from odoo.addons.microsoft_calendar.utils.microsoft_calendar import MicrosoftCalendarService
+from odoo.addons.microsoft_calendar.models.microsoft_sync import (
+    microsoft_calendar_token,
+)
+from odoo.addons.microsoft_calendar.utils.microsoft_calendar import (
+    MicrosoftCalendarService,
+)
 
 
 class Attendee(models.Model):

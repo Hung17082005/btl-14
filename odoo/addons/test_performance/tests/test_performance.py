@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from collections import defaultdict
 import json
+from collections import defaultdict
 
-from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
-from odoo.tests.common import TransactionCase, users, warmup, tagged
-from odoo.tools import mute_logger, json_default
 from odoo import Command
+from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
+from odoo.tests.common import TransactionCase, tagged, users, warmup
+from odoo.tools import json_default, mute_logger
 
 
 class TestPerformance(SavepointCaseWithUserDemo):

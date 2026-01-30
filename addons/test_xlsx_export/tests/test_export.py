@@ -6,10 +6,10 @@ from datetime import date
 from unittest.mock import patch
 
 from odoo import http
+from odoo.addons.mail.tests.common import mail_new_test_user
+from odoo.addons.web.controllers.main import ExportXlsxWriter
 from odoo.tests import common, tagged
 from odoo.tools.misc import get_lang
-from odoo.addons.web.controllers.main import ExportXlsxWriter
-from odoo.addons.mail.tests.common import mail_new_test_user
 
 
 class XlsxCreatorCase(common.HttpCase):

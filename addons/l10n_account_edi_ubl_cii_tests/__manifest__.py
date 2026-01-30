@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Testing the Import/Export invoices with UBL/CII",
-    'version': '1.0',
-    'category': 'Hidden/Tests',
-    'description': """
+    "name": "Testing the Import/Export invoices with UBL/CII",
+    "version": "1.0",
+    "category": "Hidden/Tests",
+    "description": """
     This module tests the module 'account_edi_ubl_cii', it is separated since dependencies to some 
     localizations were required. Its name begins with 'l10n' to not overload runbot.
     
@@ -17,16 +17,16 @@
     We also test that generating xml from odoo with given parameters gives exactly the same xml as the expected, 
     valid ones.
     """,
-    'depends': [
-        'l10n_generic_coa',
-        'account_edi_ubl_cii',
-        'l10n_fr',
-        'l10n_be',
-        'l10n_de',
-        'l10n_nl_edi',
+    "depends": [
+        "l10n_generic_coa",
+        "account_edi_ubl_cii",
+        "l10n_fr",
+        "l10n_be",
+        "l10n_de",
+        "l10n_nl_edi",
     ],
-    'installable': True,
-    'application': False,
-    'auto_install': False,
-    'license': 'LGPL-3',
+    "installable": True,
+    "application": False,
+    "auto_install": False,
+    "license": "LGPL-3",
 }

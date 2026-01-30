@@ -1,7 +1,8 @@
-from dateutil.relativedelta import relativedelta
 from datetime import date
 
-from odoo import models, Command
+from dateutil.relativedelta import relativedelta
+
+from odoo import Command, models
 from odoo.tools import populate
 
 

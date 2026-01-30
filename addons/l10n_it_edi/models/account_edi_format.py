@@ -1,18 +1,18 @@
 # -*- coding:utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, models, fields, _
-from odoo.tests.common import Form
-from odoo.exceptions import UserError
-from odoo.addons.l10n_it_edi.tools.remove_signature import remove_signature
-from odoo.osv.expression import OR, AND
+import json
+import logging
+import re
+from datetime import datetime
 
 from lxml import etree
-from datetime import datetime
-import re
-import logging
-import json
 
+from odoo import _, api, fields, models
+from odoo.addons.l10n_it_edi.tools.remove_signature import remove_signature
+from odoo.exceptions import UserError
+from odoo.osv.expression import AND, OR
+from odoo.tests.common import Form
 
 _logger = logging.getLogger(__name__)
 

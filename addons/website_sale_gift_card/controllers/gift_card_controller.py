@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import http
-from odoo.http import request
 from odoo.addons.website_sale.controllers import main
+from odoo.http import request
 
 
 class GiftCardController(main.WebsiteSale):

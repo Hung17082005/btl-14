@@ -8,7 +8,6 @@ import io
 import locale
 import logging
 import os
-import polib
 import re
 import tarfile
 import tempfile
@@ -16,15 +15,17 @@ import threading
 from collections import defaultdict, namedtuple
 from datetime import datetime
 from os.path import join
-
 from pathlib import Path
+
+import polib
 from babel.messages import extract
 from lxml import etree, html
 
 import odoo
 from odoo.exceptions import UserError
+
 from . import config, pycompat
-from .misc import file_open, get_iso_codes, SKIPPED_ELEMENT_TYPES
+from .misc import SKIPPED_ELEMENT_TYPES, file_open, get_iso_codes
 
 _logger = logging.getLogger(__name__)
 
@@ -124,7 +125,9 @@ ENGLISH_SMALL_WORDS = set("as at by do go if in me no of ok on or to up us we".s
 
 
 # these direct uses of CSV are ok.
-import csv # pylint: disable=deprecated-module
+import csv  # pylint: disable=deprecated-module
+
+
 class UNIX_LINE_TERMINATOR(csv.excel):
     lineterminator = '\n'
 

@@ -4,18 +4,18 @@
 import ast
 import json
 from collections import defaultdict
-from datetime import timedelta, datetime
+from datetime import datetime, timedelta
 from random import randint
 
-from odoo import api, Command, fields, models, tools, SUPERUSER_ID, _, _lt
+from odoo import SUPERUSER_ID, Command, _, _lt, api, fields, models, tools
 from odoo.addons.web_editor.controllers.main import handle_history_divergence
-from odoo.exceptions import UserError, ValidationError, AccessError
+from odoo.exceptions import AccessError, UserError, ValidationError
+from odoo.osv.expression import FALSE_LEAF, OR, TRUE_LEAF
 from odoo.tools import format_amount
-from odoo.osv.expression import OR, TRUE_LEAF, FALSE_LEAF
+from odoo.tools.misc import get_lang
 
 from .project_task_recurrence import DAYS, WEEKS
 from .project_update import STATUS_COLOR
-from odoo.tools.misc import get_lang
 
 PROJECT_TASK_READABLE_FIELDS = {
     'id',

@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import logging
 import random
 import re
-from unittest.mock import patch
 import textwrap
 from datetime import datetime, timedelta
-from lxml import etree
-import logging
+from unittest.mock import patch
 
+from lxml import etree
+
+from odoo.addons.web.controllers.main import HomeStaticTemplateHelpers
 from odoo.tests.common import BaseCase, HttpCase, tagged
 from odoo.tools import topological_sort
-from odoo.addons.web.controllers.main import HomeStaticTemplateHelpers
 
 _logger = logging.getLogger(__name__)
 

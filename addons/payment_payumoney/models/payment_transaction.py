@@ -3,10 +3,9 @@
 from werkzeug import urls
 
 from odoo import _, api, models
-from odoo.exceptions import ValidationError
-
 from odoo.addons.payment import utils as payment_utils
 from odoo.addons.payment_payumoney.controllers.main import PayUMoneyController
+from odoo.exceptions import ValidationError
 
 
 class PaymentTransaction(models.Model):

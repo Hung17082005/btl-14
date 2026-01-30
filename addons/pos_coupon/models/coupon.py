@@ -3,7 +3,7 @@
 
 # NOTE Use black to automatically format this code.
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 
 
 class Coupon(models.Model):

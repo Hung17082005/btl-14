@@ -4,7 +4,7 @@
 import math
 from collections import defaultdict
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.osv import expression
 from odoo.tools import float_compare, format_amount
 

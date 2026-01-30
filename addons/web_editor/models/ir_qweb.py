@@ -8,31 +8,29 @@ as well as render a few fields differently.
 Also, adds methods to convert values back to Odoo models.
 """
 
-import babel
 import base64
+import hashlib
 import io
 import itertools
 import json
 import logging
 import os
 import re
-import hashlib
 from datetime import datetime
 
+import babel
 import pytz
 import requests
-from datetime import datetime
 from lxml import etree, html
 from PIL import Image as I
 from werkzeug import urls
 
 import odoo.modules
-
-from odoo import _, api, models, fields
-from odoo.tools import ustr, posix_to_ldml, pycompat
-from odoo.tools import html_escape as escape
-from odoo.tools.misc import get_lang, babel_locale_parse
+from odoo import _, api, fields, models
 from odoo.addons.base.models import ir_qweb
+from odoo.tools import html_escape as escape
+from odoo.tools import posix_to_ldml, pycompat, ustr
+from odoo.tools.misc import babel_locale_parse, get_lang
 
 REMOTE_CONNECTION_TIMEOUT = 2.5
 

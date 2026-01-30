@@ -3,8 +3,9 @@
 
 import hashlib
 
-from odoo import api, models, _
+from odoo import _, api, models
 from odoo.exceptions import UserError
+
 
 class HrEmployee(models.Model):
 

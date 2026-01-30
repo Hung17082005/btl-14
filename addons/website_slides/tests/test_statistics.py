@@ -10,7 +10,7 @@ from odoo.addons.website_slides.tests import common
 from odoo.exceptions import UserError
 from odoo.tests import tagged
 from odoo.tests.common import users
-from odoo.tools import mute_logger, float_compare
+from odoo.tools import float_compare, mute_logger
 
 
 @tagged('functional')

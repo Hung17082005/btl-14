@@ -10,8 +10,7 @@ from pathlib import PurePath
 from unittest import TestCase
 from unittest.mock import patch
 
-from odoo.tests.common import TransactionCase, BaseCase
-from odoo.tests.common import users, warmup
+from odoo.tests.common import BaseCase, TransactionCase, users, warmup
 from odoo.tests.runner import OdooTestResult
 
 _logger = logging.getLogger(__name__)

@@ -2,12 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from collections import defaultdict
+
 from dateutil.relativedelta import relativedelta
 
-from odoo import api, fields, models, SUPERUSER_ID, _
-from odoo.osv import expression
+from odoo import SUPERUSER_ID, _, api, fields, models
 from odoo.addons.stock.models.stock_rule import ProcurementException
-from odoo.tools import float_compare, OrderedSet
+from odoo.osv import expression
+from odoo.tools import OrderedSet, float_compare
 
 
 class StockRule(models.Model):

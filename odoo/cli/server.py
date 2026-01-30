@@ -12,14 +12,14 @@ GNU Public Licence.
 """
 
 import atexit
-import csv # pylint: disable=deprecated-module
+import csv  # pylint: disable=deprecated-module
 import logging
 import os
 import signal
 import sys
 import threading
-import traceback
 import time
+import traceback
 
 from psycopg2 import ProgrammingError, errorcodes
 

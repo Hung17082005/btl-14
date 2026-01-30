@@ -2,14 +2,15 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import binascii
-
 from io import BytesIO
+
 from PIL import Image
 
-from odoo.addons.http_routing.models.ir_http import slug
 import odoo.tests
-from odoo.tools.misc import file_open
+from odoo.addons.http_routing.models.ir_http import slug
 from odoo.tests.common import HttpCase
+from odoo.tools.misc import file_open
+
 
 @odoo.tests.tagged('-at_install', 'post_install')
 class TestController(HttpCase):

@@ -2,7 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from unittest.mock import patch
 
-from odoo.addons.base.tests.common import TransactionCaseWithUserDemo, HttpCaseWithUserPortal
+from odoo.addons.base.tests.common import (
+    HttpCaseWithUserPortal,
+    TransactionCaseWithUserDemo,
+)
 from odoo.addons.website.tools import MockRequest
 from odoo.addons.website_sale.tests.common import TestWebsiteSaleCommon
 from odoo.tests import tagged

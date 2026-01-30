@@ -2,12 +2,19 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import json
+
 import werkzeug
 
 from odoo import http
-from odoo.http import request
 from odoo.addons.portal.controllers.web import Home
-from odoo.exceptions import UserError, ValidationError, AccessError, MissingError, AccessDenied
+from odoo.exceptions import (
+    AccessDenied,
+    AccessError,
+    MissingError,
+    UserError,
+    ValidationError,
+)
+from odoo.http import request
 
 
 class WebsiteTest(Home):

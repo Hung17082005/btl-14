@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from .common import MockLinkTracker
-from odoo.tests import common
 from odoo.exceptions import UserError
+from odoo.tests import common
+
+from .common import MockLinkTracker
 
 
 class TestLinkTracker(common.TransactionCase, MockLinkTracker):

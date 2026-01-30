@@ -1,2 +1,1 @@
-from . import model
-from . import website
+from . import model, website

@@ -3,7 +3,7 @@
 import logging
 import warnings
 
-from odoo import api, fields, models, tools, SUPERUSER_ID, _
+from odoo import SUPERUSER_ID, _, api, fields, models, tools
 from odoo.exceptions import AccessError, ValidationError
 from odoo.osv import expression
 from odoo.tools import config

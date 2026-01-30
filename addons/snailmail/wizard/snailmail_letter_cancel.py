@@ -1,6 +1,7 @@
 
 from odoo import _, api, fields, models
 
+
 class SnailmailLetterCancel(models.TransientModel):
     _name = 'snailmail.letter.cancel'
     _description = 'Dismiss notification for resend by model'

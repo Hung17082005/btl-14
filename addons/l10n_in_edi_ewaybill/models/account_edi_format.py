@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import re
 import json
+import logging
+import re
 from datetime import timedelta
 
-from odoo import models, fields, api, _
-from odoo.tools import html_escape
-from odoo.exceptions import AccessError
+from odoo import _, api, fields, models
 from odoo.addons.iap import jsonrpc
-from odoo.addons.l10n_in_edi.models.account_edi_format import DEFAULT_IAP_ENDPOINT, DEFAULT_IAP_TEST_ENDPOINT
+from odoo.addons.l10n_in_edi.models.account_edi_format import (
+    DEFAULT_IAP_ENDPOINT,
+    DEFAULT_IAP_TEST_ENDPOINT,
+)
+from odoo.exceptions import AccessError
+from odoo.tools import html_escape
 
 from .error_codes import ERROR_CODES
-
-import logging
 
 _logger = logging.getLogger(__name__)
 

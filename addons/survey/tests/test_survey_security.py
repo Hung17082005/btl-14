@@ -6,7 +6,7 @@ import datetime
 from odoo.addons.survey.tests import common
 from odoo.exceptions import AccessError, UserError
 from odoo.tests import tagged
-from odoo.tests.common import users, HttpCase
+from odoo.tests.common import HttpCase, users
 from odoo.tools import mute_logger
 
 

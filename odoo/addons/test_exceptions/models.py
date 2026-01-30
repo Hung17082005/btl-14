@@ -2,8 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import odoo.exceptions
-from odoo import models, api
+from odoo import api, models
 from odoo.tools.safe_eval import safe_eval
+
 
 class m(models.Model):
     """ This model exposes a few methods that will raise the different

@@ -3,11 +3,9 @@
 
 import werkzeug.urls
 
-from odoo import fields
-
-from odoo import http
+from odoo import fields, http
+from odoo.addons.http_routing.models.ir_http import slug, unslug
 from odoo.http import request
-from odoo.addons.http_routing.models.ir_http import unslug, slug
 from odoo.tools.translate import _
 
 

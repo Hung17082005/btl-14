@@ -2,12 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import json
+
 import werkzeug
 from werkzeug.exceptions import Forbidden, NotFound
 
-from odoo import exceptions, http, _
-from odoo.http import request
+from odoo import _, exceptions, http
 from odoo.addons.website_event.controllers.main import WebsiteEventController
+from odoo.http import request
 
 
 class WebsiteEventBoothController(WebsiteEventController):

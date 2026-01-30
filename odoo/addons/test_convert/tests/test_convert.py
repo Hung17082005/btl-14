@@ -9,7 +9,7 @@ from lxml.builder import E
 
 import odoo
 from odoo.tests import common
-from odoo.tools.convert import xml_import, _eval_xml
+from odoo.tools.convert import _eval_xml, xml_import
 
 Field = E.field
 Value = E.value

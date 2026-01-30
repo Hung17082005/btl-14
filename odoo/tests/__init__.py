@@ -1,3 +1,2 @@
-from . import common
+from . import common, test_parse_inline_template
 from .common import *
-from . import test_parse_inline_template

@@ -3,7 +3,9 @@
 
 """ Implementation of "INVENTORY VALUATION TESTS (With valuation layers)" spreadsheet. """
 
-from odoo.addons.stock_account.tests.test_stockvaluationlayer import TestStockValuationCommon
+from odoo.addons.stock_account.tests.test_stockvaluationlayer import (
+    TestStockValuationCommon,
+)
 from odoo.tests import Form
 
 

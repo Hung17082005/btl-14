@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 
-from contextlib import closing
 import base64
 import io
+from contextlib import closing
 
 import odoo
+from odoo import Command
 from odoo.tests import common, tagged
 from odoo.tools.misc import file_open, mute_logger
-from odoo.tools.translate import _, _lt, TranslationFileReader, TranslationModuleReader
-from odoo import Command
-
+from odoo.tools.translate import TranslationFileReader, TranslationModuleReader, _, _lt
 
 TRANSLATED_TERM = _lt("Klingon")
 

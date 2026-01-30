@@ -7,10 +7,9 @@ import json
 
 import odoo
 from odoo import api, http, models
+from odoo.addons.web.controllers.main import HomeStaticTemplateHelpers
 from odoo.http import request
 from odoo.tools import file_open, image_process, ustr
-
-from odoo.addons.web.controllers.main import HomeStaticTemplateHelpers
 
 
 class Http(models.AbstractModel):

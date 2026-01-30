@@ -1,14 +1,16 @@
-import uuid
 import json
-from markupsafe import Markup
-from odoo import _, fields, models, api
-from odoo.tools import float_repr
-from datetime import datetime
+import uuid
 from base64 import b64decode, b64encode
-from lxml import etree
-from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
+from datetime import datetime
+
 from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
 from cryptography.x509 import load_der_x509_certificate
+from lxml import etree
+from markupsafe import Markup
+
+from odoo import _, api, fields, models
+from odoo.tools import float_repr
 
 
 class AccountMove(models.Model):

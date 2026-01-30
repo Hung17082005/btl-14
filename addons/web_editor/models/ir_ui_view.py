@@ -4,12 +4,13 @@
 import copy
 import logging
 import uuid
+
 from lxml import etree, html
 
-from odoo import api, models, _
-from odoo.osv import expression
-from odoo.exceptions import AccessError, ValidationError
+from odoo import _, api, models
 from odoo.addons.base.models.ir_ui_view import MOVABLE_BRANDING
+from odoo.exceptions import AccessError, ValidationError
+from odoo.osv import expression
 
 _logger = logging.getLogger(__name__)
 

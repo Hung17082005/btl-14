@@ -2,17 +2,18 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
+
 try:
     import pylint
 except ImportError:
     pylint = None
-import subprocess
 import os
+import subprocess
 from os.path import join
 
-from odoo.tests.common import TransactionCase
 from odoo import tools
-from odoo.modules import get_modules, get_module_path
+from odoo.modules import get_module_path, get_modules
+from odoo.tests.common import TransactionCase
 
 HERE = os.path.dirname(os.path.realpath(__file__))
 

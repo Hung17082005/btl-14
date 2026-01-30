@@ -22,14 +22,12 @@ except ImportError:
     from werkzeug.routing.converters import NumberConverter  # moved in werkzeug 2.2.2
 
 import odoo
-from odoo import api, http, models, tools, SUPERUSER_ID
+from odoo import SUPERUSER_ID, api, http, models, tools
 from odoo.exceptions import AccessDenied, AccessError, MissingError
-from odoo.http import request, content_disposition, Response
+from odoo.http import ALLOWED_DEBUG_MODES, Response, content_disposition, request
+from odoo.modules.module import get_module_path, get_resource_path
 from odoo.tools import consteq, pycompat
 from odoo.tools.mimetypes import get_extension, guess_mimetype
-from odoo.modules.module import get_resource_path, get_module_path
-
-from odoo.http import ALLOWED_DEBUG_MODES
 from odoo.tools.misc import str2bool
 
 _logger = logging.getLogger(__name__)

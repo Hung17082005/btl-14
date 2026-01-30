@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #pylint: disable=deprecated-module
-import csv
 import codecs
+import csv
 import io
 
 _reader = codecs.getreader('utf-8')

@@ -3,6 +3,7 @@
 
 from odoo import fields, models
 
+
 class RestaurantPrinter(models.Model):
 
     _inherit = 'restaurant.printer'

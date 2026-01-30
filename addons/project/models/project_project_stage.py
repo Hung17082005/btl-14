@@ -3,6 +3,7 @@
 
 from odoo import fields, models
 
+
 class ProjectProjectStage(models.Model):
     _name = 'project.project.stage'
     _description = 'Project Stage'

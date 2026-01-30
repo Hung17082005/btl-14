@@ -4,13 +4,14 @@ import json
 import logging
 import pprint
 import random
-import requests
 import string
 from urllib.parse import parse_qs
+
+import requests
 from werkzeug.exceptions import Forbidden
 
-from odoo import fields, models, api, _
-from odoo.exceptions import ValidationError, UserError, AccessDenied
+from odoo import _, api, fields, models
+from odoo.exceptions import AccessDenied, UserError, ValidationError
 from odoo.tools import hmac
 
 _logger = logging.getLogger(__name__)

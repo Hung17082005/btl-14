@@ -2,13 +2,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from datetime import date, datetime
+
 from freezegun import freeze_time
 from pytz import timezone, utc
 
 from odoo import fields
-from odoo.exceptions import ValidationError
 from odoo.addons.resource.models.resource import Intervals
 from odoo.addons.resource.tests.common import TestResourceCommon
+from odoo.exceptions import ValidationError
 from odoo.tests.common import TransactionCase
 
 

@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import ValuationReconciliationTestCommon
-from odoo.tests.common import Form, tagged
-from odoo import fields
-
 from freezegun import freeze_time
+
+from odoo import fields
+from odoo.addons.stock_account.tests.test_anglo_saxon_valuation_reconciliation_common import (
+    ValuationReconciliationTestCommon,
+)
+from odoo.tests.common import Form, tagged
 
 
 @tagged('post_install', '-at_install')

@@ -2,8 +2,8 @@
 from datetime import datetime
 
 from odoo import Command
-from odoo.tests import tagged
 from odoo.addons.account_edi.tests.common import AccountEdiTestCommon
+from odoo.tests import tagged
 
 
 @tagged('post_install_l10n', '-at_install', 'post_install')

@@ -3,12 +3,12 @@
 
 import logging
 import math
+from collections import defaultdict
 from datetime import datetime, timedelta
 from itertools import product as cartesian_product
-from collections import defaultdict
 
-from odoo import models, api
-from odoo.tools import populate, groupby
+from odoo import api, models
+from odoo.tools import groupby, populate
 
 _logger = logging.getLogger(__name__)
 

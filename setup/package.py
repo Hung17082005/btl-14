@@ -4,18 +4,17 @@
 import argparse
 import logging
 import os
-import pexpect
 import shutil
 import subprocess
 import sys
 import tempfile
 import time
 import traceback
-
+from glob import glob
 from pathlib import Path
 from xmlrpc import client as xmlrpclib
 
-from glob import glob
+import pexpect
 
 #----------------------------------------------------------
 # Utils

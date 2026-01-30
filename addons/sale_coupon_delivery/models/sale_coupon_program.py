@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from odoo import models, _, api
+from odoo import _, api, models
 
 
 class CouponProgram(models.Model):

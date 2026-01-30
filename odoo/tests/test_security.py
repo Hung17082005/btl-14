@@ -1,6 +1,6 @@
-from os import environ, path
 import subprocess
 import sys
+from os import environ, path
 
 #This test is meant to be standalone, correct usage : python test_security.py file1 file2 file3 ...
 

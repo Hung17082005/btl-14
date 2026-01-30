@@ -3,12 +3,13 @@
 
 import hashlib
 from collections import OrderedDict
-from werkzeug.urls import url_quote
+
 from markupsafe import Markup
+from werkzeug.urls import url_quote
 
 from odoo import api, models
-from odoo.tools import pycompat
 from odoo.tools import html_escape as escape
+from odoo.tools import pycompat
 
 
 class Image(models.AbstractModel):

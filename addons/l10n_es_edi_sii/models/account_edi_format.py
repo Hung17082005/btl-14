@@ -1,20 +1,17 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
+import json
+import math
 from collections import defaultdict
-from urllib3.util.ssl_ import create_urllib3_context, DEFAULT_CIPHERS
-from urllib3.contrib.pyopenssl import inject_into_urllib3
-from OpenSSL.crypto import load_certificate, load_privatekey, FILETYPE_PEM
 
-from odoo import fields
+import requests
+from OpenSSL.crypto import FILETYPE_PEM, load_certificate, load_privatekey
+from urllib3.contrib.pyopenssl import inject_into_urllib3
+from urllib3.util.ssl_ import DEFAULT_CIPHERS, create_urllib3_context
+
+from odoo import _, fields, models
 from odoo.exceptions import UserError
 from odoo.tools import html_escape, zeep
-
-import math
-import json
-import requests
-
-from odoo import models, _
-
 
 # Custom patches to perform the WSDL requests.
 

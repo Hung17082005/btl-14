@@ -7,25 +7,24 @@ import shutil
 import tempfile
 import threading
 import traceback
-from xml.etree import ElementTree as ET
 import zipfile
-
-from psycopg2 import sql
-from pytz import country_timezones
-from functools import wraps
 from contextlib import closing
-from decorator import decorator
+from functools import wraps
+from xml.etree import ElementTree as ET
 
 import psycopg2
+from decorator import decorator
+from psycopg2 import sql
+from pytz import country_timezones
 
 import odoo
-from odoo import SUPERUSER_ID
-from odoo.exceptions import AccessDenied
 import odoo.release
 import odoo.sql_db
 import odoo.tools
-from odoo.sql_db import db_connect
+from odoo import SUPERUSER_ID
+from odoo.exceptions import AccessDenied
 from odoo.release import version_info
+from odoo.sql_db import db_connect
 
 _logger = logging.getLogger(__name__)
 

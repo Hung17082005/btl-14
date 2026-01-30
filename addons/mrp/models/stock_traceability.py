@@ -1,4 +1,5 @@
-from odoo import models, api
+from odoo import api, models
+
 
 class MrpStockReport(models.TransientModel):
     _inherit = 'stock.traceability.report'

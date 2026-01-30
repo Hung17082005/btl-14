@@ -4,7 +4,8 @@
 from ast import literal_eval
 from collections import OrderedDict
 from random import randint, sample
-from werkzeug.exceptions import NotFound, Forbidden
+
+from werkzeug.exceptions import Forbidden, NotFound
 
 from odoo import exceptions, http
 from odoo.addons.website_event.controllers.main import WebsiteEventController

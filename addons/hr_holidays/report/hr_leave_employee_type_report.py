@@ -1,39 +1,45 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 
 
 class LeaveReport(models.Model):
     _name = "hr.leave.employee.type.report"
-    _description = 'Time Off Summary / Report'
+    _description = "Time Off Summary / Report"
     _auto = False
     _order = "date_from DESC, employee_id"
 
-    employee_id = fields.Many2one('hr.employee', string="Employee", readonly=True)
-    active_employee = fields.Boolean(related='employee_id.active', readonly=True)
-    number_of_days = fields.Float('Number of Days', readonly=True, group_operator="sum")
-    department_id = fields.Many2one('hr.department', string='Department', readonly=True)
+    employee_id = fields.Many2one("hr.employee", string="Employee", readonly=True)
+    active_employee = fields.Boolean(related="employee_id.active", readonly=True)
+    number_of_days = fields.Float("Number of Days", readonly=True, group_operator="sum")
+    department_id = fields.Many2one("hr.department", string="Department", readonly=True)
     leave_type = fields.Many2one("hr.leave.type", string="Leave Type", readonly=True)
-    holiday_status = fields.Selection([
-        ('taken', 'Taken'), #taken = validated
-        ('left', 'Left'),
-        ('planned', 'Planned')
-    ])
-    state = fields.Selection([
-        ('draft', 'To Submit'),
-        ('cancel', 'Cancelled'),
-        ('confirm', 'To Approve'),
-        ('refuse', 'Refused'),
-        ('validate1', 'Second Approval'),
-        ('validate', 'Approved')
-        ], string='Status', readonly=True)
-    date_from = fields.Datetime('Start Date', readonly=True)
-    date_to = fields.Datetime('End Date', readonly=True)
-    company_id = fields.Many2one('res.company', string="Company", readonly=True)
+    holiday_status = fields.Selection(
+        [
+            ("taken", "Taken"),  # taken = validated
+            ("left", "Left"),
+            ("planned", "Planned"),
+        ]
+    )
+    state = fields.Selection(
+        [
+            ("draft", "To Submit"),
+            ("cancel", "Cancelled"),
+            ("confirm", "To Approve"),
+            ("refuse", "Refused"),
+            ("validate1", "Second Approval"),
+            ("validate", "Approved"),
+        ],
+        string="Status",
+        readonly=True,
+    )
+    date_from = fields.Datetime("Start Date", readonly=True)
+    date_to = fields.Datetime("End Date", readonly=True)
+    company_id = fields.Many2one("res.company", string="Company", readonly=True)
 
     def init(self):
-        tools.drop_view_if_exists(self._cr, 'hr_leave_employee_type_report')
+        tools.drop_view_if_exists(self._cr, "hr_leave_employee_type_report")
 
         self._cr.execute("""
             CREATE or REPLACE view hr_leave_employee_type_report as (
@@ -108,20 +114,24 @@ class LeaveReport(models.Model):
     @api.model
     def action_time_off_analysis(self):
         domain = []
-        if self.env.context.get('active_ids'):
-            domain = [('employee_id', 'in', self.env.context.get('active_ids', []))]
+        if self.env.context.get("active_ids"):
+            domain = [("employee_id", "in", self.env.context.get("active_ids", []))]
 
         return {
-            'name': _('Time Off Analysis'),
-            'type': 'ir.actions.act_window',
-            'res_model': 'hr.leave.employee.type.report',
-            'view_mode': 'pivot',
-            'search_view_id': [self.env.ref('hr_holidays.view_search_hr_holidays_employee_type_report').id],
-            'domain': domain,
-            'context': {
-                'search_default_year': True,
-                'search_default_company': True,
-                'search_default_employee': True,
-                'group_expand': True,
-            }
+            "name": _("Time Off Analysis"),
+            "type": "ir.actions.act_window",
+            "res_model": "hr.leave.employee.type.report",
+            "view_mode": "pivot",
+            "search_view_id": [
+                self.env.ref(
+                    "hr_holidays.view_search_hr_holidays_employee_type_report"
+                ).id
+            ],
+            "domain": domain,
+            "context": {
+                "search_default_year": True,
+                "search_default_company": True,
+                "search_default_employee": True,
+                "group_expand": True,
+            },
         }

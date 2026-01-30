@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import odoo.tests
-
 from datetime import timedelta
 
+import odoo.tests
 from odoo.addons.base.tests.common import HttpCaseWithUserDemo
 from odoo.addons.website_event_sale.tests.common import TestWebsiteEventSaleCommon
 from odoo.fields import Datetime

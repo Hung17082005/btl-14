@@ -1,18 +1,16 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import math
-import pytz
-
 from datetime import datetime, time, timedelta
 from textwrap import dedent
 
+import pytz
+
 from odoo import _, api, fields, models
+from odoo.addons.base.models.res_partner import _tz_get
 from odoo.exceptions import UserError
 from odoo.osv import expression
 from odoo.tools import float_round
-
-from odoo.addons.base.models.res_partner import _tz_get
-
 
 WEEKDAY_TO_NAME = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 CRON_DEPENDS = {'name', 'active', 'send_by', 'automatic_email_time', 'moment', 'tz'}

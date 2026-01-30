@@ -3,6 +3,7 @@
 
 import base64
 from io import BytesIO
+
 from lxml import etree
 
 from odoo.exceptions import UserError

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime
 import random
 import re
+from datetime import datetime
 
-from odoo import api, models, fields, _
+from odoo import _, api, fields, models
 from odoo.addons.http_routing.models.ir_http import slug, unslug
 from odoo.addons.website.tools import text_from_html
 from odoo.tools.json import scriptsafe as json_scriptsafe

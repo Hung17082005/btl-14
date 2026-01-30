@@ -2,14 +2,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from werkzeug import urls
-from werkzeug.exceptions import NotFound, Forbidden
+from werkzeug.exceptions import Forbidden, NotFound
 
 from odoo import http
+from odoo.addons.mail.controllers import mail
+from odoo.exceptions import AccessError
 from odoo.http import request
 from odoo.osv import expression
 from odoo.tools import consteq, plaintext2html
-from odoo.addons.mail.controllers import mail
-from odoo.exceptions import AccessError
 
 
 def _check_special_access(res_model, res_id, token='', _hash='', pid=False):

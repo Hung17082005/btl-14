@@ -3,7 +3,6 @@
 import logging
 
 from odoo import _, api, fields, models
-
 from odoo.addons.payment_paypal.const import SUPPORTED_CURRENCIES
 
 _logger = logging.getLogger(__name__)

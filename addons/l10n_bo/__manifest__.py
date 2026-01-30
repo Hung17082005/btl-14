@@ -13,19 +13,19 @@ Plan contable boliviano e impuestos de acuerdo a disposiciones vigentes
 
     """,
     "author": "Cubic ERP",
-    'category': 'Accounting/Localizations/Account Charts',
+    "category": "Accounting/Localizations/Account Charts",
     "depends": ["account"],
     "data": [
         "data/l10n_bo_chart_data.xml",
         "data/account.account.template.csv",
         "data/l10n_bo_chart_post_data.xml",
-        'data/account_tax_group_data.xml',
-        'data/account_tax_report_data.xml',
+        "data/account_tax_group_data.xml",
+        "data/account_tax_report_data.xml",
         "data/account_tax_data.xml",
         "data/account_chart_template_data.xml",
     ],
-    'demo': [
-        'demo/demo_company.xml',
+    "demo": [
+        "demo/demo_company.xml",
     ],
-    'license': 'LGPL-3',
+    "license": "LGPL-3",
 }

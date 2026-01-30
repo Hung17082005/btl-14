@@ -4,9 +4,9 @@
 import datetime
 import random
 import re
-import werkzeug
-
 from unittest.mock import patch
+
+import werkzeug
 
 from odoo import tools
 from odoo.addons.link_tracker.tests.common import MockLinkTracker

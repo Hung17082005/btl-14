@@ -4,10 +4,10 @@ import logging
 import pprint
 
 from odoo import _, api, models
+from odoo.addons.payment import utils as payment_utils
 from odoo.exceptions import UserError, ValidationError
 
 from .authorize_request import AuthorizeAPI
-from odoo.addons.payment import utils as payment_utils
 
 _logger = logging.getLogger(__name__)
 

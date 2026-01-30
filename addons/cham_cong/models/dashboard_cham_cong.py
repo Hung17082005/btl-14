@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, tools
+from odoo import fields, models, tools
+
 
 class DashboardChamCong(models.Model):
-    _name = 'dashboard_cham_cong'
-    _description = 'Dashboard chấm công theo tháng'
+    _name = "dashboard_cham_cong"
+    _description = "Dashboard chấm công theo tháng"
     _auto = False
 
-    nhan_vien_id = fields.Many2one('nhan_vien', string='Nhân viên')
-    thang = fields.Char(string='Tháng')
-    thang_sort = fields.Date(string='Tháng')
-    so_ngay_di_lam = fields.Integer(string='Số ngày đi làm')
+    nhan_vien_id = fields.Many2one("nhan_vien", string="Nhân viên")
+    thang = fields.Char(string="Tháng")
+    thang_sort = fields.Date(string="Tháng")
+    so_ngay_di_lam = fields.Integer(string="Số ngày đi làm")
 
     def init(self):
         tools.drop_view_if_exists(self.env.cr, self._table)
@@ -39,4 +40,3 @@ class DashboardChamCong(models.Model):
                     date_trunc('month', cc.ngay_cham_cong)
             )
         """)
-

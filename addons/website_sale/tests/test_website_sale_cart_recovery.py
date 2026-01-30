@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from odoo.addons.base.tests.common import HttpCaseWithUserPortal
 from odoo.tests import tagged
 from odoo.tests.common import HttpCase, TransactionCase
-from odoo.addons.base.tests.common import HttpCaseWithUserPortal
+
 
 @tagged('post_install', '-at_install')
 class TestWebsiteSaleCartRecovery(HttpCaseWithUserPortal):

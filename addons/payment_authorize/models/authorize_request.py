@@ -5,9 +5,9 @@ import logging
 import pprint
 from uuid import uuid4
 
-from odoo.addons.payment import utils as payment_utils
-
 import requests
+
+from odoo.addons.payment import utils as payment_utils
 
 _logger = logging.getLogger(__name__)
 

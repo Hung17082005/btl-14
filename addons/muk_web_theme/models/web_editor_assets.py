@@ -20,11 +20,11 @@
 #
 ###################################################################################
 
+import base64
 import re
 import uuid
-import base64
 
-from odoo import models, fields, api
+from odoo import api, fields, models
 from odoo.modules import module
 
 

@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from dateutil import relativedelta
+import datetime
 from datetime import timedelta
 from functools import partial
-import datetime
-from pytz import timezone
 from random import randint
 
-from odoo import api, exceptions, fields, models, _
+from dateutil import relativedelta
+from pytz import timezone
+
+from odoo import _, api, exceptions, fields, models
+from odoo.addons.resource.models.resource import Intervals, make_aware
 from odoo.exceptions import ValidationError
-from odoo.addons.resource.models.resource import make_aware, Intervals
 from odoo.tools.float_utils import float_compare
 
 

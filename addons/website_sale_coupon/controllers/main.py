@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-from odoo import http, _
+from werkzeug.urls import url_encode, url_parse
+
+from odoo import _, http
 from odoo.addons.website_sale.controllers import main
 from odoo.exceptions import UserError
 from odoo.http import request
-
-from werkzeug.urls import url_encode, url_parse
 
 
 class WebsiteSale(main.WebsiteSale):

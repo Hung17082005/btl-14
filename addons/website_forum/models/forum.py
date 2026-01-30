@@ -4,14 +4,13 @@
 import logging
 import math
 import re
-
 from datetime import datetime
 
-from odoo import api, fields, models, tools, SUPERUSER_ID, _
-from odoo.exceptions import UserError, ValidationError, AccessError
+from odoo import SUPERUSER_ID, _, api, fields, models, tools
+from odoo.addons.http_routing.models.ir_http import slug, unslug
+from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.tools import misc, sql
 from odoo.tools.translate import html_translate
-from odoo.addons.http_routing.models.ir_http import slug, unslug
 
 _logger = logging.getLogger(__name__)
 

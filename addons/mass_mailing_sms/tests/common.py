@@ -3,6 +3,7 @@
 
 import random
 import re
+
 import werkzeug
 
 from odoo import tools

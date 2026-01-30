@@ -2,14 +2,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 import contextlib
 import re
-from lxml import etree
-from psycopg2 import sql
-from unittest.mock import Mock, MagicMock, patch
+from unittest.mock import MagicMock, Mock, patch
 
 import werkzeug
+from lxml import etree
+from psycopg2 import sql
 
 import odoo
-from odoo.tools.misc import hmac, DotDict
+from odoo.tools.misc import DotDict, hmac
 
 
 def get_video_embed_code(video_url):

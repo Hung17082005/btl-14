@@ -3,9 +3,9 @@
 
 import re
 
-from odoo.http import request
 from odoo.addons.bus.controllers.main import BusController
 from odoo.exceptions import AccessDenied
+from odoo.http import request
 
 
 class EditorCollaborationController(BusController):

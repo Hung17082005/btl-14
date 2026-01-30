@@ -6,14 +6,20 @@ from io import BytesIO
 
 import babel
 import babel.dates
+from lxml import etree, html
 from markupsafe import Markup, escape
 from PIL import Image
-from lxml import etree, html
 
-from odoo import api, fields, models, _, _lt
-from odoo.tools import posix_to_ldml, float_utils, format_date, format_duration, pycompat
+from odoo import _, _lt, api, fields, models
+from odoo.tools import (
+    float_utils,
+    format_date,
+    format_duration,
+    posix_to_ldml,
+    pycompat,
+)
 from odoo.tools.mail import safe_attrs
-from odoo.tools.misc import get_lang, babel_locale_parse
+from odoo.tools.misc import babel_locale_parse, get_lang
 
 _logger = logging.getLogger(__name__)
 

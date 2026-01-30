@@ -5,10 +5,13 @@ from datetime import datetime, timedelta
 
 from odoo.addons.mail.tests.common import MockEmail
 from odoo.addons.sms.tests.common import MockSMS
-from odoo.addons.test_event_full.tests.common import TestEventFullCommon
-from odoo.addons.test_event_full.tests.common import TestWEventCommon
+from odoo.addons.test_event_full.tests.common import (
+    TestEventFullCommon,
+    TestWEventCommon,
+)
 from odoo.exceptions import ValidationError
 from odoo.tools import mute_logger
+
 
 class TestTemplateRefModel(TestWEventCommon):
 

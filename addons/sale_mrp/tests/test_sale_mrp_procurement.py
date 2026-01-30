@@ -3,9 +3,9 @@
 
 import time
 
-from odoo.tests.common import TransactionCase, Form
-from odoo.tools import mute_logger
 from odoo import Command
+from odoo.tests.common import Form, TransactionCase
+from odoo.tools import mute_logger
 
 
 class TestSaleMrpProcurement(TransactionCase):

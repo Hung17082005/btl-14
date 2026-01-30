@@ -1,6 +1,6 @@
 import ast
-import os
 import logging
+import os
 from shutil import copyfileobj
 from types import CodeType
 
@@ -18,6 +18,7 @@ except ImportError:
     pass
 else:
     from lxml import etree
+
     # xlrd.xlsx supports defusedxml, defusedxml's etree interface is broken
     # (missing ElementTree and thus ElementTree.iter) which causes a fallback to
     # Element.getiterator(), triggering a warning before 3.9 and an error from 3.9.

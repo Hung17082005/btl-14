@@ -8,9 +8,10 @@ from odoo.exceptions import ValidationError
 from odoo.tests import tagged
 from odoo.tools import mute_logger
 
-from .common import SipsCommon
 from ..controllers.main import SipsController
 from ..models.payment_acquirer import SUPPORTED_CURRENCIES
+from .common import SipsCommon
+
 
 @tagged('post_install', '-at_install')
 class SipsTest(SipsCommon):

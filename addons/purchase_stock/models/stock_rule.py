@@ -3,12 +3,13 @@
 
 from collections import defaultdict
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
 from itertools import groupby
-from odoo.tools import float_compare
 
-from odoo import api, fields, models, SUPERUSER_ID, _
+from dateutil.relativedelta import relativedelta
+
+from odoo import SUPERUSER_ID, _, api, fields, models
 from odoo.addons.stock.models.stock_rule import ProcurementException
+from odoo.tools import float_compare
 
 
 class StockRule(models.Model):

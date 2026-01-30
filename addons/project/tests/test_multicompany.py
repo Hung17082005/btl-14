@@ -2,8 +2,9 @@
 
 from contextlib import contextmanager
 
-from odoo.tests.common import TransactionCase, Form
 from odoo.exceptions import AccessError, UserError
+from odoo.tests.common import Form, TransactionCase
+
 
 class TestMultiCompanyCommon(TransactionCase):
 

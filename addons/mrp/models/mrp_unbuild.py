@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError, ValidationError
-from odoo.tools import float_compare, float_round
-from odoo.osv import expression
-
 from collections import defaultdict
+
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError, ValidationError
+from odoo.osv import expression
+from odoo.tools import float_compare, float_round
 
 
 class MrpUnbuild(models.Model):

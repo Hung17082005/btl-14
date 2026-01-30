@@ -5,22 +5,23 @@ import json
 import logging
 import re
 import time
-import requests
-import werkzeug.urls
-import werkzeug.wrappers
-from PIL import Image, ImageFont, ImageDraw
-from lxml import etree
 from base64 import b64decode, b64encode
 from math import floor
 
-from odoo.http import request
-from odoo import http, tools, _, SUPERUSER_ID
+import requests
+import werkzeug.urls
+import werkzeug.wrappers
+from lxml import etree
+from PIL import Image, ImageDraw, ImageFont
+
+from odoo import SUPERUSER_ID, _, http, tools
+from odoo.addons.base.models.assetsbundle import AssetsBundle
 from odoo.addons.http_routing.models.ir_http import slug, unslug
 from odoo.exceptions import UserError, ValidationError
+from odoo.http import request
 from odoo.modules.module import get_resource_path
+from odoo.tools.image import base64_to_image, image_data_uri
 from odoo.tools.mimetypes import guess_mimetype
-from odoo.tools.image import image_data_uri, base64_to_image
-from odoo.addons.base.models.assetsbundle import AssetsBundle
 
 from ..models.ir_attachment import SUPPORTED_IMAGE_EXTENSIONS, SUPPORTED_IMAGE_MIMETYPES
 

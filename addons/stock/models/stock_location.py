@@ -2,15 +2,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import calendar
-
-from collections import defaultdict, OrderedDict
+from collections import OrderedDict, defaultdict
 from datetime import timedelta
 
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
-from odoo.tools.misc import groupby
 from odoo.osv import expression
 from odoo.tools.float_utils import float_compare
+from odoo.tools.misc import groupby
 
 
 class Location(models.Model):

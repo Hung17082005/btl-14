@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 from datetime import timedelta
 
-from odoo import fields
+from odoo import fields, tools
 from odoo.addons.stock.tests.common2 import TestStockCommon
-from odoo import tools
 from odoo.modules.module import get_module_resource
 
 

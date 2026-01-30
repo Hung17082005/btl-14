@@ -3,7 +3,7 @@
 import logging
 
 from odoo import models
-from odoo.tools import populate, groupby
+from odoo.tools import groupby, populate
 
 _logger = logging.getLogger(__name__)
 

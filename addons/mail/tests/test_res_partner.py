@@ -4,9 +4,8 @@
 from uuid import uuid4
 
 from odoo.addons.mail.tests.common import MailCommon, mail_new_test_user
-from odoo.tests.common import Form, users
 from odoo.tests import tagged
-
+from odoo.tests.common import Form, users
 
 # samples use effective TLDs from the Mozilla public suffix
 # list at http://publicsuffix.org

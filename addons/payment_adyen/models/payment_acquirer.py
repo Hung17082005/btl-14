@@ -6,9 +6,8 @@ import re
 import requests
 
 from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
-
 from odoo.addons.payment_adyen.const import API_ENDPOINT_VERSIONS
+from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
 

@@ -2,13 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import random
-import requests
 import string
 
+import requests
 from lxml import html
 from werkzeug import urls
 
-from odoo import tools, models, fields, api, _
+from odoo import _, api, fields, models, tools
 from odoo.exceptions import UserError
 from odoo.osv import expression
 

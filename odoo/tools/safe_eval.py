@@ -25,9 +25,9 @@ from types import CodeType
 import werkzeug
 from psycopg2 import OperationalError
 
-from .misc import ustr
-
 import odoo
+
+from .misc import ustr
 
 unsafe_eval = eval
 
@@ -459,6 +459,7 @@ class wrap_module:
 
 # dateutil submodules are lazy so need to import them for them to "exist"
 import dateutil
+
 mods = ['parser', 'relativedelta', 'rrule', 'tz']
 for mod in mods:
     __import__('dateutil.%s' % mod)

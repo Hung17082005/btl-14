@@ -2,8 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import Command
+from odoo.tests import Form, tagged
+
 from .common import TestCommonSaleTimesheet
-from odoo.tests import tagged, Form
 
 
 @tagged('post_install', '-at_install')

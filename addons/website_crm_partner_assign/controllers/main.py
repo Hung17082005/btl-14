@@ -2,19 +2,17 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import datetime
-import werkzeug.urls
-
 from collections import OrderedDict
+
+import werkzeug.urls
 from werkzeug.exceptions import NotFound
 
-from odoo import fields
-from odoo import http
-from odoo.http import request
+from odoo import fields, http
 from odoo.addons.http_routing.models.ir_http import slug, unslug
-from odoo.addons.website.models.ir_http import sitemap_qs2dom
 from odoo.addons.portal.controllers.portal import CustomerPortal
+from odoo.addons.website.models.ir_http import sitemap_qs2dom
 from odoo.addons.website_partner.controllers.main import WebsitePartnerPage
-
+from odoo.http import request
 from odoo.tools.translate import _
 
 

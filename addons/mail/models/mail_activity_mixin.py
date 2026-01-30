@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import logging
 from datetime import datetime
 
-import logging
 import pytz
 
 from odoo import api, fields, models

@@ -1,12 +1,14 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 # -*- coding: utf-8 -*-
 
+import base64
+from io import BytesIO
+
+from PIL import Image
+
+from odoo import tools
 from odoo.tests import tagged
 from odoo.tests.common import TransactionCase
-from odoo import tools
-from io import BytesIO
-from PIL import Image
-import base64
 
 
 @tagged('post_install', '-at_install')

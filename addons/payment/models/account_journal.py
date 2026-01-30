@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import _, api, Command, models
+from odoo import Command, _, api, models
 from odoo.exceptions import UserError
 
 

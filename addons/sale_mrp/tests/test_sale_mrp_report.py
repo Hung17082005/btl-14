@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo.addons.account.tests.common import AccountTestInvoicingCommon
-from odoo.tests import common, Form
+from odoo.tests import Form, common
 from odoo.tools import html2plaintext
 
 

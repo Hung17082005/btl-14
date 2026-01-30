@@ -1,14 +1,16 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import datetime as dt, time
+from datetime import datetime as dt
+from datetime import time
 from datetime import timedelta as td
+
 from freezegun import freeze_time
 
 from odoo import SUPERUSER_ID
+from odoo.exceptions import UserError
 from odoo.tests import Form, tagged
 from odoo.tests.common import TransactionCase
-from odoo.exceptions import UserError
 
 
 @tagged('post_install', '-at_install')

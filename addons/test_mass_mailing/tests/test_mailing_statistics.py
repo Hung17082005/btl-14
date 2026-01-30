@@ -6,8 +6,8 @@ from lxml import html
 from odoo.addons.mail.tests.common import mail_new_test_user
 from odoo.addons.test_mass_mailing.data.mail_test_data import MAIL_TEMPLATE
 from odoo.addons.test_mass_mailing.tests.common import TestMassMailCommon
-from odoo.tests.common import users
 from odoo.tests import tagged
+from odoo.tests.common import users
 from odoo.tools import formataddr, mute_logger
 
 

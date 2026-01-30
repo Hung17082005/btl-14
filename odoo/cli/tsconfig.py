@@ -5,8 +5,9 @@ import os
 import re
 import sys
 
-from . import Command
 from odoo.modules.module import MANIFEST_NAMES
+
+from . import Command
 
 
 class TSConfig(Command):

@@ -1,20 +1,25 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import babel
 import copy
 import logging
 import re
 
+import babel
 from lxml import html
 from markupsafe import Markup
 from werkzeug import urls
 
 from odoo import _, api, fields, models, tools
 from odoo.addons.base.models.qweb import QWebCodeFound
-from odoo.exceptions import UserError, AccessError
+from odoo.exceptions import AccessError, UserError
 from odoo.tools import is_html_empty, safe_eval
-from odoo.tools.rendering_tools import convert_inline_template_to_qweb, parse_inline_template, render_inline_template, template_env_globals
+from odoo.tools.rendering_tools import (
+    convert_inline_template_to_qweb,
+    parse_inline_template,
+    render_inline_template,
+    template_env_globals,
+)
 
 _logger = logging.getLogger(__name__)
 

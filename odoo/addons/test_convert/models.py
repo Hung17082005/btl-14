@@ -3,6 +3,7 @@
 
 from odoo import api, fields, models
 
+
 class TestModel(models.Model):
     _name = 'test_convert.test_model'
     _description = "Test Convert Model"

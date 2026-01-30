@@ -3,6 +3,7 @@
 
 from odoo.exceptions import UserError
 from odoo.fields import Command
+
 from .common import PurchaseTestCommon
 
 

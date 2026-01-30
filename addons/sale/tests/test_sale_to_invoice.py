@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tools import float_is_zero
-from .common import TestSaleCommon
-from odoo.tests import Form, tagged
 from odoo import Command, fields
+from odoo.tests import Form, tagged
+from odoo.tools import float_is_zero
+
+from .common import TestSaleCommon
 
 
 @tagged('-at_install', 'post_install')

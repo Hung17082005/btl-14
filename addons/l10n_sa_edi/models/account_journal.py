@@ -1,20 +1,22 @@
 import json
-import requests
-from markupsafe import Markup
-from lxml import etree
+from base64 import b64decode, b64encode
 from datetime import datetime
-from base64 import b64encode, b64decode
-from odoo import models, fields, service, _, api
-from odoo.exceptions import UserError
-from odoo.modules.module import get_module_resource
-from requests.exceptions import HTTPError, RequestException
+from urllib.parse import urljoin
+
+import requests
 from cryptography import x509
-from cryptography.x509 import ObjectIdentifier, load_der_x509_certificate
-from cryptography.x509.oid import NameOID
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.serialization import Encoding, load_pem_private_key
-from urllib.parse import urljoin
+from cryptography.x509 import ObjectIdentifier, load_der_x509_certificate
+from cryptography.x509.oid import NameOID
+from lxml import etree
+from markupsafe import Markup
+from requests.exceptions import HTTPError, RequestException
+
+from odoo import _, api, fields, models, service
+from odoo.exceptions import UserError
+from odoo.modules.module import get_module_resource
 
 ZATCA_API_URLS = {
     "sandbox": "https://gw-fatoora.zatca.gov.sa/e-invoicing/developer-portal/",

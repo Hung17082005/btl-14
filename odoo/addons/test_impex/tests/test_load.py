@@ -10,6 +10,7 @@ from odoo.addons.base.tests.common import SavepointCaseWithUserDemo
 from odoo.tests import common
 from odoo.tools.misc import mute_logger
 
+
 def message(msg, type='error', from_=0, to_=0, record=0, field='value', **kwargs):
     return dict(kwargs,
                 type=type, rows={'from': from_, 'to': to_}, record=record,

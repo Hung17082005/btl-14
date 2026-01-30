@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import dateutil.relativedelta as relativedelta
 import functools
 import re
 
+import dateutil.relativedelta as relativedelta
 from markupsafe import Markup
 from werkzeug import urls
 

@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
 
-from . import common
-from . import test_odoobot
-from . import test_phone_blacklist
-from . import test_mail_thread_phone
-from . import test_mass_mailing
-from . import test_mass_mailing_statistics
-from . import test_mass_sms
-from . import test_portal
-from . import test_sms_composer
-from . import test_sms_management
-from . import test_sms_performance
-from . import test_sms_post
-from . import test_sms_server_actions
-from . import test_sms_sms
-from . import test_sms_template
+from . import (
+    common,
+    test_mail_thread_phone,
+    test_mass_mailing,
+    test_mass_mailing_statistics,
+    test_mass_sms,
+    test_odoobot,
+    test_phone_blacklist,
+    test_portal,
+    test_sms_composer,
+    test_sms_management,
+    test_sms_performance,
+    test_sms_post,
+    test_sms_server_actions,
+    test_sms_sms,
+    test_sms_template,
+)

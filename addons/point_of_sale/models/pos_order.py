@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
+import base64
 import logging
+import re
 from datetime import timedelta
 from functools import partial
 from itertools import groupby
 
 import psycopg2
 import pytz
-import re
 
-from odoo import api, fields, models, tools, _
-from odoo.tools import float_is_zero, float_round, float_repr, float_compare
-from odoo.exceptions import ValidationError, UserError
+from odoo import _, api, fields, models, tools
+from odoo.exceptions import UserError, ValidationError
 from odoo.http import request
 from odoo.osv.expression import AND
-import base64
+from odoo.tools import float_compare, float_is_zero, float_repr, float_round
 
 _logger = logging.getLogger(__name__)
 

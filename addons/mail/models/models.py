@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import logging
+
 from lxml.builder import E
 
-from odoo import api, models, tools, _
-
-import logging
+from odoo import _, api, models, tools
 
 _logger = logging.getLogger(__name__)
 

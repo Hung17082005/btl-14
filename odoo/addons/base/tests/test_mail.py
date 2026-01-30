@@ -2,21 +2,28 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from unittest.mock import patch
-import email.policy
 import email.message
+import email.policy
 import re
 import threading
+from unittest.mock import patch
 
 from odoo.addons.base.models.ir_mail_server import extract_rfc2822_addresses
-from odoo.tests.common import BaseCase, TransactionCase
 from odoo.tests import tagged
+from odoo.tests.common import BaseCase, TransactionCase
 from odoo.tools import (
-    is_html_empty, html_sanitize, append_content_to_html, plaintext2html,
-    email_domain_normalize, email_normalize, email_split, email_split_and_format,
-    misc, formataddr,
-    prepend_html_content,
+    append_content_to_html,
     config,
+    email_domain_normalize,
+    email_normalize,
+    email_split,
+    email_split_and_format,
+    formataddr,
+    html_sanitize,
+    is_html_empty,
+    misc,
+    plaintext2html,
+    prepend_html_content,
 )
 
 from . import test_mail_examples

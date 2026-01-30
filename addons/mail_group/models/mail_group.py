@@ -3,18 +3,18 @@
 
 import json
 import logging
-import lxml
-
 from ast import literal_eval
 from datetime import datetime
+
+import lxml
 from dateutil import relativedelta
 from werkzeug import urls
 
 from odoo import _, api, fields, models, tools
 from odoo.addons.http_routing.models.ir_http import slug
-from odoo.exceptions import ValidationError, UserError
+from odoo.exceptions import UserError, ValidationError
 from odoo.osv import expression
-from odoo.tools import email_normalize, hmac, generate_tracking_message_id
+from odoo.tools import email_normalize, generate_tracking_message_id, hmac
 
 _logger = logging.getLogger(__name__)
 

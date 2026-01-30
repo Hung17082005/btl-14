@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from unittest.mock import patch
-from unittest.mock import DEFAULT
-from werkzeug.urls import url_parse, url_decode
+from unittest.mock import DEFAULT, patch
+
+from werkzeug.urls import url_decode, url_parse
 
 from odoo import exceptions
 from odoo.addons.test_mail.models.test_mail_models import MailTestSimple
 from odoo.addons.test_mail.tests.common import TestMailCommon, TestRecipients
-from odoo.tests.common import tagged, HttpCase, users
+from odoo.tests.common import HttpCase, tagged, users
 from odoo.tools import mute_logger
 
 

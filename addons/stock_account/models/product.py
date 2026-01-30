@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
-from odoo.tools import float_is_zero, float_repr, float_round, float_compare
-from odoo.exceptions import ValidationError
 from collections import defaultdict
 from datetime import datetime
+
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools import float_compare, float_is_zero, float_repr, float_round
 
 
 class ProductTemplate(models.Model):

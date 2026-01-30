@@ -3,10 +3,9 @@ from lxml import html
 
 from odoo.addons.website.controllers.main import Website
 from odoo.addons.website.tools import MockRequest
-from odoo.tests import common, HttpCase, tagged
+from odoo.tests import HttpCase, common, tagged
 from odoo.tests.common import HOST
-from odoo.tools import config
-from odoo.tools import mute_logger
+from odoo.tools import config, mute_logger
 
 
 @tagged('-at_install', 'post_install')

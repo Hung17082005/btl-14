@@ -6,9 +6,9 @@ from xmlrpc.client import dumps, loads
 from markupsafe import Markup
 from werkzeug.wrappers import Response
 
+from odoo.fields import Command, Date, Datetime
 from odoo.http import Controller, dispatch_rpc, request, route
 from odoo.service import wsgi_server
-from odoo.fields import Date, Datetime, Command
 from odoo.tools import lazy, ustr
 from odoo.tools.misc import frozendict
 

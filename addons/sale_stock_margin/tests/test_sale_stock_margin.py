@@ -2,9 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import fields
-
+from odoo.addons.stock_account.tests.test_stockvaluationlayer import (
+    TestStockValuationCommon,
+)
 from odoo.tests import Form, tagged
-from odoo.addons.stock_account.tests.test_stockvaluationlayer import TestStockValuationCommon
 
 
 @tagged('post_install', '-at_install')

@@ -4,10 +4,9 @@
 from psycopg2 import IntegrityError
 
 from odoo.addons.test_mail.tests.common import TestMailCommon
-from odoo.tests import tagged
-from odoo.tests import users
-from odoo.tools.misc import mute_logger
+from odoo.tests import tagged, users
 from odoo.tests.common import users
+from odoo.tools.misc import mute_logger
 
 
 @tagged('mail_followers')

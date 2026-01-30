@@ -4,7 +4,6 @@
 import logging
 
 import odoo.tests
-
 from odoo.addons.product_matrix.tests import common
 
 _logger = logging.getLogger(__name__)

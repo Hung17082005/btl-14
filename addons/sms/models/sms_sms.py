@@ -4,7 +4,7 @@
 import logging
 import threading
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 
 _logger = logging.getLogger(__name__)
 

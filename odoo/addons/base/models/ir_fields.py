@@ -7,7 +7,7 @@ import itertools
 import psycopg2
 import pytz
 
-from odoo import api, Command, fields, models, _
+from odoo import Command, _, api, fields, models
 from odoo.tools import ustr
 
 REFERENCING_FIELDS = {None, 'id', '.id'}

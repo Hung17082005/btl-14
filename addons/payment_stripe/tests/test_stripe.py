@@ -2,11 +2,11 @@
 
 from unittest.mock import patch
 
+from odoo.addons.payment_stripe.const import WEBHOOK_HANDLED_EVENTS
+from odoo.addons.payment_stripe.controllers.onboarding import OnboardingController
 from odoo.tests import tagged
 from odoo.tools import mute_logger
 
-from odoo.addons.payment_stripe.controllers.onboarding import OnboardingController
-from odoo.addons.payment_stripe.const import WEBHOOK_HANDLED_EVENTS
 from .common import StripeCommon
 
 

@@ -1,8 +1,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo.tests.common import HttpCase
-from odoo.addons.sale_product_configurator.tests.common import TestProductConfiguratorCommon
+from odoo.addons.sale_product_configurator.tests.common import (
+    TestProductConfiguratorCommon,
+)
 from odoo.tests import tagged
+from odoo.tests.common import HttpCase
 
 
 @tagged('post_install', '-at_install')

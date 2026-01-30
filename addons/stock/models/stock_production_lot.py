@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import operator as py_operator
 from re import findall as regex_findall
 from re import split as regex_split
 
-import operator as py_operator
-
-from odoo.tools.misc import attrgetter
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError, ValidationError
+from odoo.tools.misc import attrgetter
 
 OPERATORS = {
     '<': py_operator.lt,

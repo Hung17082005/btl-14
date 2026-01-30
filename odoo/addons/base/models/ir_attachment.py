@@ -9,15 +9,15 @@ import mimetypes
 import os
 import re
 import uuid
-
 from collections import defaultdict
+
 from PIL import Image
 
-from odoo import api, fields, models, SUPERUSER_ID, tools, _
-from odoo.exceptions import AccessError, ValidationError, MissingError, UserError
-from odoo.tools import config, human_size, ustr, html_escape, ImageProcess, str2bool
-from odoo.tools.mimetypes import guess_mimetype
+from odoo import SUPERUSER_ID, _, api, fields, models, tools
+from odoo.exceptions import AccessError, MissingError, UserError, ValidationError
 from odoo.osv import expression
+from odoo.tools import ImageProcess, config, html_escape, human_size, str2bool, ustr
+from odoo.tools.mimetypes import guess_mimetype
 
 _logger = logging.getLogger(__name__)
 

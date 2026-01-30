@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import time
 import fnmatch
 import logging
 import optparse
+import time
+
 import odoo
 
 from . import Command
+
 _logger = logging.getLogger(__name__)
 
 

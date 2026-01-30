@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from ..exceptions import except_orm
-from ..models import Model, TransientModel, AbstractModel
+from ..models import AbstractModel, Model, TransientModel
 
 # Deprecated, kept for backward compatibility.
 except_osv = except_orm

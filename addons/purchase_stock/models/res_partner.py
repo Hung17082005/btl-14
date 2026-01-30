@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import timedelta, datetime, time
 from collections import defaultdict
+from datetime import datetime, time, timedelta
 
 from odoo import api, fields, models
 

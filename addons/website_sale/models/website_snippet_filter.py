@@ -2,7 +2,7 @@
 
 from collections import Counter
 
-from odoo import models, fields, api, _
+from odoo import _, api, fields, models
 from odoo.osv import expression
 
 

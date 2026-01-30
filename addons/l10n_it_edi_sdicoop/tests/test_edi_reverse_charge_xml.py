@@ -2,11 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from collections import namedtuple
+
 from lxml import etree
 
 from odoo import fields
-from odoo.tests import tagged
 from odoo.addons.l10n_it_edi_sdicoop.tests.test_edi_xml import TestItEdi
+from odoo.tests import tagged
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')

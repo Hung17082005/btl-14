@@ -3,13 +3,13 @@
 
 import base64
 import io
-import os
 import mimetypes
+import os
 
 from odoo import http
+from odoo.addons.sale.controllers.portal import CustomerPortal
 from odoo.exceptions import AccessError
 from odoo.http import request
-from odoo.addons.sale.controllers.portal import CustomerPortal
 
 
 class WebsiteSaleDigital(CustomerPortal):

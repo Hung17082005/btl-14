@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from typing import NamedTuple, Iterable
+from typing import Iterable, NamedTuple
+
 try:
     import phonenumbers
 except ImportError:
     phonenumbers = None
 
+from odoo.addons.phone_validation.lib import phonenumbers_patch
 from odoo.tests.common import BaseCase
 from odoo.tools.parse_version import parse_version
-from odoo.addons.phone_validation.lib import phonenumbers_patch
+
 
 class TestPhonenumbersPatch(BaseCase):
 

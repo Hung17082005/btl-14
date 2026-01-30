@@ -2,9 +2,8 @@
 
 import logging
 
-from odoo.fields import Command
-
 from odoo.addons.payment.tests.common import PaymentCommon
+from odoo.fields import Command
 
 _logger = logging.getLogger(__name__)
 

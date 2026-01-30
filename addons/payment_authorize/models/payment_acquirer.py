@@ -4,8 +4,8 @@ import logging
 import pprint
 
 from odoo import _, api, fields, models
-from odoo.fields import Command
 from odoo.exceptions import UserError, ValidationError
+from odoo.fields import Command
 
 from .authorize_request import AuthorizeAPI
 

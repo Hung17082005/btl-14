@@ -3,10 +3,10 @@
 import logging
 from contextlib import contextmanager
 from unittest.mock import patch
-from odoo.addons.account.models.account_payment_method import AccountPaymentMethod
-from odoo.fields import Command
 
+from odoo.addons.account.models.account_payment_method import AccountPaymentMethod
 from odoo.addons.payment.tests.utils import PaymentTestUtils
+from odoo.fields import Command
 
 _logger = logging.getLogger(__name__)
 

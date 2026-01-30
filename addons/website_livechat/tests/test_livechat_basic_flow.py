@@ -3,7 +3,7 @@
 
 import datetime
 
-from odoo import tests, _
+from odoo import _, tests
 from odoo.addons.base.tests.common import HttpCaseWithUserDemo
 from odoo.addons.website_livechat.tests.common import TestLivechatCommon
 

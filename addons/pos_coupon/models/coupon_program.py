@@ -3,9 +3,10 @@
 
 # NOTE Use black to automatically format this code.
 
-from odoo import api, fields, models, _
-
 import ast
+
+from odoo import _, api, fields, models
+
 
 class CouponProgram(models.Model):
     _inherit = "coupon.program"

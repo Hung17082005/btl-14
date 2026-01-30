@@ -7,6 +7,7 @@ import odoo.tests
 from odoo.addons.iap.tools.iap_tools import iap_jsonrpc_mocked
 from odoo.tools import mute_logger
 
+
 class TestConfiguratorCommon(odoo.tests.HttpCase):
 
     def _theme_upgrade_upstream(self):

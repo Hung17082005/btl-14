@@ -8,8 +8,8 @@ import os
 
 from PIL import Image
 
-from odoo.exceptions import AccessError
 from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
+from odoo.exceptions import AccessError
 from odoo.tools import image_to_base64
 
 HASH_SPLIT = 2      # FIXME: testing implementations detail is not a good idea

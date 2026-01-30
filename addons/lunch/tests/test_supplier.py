@@ -1,14 +1,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-import pytz
-
 from datetime import datetime, time, timedelta
 from unittest.mock import patch
 
-from odoo import fields
-from odoo.tests import common
+import pytz
 
+from odoo import fields
 from odoo.addons.lunch.tests.common import TestsCommon
+from odoo.tests import common
 
 
 class TestSupplier(TestsCommon):

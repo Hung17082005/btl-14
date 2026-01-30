@@ -5,17 +5,16 @@ import ast
 import base64
 import datetime
 import logging
-import psycopg2
+import re
 import smtplib
 import threading
-import re
-import pytz
-
 from collections import defaultdict
+
+import psycopg2
+import pytz
 from dateutil.parser import parse
 
-from odoo import _, api, fields, models
-from odoo import tools
+from odoo import _, api, fields, models, tools
 from odoo.addons.base.models.ir_mail_server import MailDeliveryException
 
 _logger = logging.getLogger(__name__)

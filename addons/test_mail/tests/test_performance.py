@@ -3,9 +3,9 @@
 import base64
 
 from odoo.addons.base.tests.common import TransactionCaseWithUserDemo
-from odoo.tests.common import users, warmup
 from odoo.tests import tagged
-from odoo.tools import mute_logger, formataddr
+from odoo.tests.common import users, warmup
+from odoo.tools import formataddr, mute_logger
 
 
 @tagged('mail_performance', 'post_install', '-at_install')

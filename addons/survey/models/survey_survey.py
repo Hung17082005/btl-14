@@ -4,9 +4,10 @@
 import json
 import random
 import uuid
+
 import werkzeug
 
-from odoo import api, exceptions, fields, models, _
+from odoo import _, api, exceptions, fields, models
 from odoo.exceptions import AccessError, UserError
 from odoo.osv import expression
 from odoo.tools import is_html_empty

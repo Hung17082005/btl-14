@@ -4,18 +4,21 @@
 """ OpenERP core library."""
 
 
+import os.path
+
 #----------------------------------------------------------
 # odoo must be a namespace package for odoo.addons to become one too
 # https://packaging.python.org/guides/packaging-namespace-packages/
 #----------------------------------------------------------
 import pkgutil
-import os.path
+
 __path__ = [
     os.path.abspath(path)
     for path in pkgutil.extend_path(__path__, __name__)
 ]
 
 import sys
+
 MIN_PY_VERSION = (3, 7)
 assert sys.version_info > MIN_PY_VERSION, f"Outdated python version detected, Odoo requires Python >= {'.'.join(map(str, MIN_PY_VERSION))} to run."
 
@@ -62,8 +65,10 @@ multi_process = False
 #----------------------------------------------------------
 # Make sure the OpenERP server runs in UTC.
 import os
+
 os.environ['TZ'] = 'UTC' # Set the timezone
 import time
+
 if hasattr(time, 'tzset'):
     time.tzset()
 
@@ -124,32 +129,33 @@ def registry(database_name=None):
         database_name = threading.current_thread().dbname
     return modules.registry.Registry(database_name)
 
-#----------------------------------------------------------
-# Imports
-#----------------------------------------------------------
-from . import upgrade  # this namespace must be imported first
-from . import addons
-from . import conf
-from . import loglevels
-from . import modules
-from . import netsvc
-from . import osv
-from . import release
-from . import service
-from . import sql_db
-from . import tools
-
-#----------------------------------------------------------
-# Model classes, fields, api decorators, and translations
-#----------------------------------------------------------
-from . import models
-from . import fields
-from . import api
-from odoo.tools.translate import _, _lt
 from odoo.fields import Command
+from odoo.tools.translate import _, _lt
 
 #----------------------------------------------------------
 # Other imports, which may require stuff from above
 #----------------------------------------------------------
-from . import cli
-from . import http
+#----------------------------------------------------------
+# Model classes, fields, api decorators, and translations
+#----------------------------------------------------------
+#----------------------------------------------------------
+# Imports
+#----------------------------------------------------------
+from . import upgrade  # this namespace must be imported first
+from . import (
+    addons,
+    api,
+    cli,
+    conf,
+    fields,
+    http,
+    loglevels,
+    models,
+    modules,
+    netsvc,
+    osv,
+    release,
+    service,
+    sql_db,
+    tools,
+)

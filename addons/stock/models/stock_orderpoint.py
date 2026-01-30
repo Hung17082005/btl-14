@@ -2,11 +2,12 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import logging
-from pytz import timezone, UTC
 from collections import defaultdict
 from datetime import datetime, time
+
 from dateutil import relativedelta
 from psycopg2 import OperationalError
+from pytz import UTC, timezone
 
 from odoo import SUPERUSER_ID, _, api, fields, models, registry
 from odoo.addons.stock.models.stock_rule import ProcurementException

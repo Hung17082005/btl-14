@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import json
 from datetime import datetime, timedelta
 from itertools import groupby
-import json
 
-from odoo import api, fields, models, SUPERUSER_ID, _
+from odoo import SUPERUSER_ID, _, api, fields, models
+from odoo.addons.payment import utils as payment_utils
 from odoo.exceptions import AccessError, UserError, ValidationError
 from odoo.osv import expression
 from odoo.tools import float_is_zero, html_keep_url, is_html_empty
 
-from odoo.addons.payment import utils as payment_utils
 
 class SaleOrder(models.Model):
     _name = "sale.order"

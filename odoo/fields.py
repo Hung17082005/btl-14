@@ -3,33 +3,46 @@
 
 """ High-level objects for fields. """
 
-from collections import defaultdict
-from datetime import date, datetime, time
-from operator import attrgetter
-from xmlrpc.client import MAXINT
 import base64
 import binascii
 import enum
 import itertools
 import logging
 import warnings
+from collections import defaultdict
+from datetime import date, datetime, time
+from operator import attrgetter
+from xmlrpc.client import MAXINT
 
-from markupsafe import Markup
 import psycopg2
 import pytz
-
-from .tools import (
-    float_repr, float_round, float_compare, float_is_zero, html_sanitize, human_size,
-    pg_varchar, ustr, OrderedSet, pycompat, sql, date_utils, unique, IterableGenerator,
-    image_process, merge_sequences,
-)
-from .tools import DEFAULT_SERVER_DATE_FORMAT as DATE_FORMAT
-from .tools import DEFAULT_SERVER_DATETIME_FORMAT as DATETIME_FORMAT
-from .tools.translate import html_translate, _
-from .tools.mimetypes import guess_mimetype
+from markupsafe import Markup
 
 from odoo import SUPERUSER_ID
 from odoo.exceptions import CacheMiss
+
+from .tools import DEFAULT_SERVER_DATE_FORMAT as DATE_FORMAT
+from .tools import DEFAULT_SERVER_DATETIME_FORMAT as DATETIME_FORMAT
+from .tools import (
+    IterableGenerator,
+    OrderedSet,
+    date_utils,
+    float_compare,
+    float_is_zero,
+    float_repr,
+    float_round,
+    html_sanitize,
+    human_size,
+    image_process,
+    merge_sequences,
+    pg_varchar,
+    pycompat,
+    sql,
+    unique,
+    ustr,
+)
+from .tools.mimetypes import guess_mimetype
+from .tools.translate import _, html_translate
 
 DATE_LENGTH = len(date.today().strftime(DATE_FORMAT))
 DATETIME_LENGTH = len(datetime.now().strftime(DATETIME_FORMAT))
@@ -4123,6 +4136,12 @@ def apply_required(model, field_name):
 # pylint: disable=wrong-import-position
 from .exceptions import AccessError, MissingError, UserError
 from .models import (
-    check_pg_name, expand_ids, is_definition_class, is_registry_class,
-    BaseModel, IdType, NewId, PREFETCH_MAX,
+    PREFETCH_MAX,
+    BaseModel,
+    IdType,
+    NewId,
+    check_pg_name,
+    expand_ids,
+    is_definition_class,
+    is_registry_class,
 )

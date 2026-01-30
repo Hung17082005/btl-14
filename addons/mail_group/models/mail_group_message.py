@@ -6,7 +6,7 @@ import logging
 from odoo import _, api, fields, models
 from odoo.exceptions import AccessError, UserError
 from odoo.osv import expression
-from odoo.tools import email_normalize, append_content_to_html, ustr
+from odoo.tools import append_content_to_html, email_normalize, ustr
 
 _logger = logging.getLogger(__name__)
 

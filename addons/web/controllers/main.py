@@ -26,23 +26,31 @@ import werkzeug.wrappers
 import werkzeug.wsgi
 from lxml import etree, html
 from markupsafe import Markup
-from werkzeug.urls import url_encode, url_decode, iri_to_uri
+from werkzeug.urls import iri_to_uri, url_decode, url_encode
 
 import odoo
 import odoo.modules.registry
-from odoo.api import call_kw
-from odoo.addons.base.models.ir_qweb import render as qweb_render
-from odoo.modules import get_resource_path, module
-from odoo.tools import html_escape, pycompat, ustr, apply_inheritance_specs, lazy_property, osutil
-from odoo.tools.mimetypes import guess_mimetype
-from odoo.tools.translate import _
-from odoo.tools.misc import str2bool, xlsxwriter, file_open, file_path
-from odoo.tools.safe_eval import safe_eval, time
 from odoo import http
-from odoo.http import content_disposition, dispatch_rpc, request, serialize_exception as _serialize_exception
-from odoo.exceptions import AccessError, UserError, AccessDenied
+from odoo.addons.base.models.ir_qweb import render as qweb_render
+from odoo.api import call_kw
+from odoo.exceptions import AccessDenied, AccessError, UserError
+from odoo.http import content_disposition, dispatch_rpc, request
+from odoo.http import serialize_exception as _serialize_exception
 from odoo.models import check_method_name
+from odoo.modules import get_resource_path, module
 from odoo.service import db, security
+from odoo.tools import (
+    apply_inheritance_specs,
+    html_escape,
+    lazy_property,
+    osutil,
+    pycompat,
+    ustr,
+)
+from odoo.tools.mimetypes import guess_mimetype
+from odoo.tools.misc import file_open, file_path, str2bool, xlsxwriter
+from odoo.tools.safe_eval import safe_eval, time
+from odoo.tools.translate import _
 
 _logger = logging.getLogger(__name__)
 

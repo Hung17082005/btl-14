@@ -8,7 +8,7 @@ import time
 
 from lxml import etree
 
-from odoo import api, fields, models, tools, _
+from odoo import _, api, fields, models, tools
 from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)

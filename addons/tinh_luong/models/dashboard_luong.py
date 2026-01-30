@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, tools
+from odoo import fields, models, tools
+
 
 class DashboardLuong(models.Model):
     _name = 'dashboard_luong'

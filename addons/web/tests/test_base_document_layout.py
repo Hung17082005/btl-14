@@ -1,10 +1,10 @@
 import os
-from PIL import Image
 from functools import partial
 
-from odoo.tests import TransactionCase, tagged, Form
-from odoo.tools import frozendict, image_to_base64, hex_to_rgb
+from PIL import Image
 
+from odoo.tests import Form, TransactionCase, tagged
+from odoo.tools import frozendict, hex_to_rgb, image_to_base64
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 _file_cache = {}
