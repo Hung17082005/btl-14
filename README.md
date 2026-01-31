@@ -91,7 +91,7 @@ build-essential libffi-dev zlib1g-dev libpq-dev
 ### 4.2. Tải project
 
 ```bash
-git clone https://github.com/HiepV7413/TTDN-16-02-N3.git
+git clone (https://github.com/HiepV7413/TTDN-16-02-N3.git)
 cd TTDN-16-02-N3
 ```
 
