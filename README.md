@@ -205,5 +205,5 @@ Truy cập hệ thống tại:
 
 ## 📝 6. Nguồn tham khảo
 
-- Module chấm công (Khóa 15): https://github.com/dinhtuananh188/TTDN-15-01-N5.git
+- Module chấm công  (Khóa 16):(https://github.com/HiepV7413/TTDN-16-02-N3.git)
 # Ch-mc-ng-T-nh-L-ng
