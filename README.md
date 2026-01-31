@@ -59,32 +59,15 @@ Thay vì xử lý thủ công hoặc rời rạc bằng Excel, hệ thống cung
 ### 👤 Quản lý Nhân sự
 
 #### Trang quản lý nhân viên
-<img width="1902" height="931" alt="image" src="/assets/assets_nhan_su/nhan_vien.png" />
+<img width="1919" height="1071" alt="image" src="https://github.com/user-attachments/assets/66e22b9f-a436-4bad-88da-feda67552a38" />
 
 #### Dashboard chấm công
-<img width="1902" height="931" alt="image" src="/assets/assets_nhan_su/dashboard_cham_cong.png" />
-
-#### Trang quản lý chức vụ
-<img width="1902" height="931" alt="image" src="/assets/assets_nhan_su/chuc_vu.png" />
-
-#### Trang quản lý loại hợp đồng
-<img width="1902" height="931" alt="image" src="/assets/assets_nhan_su/loai_hop_dong.png" />
-
-#### Trang quản lý hợp đồng lao động
-<img width="1902" height="931" alt="image" src="/assets/assets_nhan_su/hop_dong_lao_dong.png" />
+<img width="1919" height="988" alt="image" src="https://github.com/user-attachments/assets/c9e8c34b-4b81-42cf-ac36-e8fa149c4f29" />
 
 ### ⏱️ Quản lý Chấm công
 
 #### Trang quản lý chấm công
-<img width="1902" height="931" alt="image" src="/assets/assets_cham_cong/cham_cong.png" />
-
-#### Trang quản lý đợt đăng ký
-<img width="1902" height="931" alt="image" src="/assets/assets_cham_cong/dot_dang_ky.png" />
-
-### 💰 Quản lý Tính lương
-
-#### Trang quản lý bảng lương
-<img width="1902" height="931" alt="image" src="/assets/assets_tinh_luong/bang_luong.png" />
+<img width="1917" height="986" alt="image" src="https://github.com/user-attachments/assets/4b7e3b2b-c4a4-444f-91a0-122685c7cb55" />
 
 ## ⚙️ 4. Cài đặt hệ thống
 
